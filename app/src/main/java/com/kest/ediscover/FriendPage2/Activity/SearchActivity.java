@@ -8,7 +8,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ScrollView;
 
+import com.hyphenate.EMConnectionListener;
+import com.hyphenate.EMContactListener;
+import com.hyphenate.EMError;
+import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.domain.UserClass2;
+import com.hyphenate.util.NetUtils;
 import com.kest.ediscover.CustomControl.Mylistview;
 import com.kest.ediscover.FriendPage2.friendadapter.NewFriendAdapter;
 import com.kest.ediscover.FriendPage2.friendclass.UserClass;
@@ -71,8 +76,6 @@ public class SearchActivity extends Activity implements View.OnClickListener,Htt
         for (int i = 0; i < 15; i++) {
             Slist.add(""+i);
         }
-
-
 
     }
 

@@ -103,6 +103,7 @@
             android:background="@color/color_white_f1" />
 
         <RelativeLayout
+            android:id="@+id/layout_creategroup"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -146,6 +147,7 @@
             android:background="@color/color_white_f1" />
 
         <RelativeLayout
+            android:id="@+id/layout_megroup"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"

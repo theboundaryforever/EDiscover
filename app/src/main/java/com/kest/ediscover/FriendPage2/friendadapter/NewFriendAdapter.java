@@ -94,9 +94,7 @@ public class NewFriendAdapter extends BaseAdapter implements Dialog1.DialogOnIte
                dialog1.dismiss();
                break;
            case R.id.tv_confirm:  //确认
-               try {
-                   EMClient.getInstance().contactManager().addContact(Slist.get(sign).getUsername(), dialog1.getEditText().toString());
-               }catch (Exception e){e.printStackTrace(); Log.d("添加好友异常","NewFriendAdapter"); }
+               InsertFriend();
                break;
        }
     }
@@ -107,6 +105,20 @@ public class NewFriendAdapter extends BaseAdapter implements Dialog1.DialogOnIte
         TextView tv_name;
         TextView tv_state;
 
+    }
+
+    /**添加好友*/
+    private void InsertFriend(){
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Log.d("添加好友方法",""+6666);
+                    EMClient.getInstance().contactManager().addContact(Slist.get(sign).getHx_username(), dialog1.getEditText().toString());
+                }catch (Exception e){e.printStackTrace(); Log.d("添加好友异常","NewFriendAdapter"); }
+            }
+        }).start();
     }
 
 }

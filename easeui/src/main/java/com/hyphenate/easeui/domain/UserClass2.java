@@ -21,6 +21,8 @@ public class UserClass2 {
 
     String initialLetter;
 
+    String sign;  //是否为选中状态
+
 
     public String getUser_id() {
         return user_id;
@@ -71,5 +73,13 @@ public class UserClass2 {
 
     public void setInitialLetter(String initialLetter) {
         this.initialLetter = initialLetter;
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public void setSign(String sign) {
+        this.sign = sign;
     }
 }

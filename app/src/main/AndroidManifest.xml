@@ -127,6 +127,12 @@
 
         <activity android:name=".FriendPage2.Activity.SearchActivity" android:launchMode="singleTop"/>
 
+        <activity android:name=".ChatPage.Activity.GroupChatActivity" android:launchMode="singleTop" />
+
+        <activity android:name=".FriendPage2.Activity.SelectContactActivity" android:launchMode="singleTop" />
+
+
+
         <!-- 环信自己的activity     -->
         <activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity" />
         <activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity" />

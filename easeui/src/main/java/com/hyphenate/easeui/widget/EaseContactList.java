@@ -27,8 +27,10 @@ public class EaseContactList extends RelativeLayout {
     protected ListView listView;
     protected EaseContactAdapter adapter;
     protected EaseContactAdapter2 adapter2;
+    protected EaseContactAdapter2 adapter3;
     protected List<EaseUser> contactList;
     protected List<UserClass2> contactList2;
+    protected List<UserClass2> contactList3;
     protected EaseSidebar sidebar;
     
     protected int primaryColor;
@@ -109,6 +111,18 @@ public class EaseContactList extends RelativeLayout {
     }
 
     public void init2(List<UserClass2> contactList){
+        this.contactList2 = contactList;
+        adapter2 = new EaseContactAdapter2(context, 0, new ArrayList<UserClass2>(contactList));
+        adapter2.setPrimaryColor(primaryColor).setPrimarySize(primarySize).setInitialLetterBg(initialLetterBg)
+                .setInitialLetterColor(initialLetterColor);
+        listView.setAdapter(adapter2);
+
+        if(showSiderBar){
+            sidebar.setListView(listView);
+        }
+    }
+
+    public void init3(List<UserClass2> contactList){
         this.contactList2 = contactList;
         adapter2 = new EaseContactAdapter2(context, 0, new ArrayList<UserClass2>(contactList));
         adapter2.setPrimaryColor(primaryColor).setPrimarySize(primarySize).setInitialLetterBg(initialLetterBg)

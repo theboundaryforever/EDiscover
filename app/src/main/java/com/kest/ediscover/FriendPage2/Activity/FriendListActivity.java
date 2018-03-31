@@ -15,6 +15,7 @@ import com.hyphenate.easeui.domain.UserClass2;
 import com.hyphenate.easeui.ui.EaseContactListFragment;
 import com.hyphenate.easeui.widget.EaseContactList;
 import com.kest.ediscover.ChatPage.Activity.ChatListActivity;
+import com.kest.ediscover.ChatPage.Activity.GroupChatActivity;
 import com.kest.ediscover.MyApplication;
 import com.kest.ediscover.MyHttputils.Conntent;
 import com.kest.ediscover.MyHttputils.HttpUtils;
@@ -67,6 +68,8 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
         this.findViewById(R.id.allbuy_btn).setOnClickListener(this);
         this.findViewById(R.id.layout_newfriends).setOnClickListener(this);
         this.findViewById(R.id.view_search).setOnClickListener(this);
+        this.findViewById(R.id.layout_megroup).setOnClickListener(this);
+        this.findViewById(R.id.layout_creategroup).setOnClickListener(this);
 
         txt_title = (TextView)this.findViewById(R.id.txt_title1_title);
 
@@ -75,10 +78,11 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
         listView = easeContactList.getListView();
 
         assigment();
-        aaa();
+        getSelectFriendlist();
     }
 
-    private void aaa(){
+    /**查寻通讯录*/
+    private void getSelectFriendlist(){
         Map<String,Object> map = new HashMap<>();
         map.put("token",sp.getToken());
         map.put("action","user_contacts");
@@ -126,6 +130,12 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
             case R.id.view_search:  //搜索好友
                 startActivity(new Intent(FriendListActivity.this,SearchActivity.class));
                 break;
+            case R.id.layout_creategroup:  //创建群
+                startActivity(new Intent(FriendListActivity.this, SelectContactActivity.class));
+                break;
+            case R.id.layout_megroup:  //我加入的群
+                startActivity(new Intent(FriendListActivity.this, GroupChatActivity.class));
+                break;
         }
     }
 
@@ -138,20 +148,22 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
                 try{
                     JSONObject js = new JSONObject(result);
                     if(js.getInt("returnCode")==10000){
-                        JSONArray ja = js.getJSONArray("userList");
-                        for (int i = 0; i < ja.length(); i++) {
-                            JSONObject jo = ja.getJSONObject(i);
-                            UserClass2 us = new UserClass2();
-                            us.setInitialLetter(us.getInitialLetter());
-                            us.setHx_username(jo.getString("hx_username"));
-                            us.setNickname(jo.getString("nickname"));
-                            us.setUser_id(jo.getString("user_id"));
-                            us.setUsername(jo.getString("username"));
-                            us.setImg(jo.getString("img"));
-                            Ulist.add(us);
-                        }
-                        if(Ulist.size()>0) {
-                            easeContactList.init2(Ulist);
+                        if(js.getString("action").equals("user_contacts")) {
+                            JSONArray ja = js.getJSONArray("userList");
+                            for (int i = 0; i < ja.length(); i++) {
+                                JSONObject jo = ja.getJSONObject(i);
+                                UserClass2 us = new UserClass2();
+                                us.setInitialLetter(us.getInitialLetter());
+                                us.setHx_username(jo.getString("hx_username"));
+                                us.setNickname(jo.getString("nickname"));
+                                us.setUser_id(jo.getString("user_id"));
+                                us.setUsername(jo.getString("username"));
+                                us.setImg(jo.getString("img"));
+                                Ulist.add(us);
+                            }
+                            if (Ulist.size() > 0) {
+                                easeContactList.init2(Ulist);
+                            }
                         }
                     }else{
                         MyApplication.setToast(js.getString("returnMsg"));
