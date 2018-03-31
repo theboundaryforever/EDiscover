@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:gravity="center_vertical">
+
+
+    <TextView
+        android:id="@+id/platform_name_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="美博城"
+        android:textColor="#000"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/account_name_list_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_toEndOf="@+id/platform_name_item"
+        android:layout_toRightOf="@+id/platform_name_item"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:text="13247370956"
+        android:textColor="#000"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/in_btn_list_item"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="8dp"
+     
+        android:background="@mipmap/in_platform"
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:id="@+id/delete_btn_list_item"
+        android:layout_width="60dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:text="解绑"
+        android:textColor="#fff"
+        android:layout_toLeftOf="@id/in_btn_list_item"
+        android:background="@mipmap/code_bg"
+        android:textSize="13sp"
+        android:gravity="center"
+
+        />
+</LinearLayout>

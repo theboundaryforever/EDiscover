@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F8F8"
+    tools:context="com.kest.ediscover.account.SettingActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary">
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/back2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#fff"
+                android:text="返回"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="70dp"
+            android:gravity="center"
+            android:layout_toRightOf="@id/back">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="5dp"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:text="设置"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/clearcache"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:background="#fff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="清空缓存"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:layout_width="9dp"
+                android:layout_height="18dp"
+
+                android:gravity="center_vertical"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="17dp"
+                android:background="@mipmap/next"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_marginTop="1.5dp"
+        android:background="#fff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="重置登录密码"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:layout_width="9dp"
+                android:layout_height="18dp"
+
+                android:gravity="center_vertical"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="17dp"
+                android:background="@mipmap/next"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_marginTop="1.5dp"
+        android:background="#fff"
+        android:id="@+id/accountlist">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="设置共享平台账户"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:layout_width="9dp"
+                android:layout_height="18dp"
+
+                android:gravity="center_vertical"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="17dp"
+                android:background="@mipmap/next"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:text="退出登录"
+        android:background="#fff"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#F4345D"
+        android:id="@+id/logout_btn"/>
+</LinearLayout>

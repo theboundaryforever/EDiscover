@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kest.ediscover.SplashActivity">
+    <RelativeLayout
+        android:id="@+id/ad_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@mipmap/welcome">
+
+        <LinearLayout
+            android:id="@+id/splash_skip"
+            android:layout_width="110dp"
+            android:layout_height="25dp"
+            android:alpha="0.6"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/splash_skip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/splash_timer_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="@dimen/font_large"
+                android:alpha="1" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:alpha="1"
+                android:background="@mipmap/splash_skip_divider" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="@dimen/font_large"
+                android:alpha="1"
+                android:text="点击跳过" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

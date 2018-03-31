@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp">
+
+    <ImageView
+        android:id="@+id/img_shaomiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/toolbar_flickinga"/>
+
+    <ImageView
+        android:id="@+id/img_fukuang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_shaomiao"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/toolbar_pay"/>
+
+    <ImageView
+        android:id="@+id/img_shoukuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_fukuang"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/toolbar_collectmoney"/>
+
+    <ImageView
+        android:id="@+id/img_soushuo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_shoukuan"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/toolbar_search"/>
+
+    <ImageView
+        android:id="@+id/img_zhaoxiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/aplussign"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
