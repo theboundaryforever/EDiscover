@@ -42,6 +42,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.squareup.okhttp3:okhttp:3.3.0'
+    compile 'com.google.code.gson:gson:2.8.1'
     // 扫一扫
     compile 'com.google.zxing:core:3.3.0'
     compile 'cn.bingoogolapple:bga-qrcodecore:1.1.9@aar'
@@ -51,6 +52,5 @@ dependencies {
     //compile 'com.android.support:support-v4:+'
     compile 'com.getui:sdk:2.11.1.0'
     compile 'com.github.razerdp:BasePopup:1.9.1'
-    implementation files('libs/gson-2.2.4.jar')
     implementation project(':easeui')
 }
