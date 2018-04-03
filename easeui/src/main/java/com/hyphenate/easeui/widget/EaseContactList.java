@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.adapter.EaseContactAdapter;
 import com.hyphenate.easeui.adapter.EaseContactAdapter2;
+import com.hyphenate.easeui.adapter.EaseContactAdapter3;
 import com.hyphenate.easeui.domain.EaseUser;
 import com.hyphenate.easeui.domain.UserClass2;
 
@@ -27,7 +28,7 @@ public class EaseContactList extends RelativeLayout {
     protected ListView listView;
     protected EaseContactAdapter adapter;
     protected EaseContactAdapter2 adapter2;
-    protected EaseContactAdapter2 adapter3;
+    protected EaseContactAdapter3 adapter3;
     protected List<EaseUser> contactList;
     protected List<UserClass2> contactList2;
     protected List<UserClass2> contactList3;
@@ -86,7 +87,8 @@ public class EaseContactList extends RelativeLayout {
         initialLetterBg = ta.getDrawable(R.styleable.EaseContactList_ctsListInitialLetterBg);
         initialLetterColor = ta.getColor(R.styleable.EaseContactList_ctsListInitialLetterColor, 0);
         ta.recycle();
-        
+
+        adapter3 = new EaseContactAdapter3(context, 0, new ArrayList<UserClass2>(new ArrayList<UserClass2>()));
         
         LayoutInflater.from(context).inflate(R.layout.ease_widget_contact_list, this);
         listView = (ListView)findViewById(R.id.list);
@@ -123,17 +125,16 @@ public class EaseContactList extends RelativeLayout {
     }
 
     public void init3(List<UserClass2> contactList){
-        this.contactList2 = contactList;
-        adapter2 = new EaseContactAdapter2(context, 0, new ArrayList<UserClass2>(contactList));
-        adapter2.setPrimaryColor(primaryColor).setPrimarySize(primarySize).setInitialLetterBg(initialLetterBg)
-                .setInitialLetterColor(initialLetterColor);
-        listView.setAdapter(adapter2);
+        this.contactList3 = contactList;
 
+        adapter3.setPrimaryColor(primaryColor).setPrimarySize(primarySize).setInitialLetterBg(initialLetterBg)
+                .setInitialLetterColor(initialLetterColor);
+        listView.setAdapter(adapter3);
         if(showSiderBar){
             sidebar.setListView(listView);
         }
+        adapter3.setList3(contactList3);
     }
-    
     
     public void refresh(){
         Message msg = handler.obtainMessage(MSG_UPDATE_LIST);
@@ -147,6 +148,10 @@ public class EaseContactList extends RelativeLayout {
     public ListView getListView(){
         return listView;
     }
+
+    public EaseContactAdapter3 getAdapter3(){
+        return adapter3;
+    }
     
     public void setShowSiderBar(boolean showSiderBar){
         if(showSiderBar){
@@ -155,6 +160,5 @@ public class EaseContactList extends RelativeLayout {
             sidebar.setVisibility(View.GONE);
         }
     }
-
 
 }
