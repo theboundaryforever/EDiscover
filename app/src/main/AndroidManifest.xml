@@ -131,6 +131,7 @@
 
         <activity android:name=".FriendPage2.Activity.SelectContactActivity" android:launchMode="singleTop" />
 
+        <activity android:name=".ChatPage.Activity.GroupDetailsActivity" android:launchMode="singleTop" />
 
 
         <!-- 环信自己的activity     -->

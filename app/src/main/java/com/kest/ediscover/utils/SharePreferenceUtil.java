@@ -206,5 +206,6 @@ public class SharePreferenceUtil {
         return sp.getString("type", "");
     }
 
+
 }
 

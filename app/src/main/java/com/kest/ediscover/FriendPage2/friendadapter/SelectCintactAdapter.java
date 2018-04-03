@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.hyphenate.easeui.domain.UserClass2;
 import com.kest.ediscover.R;
 
 import java.util.List;
@@ -20,12 +21,22 @@ public class SelectCintactAdapter extends RecyclerView.Adapter{
 
     private Context context;
     private LayoutInflater mLayoutInflater;
-    private List<Integer> Ilist;
+    private List<UserClass2> Ilist;
 
-    public SelectCintactAdapter(Context context, LayoutInflater mLayoutInflater, List<Integer> ilist) {
+    public SelectCintactAdapter(Context context, LayoutInflater mLayoutInflater, List<UserClass2> ilist) {
         this.context = context;
         this.mLayoutInflater = mLayoutInflater;
         Ilist = ilist;
+    }
+
+    public void setList(List<UserClass2> list){
+        Ilist.removeAll(Ilist);
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i).getSign().equals("1")){
+                Ilist.add(list.get(i));
+            }
+        }
+        notifyDataSetChanged();
     }
 
     @Override
