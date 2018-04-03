@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--修改支付密码-->
+<include
+    layout="@layout/activity_settings_title_pay"
+    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y36">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您是否记得域名liuming"
+            android:textSize="@dimen/x9" />
+        <ImageView
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x2"
+            android:layout_marginTop="@dimen/x2"
+            android:src="@mipmap/e_dlscover" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x9"
+        android:textSize="@dimen/x8"
+        android:text="当前是使用的支付密码"
+        android:textColor="@color/default_text_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y14"
+        android:layout_marginTop="@dimen/x24"
+        >
+
+        <TextView
+            android:id="@+id/tv_forget"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/y14"
+            android:layout_marginRight="@dimen/x3"
+            android:layout_weight="1"
+            android:background="@mipmap/bt_bg1"
+            android:text="不记得" />
+
+        <TextView
+            android:id="@+id/tv_remember"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x3"
+            android:layout_marginRight="@dimen/y14"
+            android:layout_weight="1"
+            android:background="@mipmap/bt_bg2"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="记得" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

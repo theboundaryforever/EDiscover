@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg_color"
+    >
+    <include
+        layout="@layout/activity_settings_title_pwd"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x9"
+            android:text="再次输入密码"
+            android:layout_marginTop="@dimen/x41"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+           />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y17"
+        android:layout_marginLeft="@dimen/x24"
+        android:layout_marginRight="@dimen/x24"
+        android:background="@null"
+        android:layout_gravity="center_horizontal"
+        android:hint="输入支付密码"
+        android:layout_marginTop="@dimen/x15" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支付密码不能是重复，连续的数字"
+        android:textSize="@dimen/x7"
+        android:layout_marginTop="@dimen/y5"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        />
+    <LinearLayout
+        android:id="@+id/ll_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y16"
+        android:background="@mipmap/bt_bg2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x19"
+        android:layout_marginLeft="@dimen/x24"
+        android:layout_marginRight="@dimen/x24"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="下一步"
+            android:textSize="@dimen/x8"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+</LinearLayout>

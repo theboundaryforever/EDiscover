@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg_color"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y27"
+        android:background="@mipmap/daohang">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/iv_back"
+            android:paddingLeft="@dimen/x9"
+            android:layout_alignParentBottom="true"
+
+            android:paddingBottom="@dimen/x10"
+            android:paddingRight="@dimen/x10" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="举报网络诈骗"
+            android:textSize="@dimen/y7"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x9"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x26"
+                android:text="举报类型"
+                android:textSize="@dimen/x8"
+                android:paddingLeft="@dimen/x9"
+                android:paddingTop="@dimen/x9"
+                />
+            <RelativeLayout
+                android:id="@+id/rl_report_net"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y21"
+                android:background="@color/white"
+                android:paddingTop="@dimen/x10"
+
+                android:paddingLeft="@dimen/x9"        >
+                <TextView
+                    android:id="@+id/tv_fraud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="举报网络诈骗"
+                    android:textSize="@dimen/x9"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/set_go"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x9"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y21"
+                android:background="@color/white"
+                android:paddingTop="@dimen/x10"
+
+                android:paddingLeft="@dimen/x9"        >
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="举报信息贩卖"
+                    android:textSize="@dimen/x9"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/set_go"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x9"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_mlm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y21"
+                android:background="@color/white"
+                android:paddingTop="@dimen/x10"
+
+                android:paddingLeft="@dimen/x9"        >
+                <TextView
+                    android:id="@+id/tv_mlm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="举报网络传销"
+                    android:textSize="@dimen/x9"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/set_go"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x9"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_pornography"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y21"
+                android:background="@color/white"
+                android:paddingTop="@dimen/x10"
+
+                android:paddingLeft="@dimen/x9"        >
+                <TextView
+                    android:id="@+id/tv_pornography"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="举报黄赌毒"
+                    android:textSize="@dimen/x9"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/set_go"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x9"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_other"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y21"
+                android:background="@color/white"
+                android:paddingTop="@dimen/x10"
+
+                android:paddingLeft="@dimen/x9"        >
+                <TextView
+                    android:id="@+id/tv_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其它"
+                    android:textSize="@dimen/x9"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/set_go"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x9"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

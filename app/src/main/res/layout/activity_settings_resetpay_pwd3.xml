@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg_color"
+    >
+    <include
+        layout="@layout/activity_settings_title_pwd"
+        />
+    <LinearLayout
+        android:layout_marginTop="@dimen/y31"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x8"
+            android:text="输入"
+            android:textColor="@color/default_text_color"/>
+        <TextView
+            android:id="@+id/tv_card_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付密码，"
+            android:textSize="@dimen/x8"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="完成身份验证"
+            android:textColor="@color/default_text_color"
+            android:textSize="@dimen/x8"
+            />
+    </LinearLayout>
+    <EditText
+        android:layout_width="@dimen/y123"
+        android:layout_height="@dimen/y17"
+        android:background="@null"
+        android:layout_gravity="center_horizontal"
+        android:hint="输入支付密码"
+        android:layout_marginTop="@dimen/x15" />
+</LinearLayout>
