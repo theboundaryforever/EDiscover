@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -12,10 +14,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.hyphenate.easeui.domain.UserClass2;
-import com.hyphenate.easeui.ui.EaseContactListFragment;
 import com.hyphenate.easeui.widget.EaseContactList;
 import com.kest.ediscover.ChatPage.Activity.ChatListActivity;
-import com.kest.ediscover.ChatPage.Activity.GroupChatActivity;
+import com.kest.ediscover.FriendPage2.friendfragment.FriendListFragment;
 import com.kest.ediscover.MyApplication;
 import com.kest.ediscover.MyHttputils.Conntent;
 import com.kest.ediscover.MyHttputils.HttpUtils;
@@ -32,6 +33,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import butterknife.OnTouch;
+
 /**
  * Created by Administrator on 2018\3\27 0027.
  * 朋友列表界面
@@ -39,16 +42,13 @@ import java.util.Map;
 
 public class FriendListActivity extends FragmentActivity implements View.OnClickListener,HttpUtils.ICallback{
 
-    private EaseContactListFragment easeContactListFragment = new EaseContactListFragment();
+    private FriendListFragment friendListFragment = new FriendListFragment();
+    private FragmentTransaction fragmentTransaction;
     private SharePreferenceUtil sp;
-    private EaseContactList easeContactList;
     private List<UserClass2> Ulist = new ArrayList<>();
 
 
-    protected ListView listView;
-
     private TextView txt_title;
-    private RelativeLayout layout_newfriends;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,45 +61,29 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
     private void init(){
 
         sp = SharePreferenceUtil.getInstance(this);
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
         this.findViewById(R.id.purse_btn).setOnClickListener(this);
         this.findViewById(R.id.Chatlist_btn).setOnClickListener(this);
         this.findViewById(R.id.city_btn2).setOnClickListener(this);
         this.findViewById(R.id.allbuy_btn).setOnClickListener(this);
-        this.findViewById(R.id.layout_newfriends).setOnClickListener(this);
         this.findViewById(R.id.view_search).setOnClickListener(this);
-        this.findViewById(R.id.layout_megroup).setOnClickListener(this);
-        this.findViewById(R.id.layout_creategroup).setOnClickListener(this);
 
         txt_title = (TextView)this.findViewById(R.id.txt_title1_title);
 
-        easeContactList = (EaseContactList)this.findViewById(R.id.friendlist_contaclist);
-
-        listView = easeContactList.getListView();
 
         assigment();
-        getSelectFriendlist();
     }
 
-    /**查寻通讯录*/
-    private void getSelectFriendlist(){
-        Map<String,Object> map = new HashMap<>();
-        map.put("token",sp.getToken());
-        map.put("action","user_contacts");
-        HttpUtils.getInstance().post(Conntent.HTTPURL+Conntent.EASEMOBFRIENDLIST,map,this);
-    }
+
 
     /**赋值*/
     private void assigment(){
 
         txt_title.setText("通讯录");
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("通讯录-item",Ulist.get(i).getUsername());
-            }
-        });
+        fragmentTransaction.add(R.id.friendlist_framelayout,friendListFragment).commit();
+
 
     }
 
@@ -124,21 +108,31 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
                 intent.putExtra("address","http://pay.allbuy.me/index.php?m=Home&c=Index&a=index&token=" + sp.getToken());
                 startActivity(intent);
                 break;
-            case R.id.layout_newfriends:  //新朋友
-                startActivity(new Intent(FriendListActivity.this,NewFriendsActivity.class));
-                break;
             case R.id.view_search:  //搜索好友
                 startActivity(new Intent(FriendListActivity.this,SearchActivity.class));
                 break;
-            case R.id.layout_creategroup:  //创建群
-                startActivity(new Intent(FriendListActivity.this, SelectContactActivity.class));
-                break;
-            case R.id.layout_megroup:  //我加入的群
-                startActivity(new Intent(FriendListActivity.this, GroupChatActivity.class));
-                break;
+
         }
     }
 
+    //记录用户首次点击返回键的时间
+    private long firstTime=0;
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        switch (keyCode){
+            case KeyEvent.KEYCODE_BACK:
+                long secondTime=System.currentTimeMillis();
+                if(secondTime-firstTime>2000){
+                    MyApplication.setToast("再按一次退出程序");
+                    firstTime=secondTime;
+                    return true;
+                }else{
+                    System.exit(0);
+                }
+                break;
+        }
+        return super.onKeyUp(keyCode, event);
+    }
 
     @Override
     public void onSuccess(String url, String result) {
@@ -162,7 +156,7 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
                                 Ulist.add(us);
                             }
                             if (Ulist.size() > 0) {
-                                easeContactList.init2(Ulist);
+
                             }
                         }
                     }else{
@@ -174,4 +168,5 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
             }
         }
     }
+
 }
