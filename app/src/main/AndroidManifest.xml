@@ -130,9 +130,46 @@
         <activity android:name=".ChatPage.Activity.GroupChatActivity" android:launchMode="singleTop" />
 
         <activity android:name=".FriendPage2.Activity.SelectContactActivity" android:launchMode="singleTop" />
-
-        <activity android:name=".ChatPage.Activity.GroupDetailsActivity" android:launchMode="singleTop" />
-
+        <!--我的-->
+        <activity android:name=".my.settings.MyActivity" android:launchMode="singleTop"/>
+        <!--设置界面-->
+        <activity android:name=".my.settings.SettingsActivity" android:launchMode="singleTop"/>
+        <!--联系客服-->
+        <activity android:name=".my.settings.ContractCustomerActivity" android:launchMode="singleTop"/>
+        <!--举报中心-->
+        <activity android:name=".my.settings.ReportCenterActivity"
+            android:launchMode="singleTop"
+            />
+        <!--举报首页-->
+        <activity android:name=".my.settings.ReportActivity" android:launchMode="singleTop"/>
+        <!--举报网络诈骗-->
+        <activity android:name=".my.settings.ReportNetActivity" android:launchMode="singleTop"/>
+        <!--黄赌毒-->
+        <activity android:name=".my.settings.ReportPornographyActivity" android:launchMode="singleTop"/>
+        <!--举报信息贩卖-->
+        <activity android:name=".my.settings.ReportInfoActivity" android:launchMode="singleTop"/>
+        <!--网络传销-->
+        <activity android:name=".my.settings.ReportMLMActivity" android:launchMode="singleTop"/>
+        <!--举报其它受害-->
+        <activity android:name=".my.settings.ReportOtherActivity" android:launchMode="singleTop"/>
+        <!--举报人真实姓名-->
+        <activity android:name=".my.settings.ReportRealNameActivity" android:launchMode="singleTop"/>
+        <!--举报人电话-->
+        <activity android:name=".my.settings.ReportRealTelActivity" android:launchMode="singleTop"/>
+        <!--举报描述-->
+        <activity android:name=".my.settings.ReportDescribeActivity" android:launchMode="singleTop"/>
+<!--设置密码主界面-->
+        <activity android:name=".my.settings.SettingsPWDActivity" android:launchMode="singleTop"/>
+        <!--重置登录密码-->
+        <activity android:name=".my.settings.ResetLoginPwdActivity" android:launchMode="singleTop"/>
+        <!--设置密码的下一步-->
+        <activity android:name=".my.settings.ResetPWD2Activity" android:launchMode="singleTop"/>
+        <!--修改支付密码-->
+        <activity android:name=".my.settings.ResetPWDActivity" android:launchMode="singleTop"/>
+        <!--换绑手机-->
+        <activity android:name=".my.settings.ChangeTelActivity" android:launchMode="singleTop"/>
+        <!--换绑手机成功-->
+        <activity android:name=".my.settings.ChangeTelSuccessActivity" android:launchMode="singleTop"/>
 
         <!-- 环信自己的activity     -->
         <activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity" />

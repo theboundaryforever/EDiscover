@@ -21,6 +21,7 @@ import com.kest.ediscover.ScanActivity;
 import com.kest.ediscover.WebAppActivity;
 import com.kest.ediscover.finance.FinanceFBiz;
 import com.kest.ediscover.FriendPage2.Activity.FriendListActivity;
+import com.kest.ediscover.my.settings.MyActivity;
 import com.kest.ediscover.utils.DebugLog;
 import com.kest.ediscover.utils.SharePreferenceUtil;
 
@@ -160,8 +161,12 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
                 startActivity(new Intent(HomeActivity.this, ChatListActivity.class));
                 break;
             case R.id.city_btn2:  //我的
-                Intent intent6 = new Intent(HomeActivity.this, WebAppActivity.class);
+            /*    Intent intent6 = new Intent(HomeActivity.this, WebAppActivity.class);
                 intent6.putExtra("address","http://pay.allbuy.me/index.php?m=Home&c=Index&a=index&token=" + sp.getToken());
+              */
+                Intent intent6 = new Intent(HomeActivity.this, MyActivity.class);
+                intent6.putExtra("address","http://pay.allbuy.me/index.php?m=Home&c=Index&a=index&token=" + sp.getToken());
+
                 startActivity(intent6);
                 break;
             case R.id.img_shaomiao:  //便捷栏扫描
