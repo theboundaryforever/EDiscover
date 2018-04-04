@@ -1,5 +1,6 @@
 package com.kest.ediscover.my.settings;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,7 +16,7 @@ import com.kest.ediscover.R;
  * Created by Administrator on 2018/4/3 0003.
  */
 /*设置*/
-public class SettingsActivity  extends AppCompatActivity {
+public class SettingsActivity  extends Activity {
     ImageView iv_back;
     //设置手机号
     RelativeLayout rl_tel;
@@ -44,6 +45,7 @@ public class SettingsActivity  extends AppCompatActivity {
         rl_report=findViewById(R.id.rl_report);
         rl_contract=findViewById(R.id.rl_contract);
         iv_back=findViewById(R.id.iv_back);
+        ll_exit=findViewById(R.id.ll_exit);
 
     }
     private void setListener(){

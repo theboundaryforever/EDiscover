@@ -118,7 +118,7 @@
             />
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/rl_birth"
+        android:id="@+id/rl_vertify"
         android:layout_width="match_parent"
         android:layout_height="@dimen/y21"
         android:background="@color/white"
@@ -204,7 +204,7 @@
             />
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/rl_vertify"
+        android:id="@+id/rl_birth"
         android:layout_width="match_parent"
         android:layout_height="@dimen/y21"
         android:background="@color/white"
@@ -216,7 +216,7 @@
             android:textSize="@dimen/x9"
             android:layout_marginLeft="@dimen/x9"
             android:layout_centerVertical="true"
-            android:text="身份认证"
+            android:text="生日"
             />
         <ImageView
             android:id="@+id/iv_vertify"
@@ -260,7 +260,7 @@
             android:textSize="@dimen/x9"
             android:layout_marginLeft="@dimen/x9"
             android:layout_centerVertical="true"
-            android:text="身份认证"
+            android:text="性别"
             />
         <ImageView
             android:id="@+id/iv_sex"

@@ -21,7 +21,7 @@ import com.kest.ediscover.ScanActivity;
 import com.kest.ediscover.WebAppActivity;
 import com.kest.ediscover.finance.FinanceFBiz;
 import com.kest.ediscover.FriendPage2.Activity.FriendListActivity;
-import com.kest.ediscover.my.settings.MyActivity;
+import com.kest.ediscover.my.MyActivity;
 import com.kest.ediscover.utils.DebugLog;
 import com.kest.ediscover.utils.SharePreferenceUtil;
 

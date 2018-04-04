@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/default_bg_color"
-    >
+    android:background="@color/default_bg_color">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y68"
+        android:layout_height="@dimen/x131"
         android:background="@mipmap/im_my_bg">
 
         <ImageView
@@ -18,12 +17,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:paddingBottom="@dimen/x9"
-            android:paddingLeft="@dimen/x9"
-            android:paddingRight="@dimen/x9"
-            android:paddingTop="@dimen/x19"
-            android:src="@mipmap/set_up"
-            />
+            android:paddingBottom="@dimen/y20"
+            android:paddingLeft="@dimen/y20"
+            android:paddingRight="@dimen/x13"
+            android:paddingTop="@dimen/y20"
+            android:src="@mipmap/set_up" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,34 +30,32 @@
             android:layout_centerHorizontal="true"
             android:text="我的"
             android:textColor="@color/white"
-            android:textSize="@dimen/y7" />
+            android:textSize="@dimen/x13" />
         <ImageView
             android:id="@+id/iv_go"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/white_arrow"
-            android:layout_below="@+id/tv_settings"
+            android:layout_marginTop="@dimen/x74"
+            android:paddingRight="@dimen/x13"
             android:layout_alignParentRight="true"
-           android:layout_alignParentBottom="true"
-            android:paddingRight="@dimen/x9"
-
-            android:paddingBottom="@dimen/x9" />
+             />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/qr_code"
-            android:layout_alignParentBottom="true"
             android:layout_marginBottom="@dimen/y16"
+            android:layout_marginTop="@dimen/x72"
             android:layout_toLeftOf="@+id/iv_go"
             android:layout_marginRight="@dimen/x9" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_img"
-            android:layout_width="@dimen/y22"
-            android:layout_height="@dimen/y22"
+            android:layout_width="@dimen/x42"
+            android:layout_height="@dimen/x42"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/y12"
-            android:layout_marginLeft="@dimen/x9"
+            android:layout_marginBottom="@dimen/x23"
+            android:layout_marginLeft="@dimen/x13"
             android:src="@mipmap/ic_launcher"
             />
 
@@ -67,12 +63,12 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/x10"
-            android:layout_marginTop="@dimen/x53"
+            android:layout_marginLeft="@dimen/x14"
+            android:layout_marginTop="@dimen/x72"
             android:layout_toRightOf="@+id/iv_img"
             android:text="刘晓明"
             android:textColor="@color/white"
-            android:textSize="@dimen/x9" />
+            android:textSize="@dimen/x13" />
 
 
         <RelativeLayout
@@ -89,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:text="域名：liumin "
                 android:textColor="@color/white"
-                android:textSize="@dimen/x8" />
+                android:textSize="@dimen/x14" />
 
             <ImageView
                 android:id="@+id/iv_code"
@@ -115,7 +111,7 @@
             <RelativeLayout
                 android:id="@+id/rl_authen"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x21"
+                android:layout_height="@dimen/x28"
                 android:background="@color/white"
                 >
 
@@ -126,9 +122,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:paddingLeft="@dimen/x6"
+                    android:layout_marginLeft="@dimen/x13"
                     android:src="@mipmap/real_name_authentication" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,8 +130,8 @@
                     android:text="实名认证后，更多体验"
                     android:layout_toRightOf="@+id/iv_vertify"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/x9"
-                    android:layout_marginLeft="@dimen/x9"
+                    android:textSize="@dimen/x13"
+                    android:layout_marginLeft="@dimen/x13"
                     android:textColor="@color/vertify_color"
                     />
                 <ImageView
@@ -145,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="@dimen/x9"
+                    android:paddingRight="@dimen/x13"
                     android:src="@mipmap/cross"
                     android:paddingTop="@dimen/x7"
                     android:paddingBottom="@dimen/x7"
@@ -155,26 +149,67 @@
             <RelativeLayout
                 android:id="@+id/rl_count"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y23"
+                android:layout_height="@dimen/y31"
                 android:background="@color/white">
                 <ImageView
                     android:id="@+id/iv_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/im_count"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/y7"
-                    android:layout_marginBottom="@dimen/x9" />
+                    android:layout_marginLeft="@dimen/x13"
+                    android:layout_centerVertical="true"
+                     />
                 <TextView
+                    android:id="@+id/tv_account"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="账户明细"
                     android:layout_toRightOf="@+id/iv_count"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/x9"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/x11"
-                    android:layout_marginBottom="@dimen/x11"
+                    android:textSize="@dimen/x13"
+                    android:layout_marginLeft="@dimen/x13"
+                    android:layout_centerVertical="true"
+
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x13"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/set_go"
+                   />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignLeft="@+id/tv_account"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_total_assets"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y31"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/iv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/im_total_assets"
+                   android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x13"
+                    />
+                <TextView
+                    android:id="@+id/tv_total_assets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="总资产"
+                    android:layout_toRightOf="@+id/iv_total"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/x13"
+                    android:layout_marginLeft="@dimen/x13"
+                    android:layout_centerVertical="true"
                     />
                 <ImageView
                     android:layout_width="wrap_content"
@@ -183,70 +218,42 @@
                     android:layout_centerVertical="true"
                     android:src="@mipmap/set_go"
                     android:layout_marginRight="@dimen/x9" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/rl_total_assets"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y23"
-                android:background="@color/white">
-                <ImageView
-                    android:id="@+id/iv_total"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/im_total_assets"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginBottom="@dimen/x9"
-                    android:layout_marginTop="@dimen/y7" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="总资产"
-                    android:layout_toRightOf="@+id/iv_total"
-                    android:layout_marginBottom="@dimen/x11"
-                    android:gravity="center_vertical"
-                    android:textSize="@dimen/x9"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/x11" />
-                <ImageView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/set_go"
-                    android:layout_marginRight="@dimen/x9" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignLeft="@+id/tv_total_assets"
+                    />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rl_line"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y23"
+                android:layout_height="@dimen/y31"
                 android:background="@color/white">
                 <ImageView
                     android:id="@+id/iv_line"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/im_line"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/y7" />
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x13" />
                 <TextView
+                    android:id="@+id/tv_line"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="线下订单记录"
-                    android:layout_marginBottom="@dimen/x11"
                     android:layout_toRightOf="@+id/iv_line"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/x9"
-
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/x11" />
+                    android:textSize="@dimen/x13"
+                    android:layout_marginLeft="@dimen/x13" />
                 <ImageView
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@mipmap/set_go"
-                    android:layout_marginRight="@dimen/x9" />
+                    android:layout_marginRight="@dimen/x13" />
             </RelativeLayout>
             <View
                 android:layout_width="match_parent"
@@ -254,26 +261,27 @@
             <RelativeLayout
                 android:id="@+id/rl_ed"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y23"
+                android:layout_height="@dimen/y31"
                 android:background="@color/white">
                 <ImageView
                     android:id="@+id/iv_ed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/im_ed"
-                    android:layout_marginBottom="@dimen/x9"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/y7" />
+                    android:layout_marginLeft="@dimen/x13"
+                    android:layout_centerVertical="true" />
                 <TextView
+                    android:id="@+id/tv_ed"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="ED币账户"
                     android:layout_toRightOf="@+id/iv_ed"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/x9"
-                    android:layout_marginBottom="@dimen/x11"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/x11" />
+                    android:textSize="@dimen/x13"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginLeft="@dimen/x13"
+                  />
                 <ImageView
 
                     android:layout_width="wrap_content"
@@ -282,29 +290,37 @@
                     android:layout_centerVertical="true"
                     android:src="@mipmap/set_go"
                     android:layout_marginRight="@dimen/x9" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignLeft="@+id/tv_ed"
+                    />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rl_wallet"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y23"
+                android:layout_height="@dimen/y31"
                 android:background="@color/white">
                 <ImageView
                     android:id="@+id/iv_wallet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/im_wallet"
-                    android:layout_marginBottom="@dimen/x9"
-                    android:layout_marginLeft="@dimen/x9"
+                    android:layout_marginBottom="@dimen/x13"
+                    android:layout_marginLeft="@dimen/x13"
                     android:layout_marginTop="@dimen/y7" />
                 <TextView
+                    android:id="@+id/tv_wallet"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="余额"
                     android:layout_toRightOf="@+id/iv_wallet"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/x9"
+                    android:textSize="@dimen/x13"
                     android:layout_marginBottom="@dimen/x11"
-                    android:layout_marginLeft="@dimen/x9"
+                    android:layout_marginLeft="@dimen/x13"
                     android:layout_marginTop="@dimen/x11" />
                 <ImageView
 
@@ -313,7 +329,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@mipmap/set_go"
-                    android:layout_marginRight="@dimen/x9" />
+                    android:layout_marginRight="@dimen/x13" />
             </RelativeLayout>
             <View
                 android:layout_width="match_parent"
@@ -321,26 +337,24 @@
             <RelativeLayout
                 android:id="@+id/rl_card"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y23"
+                android:layout_height="@dimen/y31"
                 android:background="@color/white">
                 <ImageView
                     android:id="@+id/iv_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/im_ed"
-                    android:layout_marginBottom="@dimen/x9"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/y7" />
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x13" />
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="我的银行卡"
                     android:layout_toRightOf="@+id/iv_card"
-                    android:gravity="center_vertical"
-                    android:textSize="@dimen/x9"
-                    android:layout_marginBottom="@dimen/x11"
-                    android:layout_marginLeft="@dimen/x9"
-                    android:layout_marginTop="@dimen/x11" />
+                    android:layout_marginLeft="@dimen/x13"
+                    android:textSize="@dimen/x13"
+                   android:layout_centerVertical="true"
+                    />
                 <ImageView
 
                     android:layout_width="wrap_content"
@@ -348,7 +362,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@mipmap/set_go"
-                    android:layout_marginRight="@dimen/x9" />
+                    android:layout_marginRight="@dimen/x13" />
             </RelativeLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

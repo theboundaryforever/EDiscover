@@ -6,7 +6,7 @@
     >
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="@dimen/y27"
+    android:layout_height="@dimen/bt_margin_49"
     android:background="@mipmap/daohang">
 
     <ImageView
@@ -14,35 +14,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/iv_back"
-        android:paddingLeft="@dimen/x9"
-        android:layout_alignParentBottom="true"
-
-        android:paddingBottom="@dimen/x10"
-        android:paddingRight="@dimen/x10" />
+        android:layout_centerVertical="true"
+        android:padding="@dimen/bt_margin_15" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="举报中心"
-        android:textSize="@dimen/y7"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/x9"
-        android:textColor="@color/white"
-        />
+        android:textSize="@dimen/font17"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white" />
 </RelativeLayout>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/yes"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x34"
-        />
+        android:layout_marginTop="@dimen/bt_margin_57" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="提交成功"
-        android:textSize="@dimen/x10"
+        android:textSize="@dimen/font16"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x15"
-        />
+        android:layout_marginTop="@dimen/bt_margin_25" />
 </LinearLayout>

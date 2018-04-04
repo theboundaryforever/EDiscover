@@ -6,8 +6,7 @@
     >
     <RelativeLayout
         android:layout_width="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_height="@dimen/y27"
+        android:layout_height="@dimen/bt_margin_49"
         android:background="@mipmap/daohang">
 
         <ImageView
@@ -15,22 +14,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/iv_back"
-            android:paddingLeft="@dimen/x9"
-            android:layout_alignParentBottom="true"
-
-            android:paddingBottom="@dimen/x10"
-            android:paddingRight="@dimen/x10" />
+            android:layout_centerVertical="true"
+            android:padding="@dimen/bt_margin_15" />
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="本人姓名"
-            android:textSize="@dimen/y7"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/x9"
+            android:textSize="@dimen/font17"
             android:textColor="@color/white"
-            />
+            android:layout_centerInParent="true" />
         <TextView
             android:id="@+id/tv_ok"
             android:layout_width="wrap_content"
@@ -38,15 +31,12 @@
             android:layout_alignParentRight="true"
             android:text="完成"
             android:textColor="@color/white"
-            android:textSize="@dimen/y7"
-            android:padding="@dimen/x9"
-            android:layout_alignParentBottom="true"
-
-            />
+            android:textSize="@dimen/font17"
+            android:padding="@dimen/bt_margin_15" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/bt_margin_64"
         android:background="@color/white"
         >
         <EditText
@@ -54,23 +44,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="刘晓明"
-            android:textSize="@dimen/x9"
-            android:paddingLeft="@dimen/x9"
-            android:paddingTop="@dimen/x14"
-            android:paddingBottom="@dimen/x14"
-            android:background="@null"
-            />
+            android:textSize="@dimen/font16"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:padding="@dimen/bt_margin_15"
+            android:background="@null" />
         <ImageView
             android:id="@+id/iv_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/cancel"
             android:layout_alignParentRight="true"
-            android:paddingTop="@dimen/x14"
-            android:paddingBottom="@dimen/x14"
-            android:paddingRight="@dimen/x9"
-            android:paddingLeft="@dimen/x9"
-            />
+            android:layout_centerVertical="true"
+            android:padding="@dimen/bt_margin_15" />
     </RelativeLayout>
 
 </LinearLayout>

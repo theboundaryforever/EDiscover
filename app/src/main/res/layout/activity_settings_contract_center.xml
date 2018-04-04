@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y27"
+        android:layout_height="@dimen/bt_margin_49"
         android:orientation="horizontal"
         android:background="@color/white">
 
@@ -13,44 +13,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/set_back"
-            android:paddingLeft="@dimen/x9"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="@dimen/x10"
-            android:paddingRight="@dimen/x10" />
+             android:layout_centerVertical="true"
+            android:padding="@dimen/bt_margin_15" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="客服中心"
-            android:textSize="@dimen/y7"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/x9"
-            />
+            android:textSize="@dimen/font17"
+            android:layout_centerInParent="true" />
     </RelativeLayout>
-    <View
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x6"/>
+        android:layout_height="@dimen/bt_margini_20"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        >
+        android:background="@color/white">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/customer_service"
-            android:layout_marginTop="@dimen/y19"
-            android:layout_centerHorizontal="true"
-            />
+            android:layout_marginTop="@dimen/bt_margin_45"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="请联系全买得客服"
         android:textColor="@color/default_text_color"
-        android:textSize="@dimen/x9"
+        android:textSize="@dimen/font15"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x25"
+        android:layout_marginTop="@dimen/bt_margin_42"
         />
     <TextView
         android:id="@+id/tv_tel_go"
@@ -58,12 +51,9 @@
         android:layout_height="wrap_content"
         android:drawableLeft="@mipmap/telephone"
         android:layout_gravity="center_horizontal"
-        android:paddingTop="@dimen/y5"
-        android:paddingLeft="@dimen/x9"
-        android:paddingBottom="@dimen/x9"
-        android:paddingRight="@dimen/x9"
-        android:textSize="@dimen/x12"
+        android:padding="@dimen/bt_margin_15"
+        android:textSize="@dimen/font20"
         android:text="400-133-7753"
-        android:drawablePadding="@dimen/x3"
+        android:drawablePadding="@dimen/bt_margin_5"
         />
 </LinearLayout>

@@ -29,6 +29,10 @@
     <color name="default_bg_color">#e1e1e1</color>
     <color name="default_bg_color2">#e9c686</color>
     <color name="vertify_color">#e9c686</color>
-    <color name="default_text_color">#808080</color>
+    <color name="text_color">#333333</color>
+    <color name="default_text_color">#a7a7a7</color>
+    <color name="qr_bg_color">#333333</color>
+    <color name="bank_title_bg">#2f354a</color>
+    <color name="bank_title_color">#eabf75</color>
 
 </resources>
