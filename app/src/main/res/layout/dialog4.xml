@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+
+
+    <LinearLayout
+        android:id="@+id/layout_dialog4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white_ff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_bottom_txt1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/color_black6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_white_ea" />
+
+        <TextView
+            android:id="@+id/tv_bottom_txt2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/color_redff"
+            android:text="确定"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_white_ea" />
+
+        <TextView
+            android:id="@+id/tv_bottom_txt3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/color_black6"
+            android:text="取消"/>
+
+    </LinearLayout>
+
+</LinearLayout>

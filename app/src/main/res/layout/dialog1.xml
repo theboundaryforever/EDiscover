@@ -20,7 +20,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/color_black6"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:text="请求添加好友"/>
 
         <LinearLayout
@@ -76,7 +76,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:textColor="@color/color_black6"
                 android:text="取消"/>
 
@@ -93,7 +93,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:textColor="@color/color_blue"
                 android:text="发送"/>
 

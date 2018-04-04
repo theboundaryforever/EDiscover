@@ -207,5 +207,12 @@ public class SharePreferenceUtil {
     }
 
 
+    public String getHX_username(){return sp.getString("HX_username","");}
+
+    public void setHx_username(String HX_username){
+        editor.putString("HX_username", HX_username);
+        editor.commit();
+    }
+
 }
 
