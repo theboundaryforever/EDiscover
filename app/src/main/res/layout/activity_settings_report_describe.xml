@@ -65,7 +65,7 @@
             android:id="@+id/iv_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/Cancel"
+            android:src="@mipmap/cancel"
             android:layout_alignParentRight="true"
             android:paddingTop="@dimen/x14"
             android:paddingBottom="@dimen/x14"
