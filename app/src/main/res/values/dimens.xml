@@ -23,29 +23,52 @@
     <dimen name="button_height_short">32dp</dimen>
 
     <dimen name="bt_margin_1">1dp</dimen>
+    <dimen name="bt_margin_3">3dp</dimen>
     <dimen name="bt_margin_5">5dp</dimen>
     <dimen name="bt_margin_8">8dp</dimen>
     <dimen name="bt_margin_10">10dp</dimen>
+    <dimen name="bt_margin_12">12dp</dimen>
     <dimen name="bt_margin_13">13dp</dimen>
     <dimen name="bt_margin_15">15dp</dimen>
+    <dimen name="bt_margin_18">18dp</dimen>
     <dimen name="bt_margini_20">20dp</dimen>
     <dimen name="bt_margini_22">22dp</dimen>
+    <dimen name="bt_margin_24">24dp</dimen>
     <dimen name="bt_margin_25">25dp</dimen>
+    <dimen name="bt_margin_27">27dp</dimen>
     <dimen name="bt_margin_29">29dp</dimen>
 
     <dimen name="bt_margin_30">30dp</dimen>
+    <dimen name="bt_margin_32">32dp</dimen>
     <dimen name="bt_margin_33">33dp</dimen>
+    <dimen name="bt_margin_34">34dp</dimen>
+    <dimen name="bt_margin_35">35dp</dimen>
     <dimen name="bt_margin_40">40dp</dimen>
     <dimen name="bt_margin_42">42dp</dimen>
     <dimen name="bt_margin_43">43dp</dimen>
     <dimen name="bt_margin_45">45dp</dimen>
+    <dimen name="bt_margin_48">48dp</dimen>
     <dimen name="bt_margin_49">49dp</dimen>
     <dimen name="bt_margin_50">50dp</dimen>
+    <dimen name="bt_margin_52">52dp</dimen>
     <dimen name="bt_margin_57">57dp</dimen>
     <dimen name="bt_margin_60">60dp</dimen>
     <dimen name="bt_margin_65">65dp</dimen>
     <dimen name="bt_margin_64">64dp</dimen>
+    <dimen name="bt_margin_70">70dp</dimen>
+    <dimen name="bt_margin_74">74dp</dimen>
+    <dimen name="bt_margin_75">75dp</dimen>
+    <dimen name="bt_margin_86">86dp</dimen>
+    <dimen name="bt_margin_100">100dp</dimen>
+    <dimen name="bt_margin_108">108dp</dimen>
+    <dimen name="bt_margin_120">120dp</dimen>
     <dimen name="bt_margin_125">125dp</dimen>
+    <dimen name="bt_margin_130">130dp</dimen>
+    <dimen name="bt_margin_150">150dp</dimen>
+    <dimen name="bt_margin_190">190dp</dimen>
+    <dimen name="bt_margin_200">200dp</dimen>
+    <dimen name="bt_margin_280">280dp</dimen>
+    <dimen name="bt_margin_350">350dp</dimen>
 
     <dimen name="font1">1sp</dimen>
     <dimen name="font2">2sp</dimen>
@@ -68,7 +91,7 @@
     <dimen name="font19">19sp</dimen>
     <dimen name="font20">20sp</dimen>
 
-
+    <dimen name="font30">30sp</dimen>
 
 
 </resources>

@@ -87,12 +87,9 @@
         <!--启动页-->
         <activity android:name=".SplashActivity"  android:launchMode="singleTop"
                   android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
+
         <activity android:name=".account.AddAccountActivity"  android:launchMode="singleTop"
                   android:screenOrientation="portrait">
         </activity>
@@ -167,6 +164,20 @@
         <activity android:name=".my.settings.ResetPWD2Activity" android:launchMode="singleTop"/>
         <!--修改支付密码-->
         <activity android:name=".my.settings.ResetPWDActivity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetPWDSuccessActivity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetRememberPWD1Activity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetRememberPWD2Activity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetRememberPWD3Activity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetForgetPWDActivity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetForgetPWD2Activity" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".my.settings.SetForgetPWD3Activity" android:launchMode="singleTop"/>
         <!--换绑手机-->
         <activity android:name=".my.settings.ChangeTelActivity" android:launchMode="singleTop"/>
         <!--换绑手机成功-->

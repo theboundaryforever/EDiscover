@@ -4,19 +4,21 @@
     android:layout_height="match_parent"
     android:background="@color/qr_bg_color">
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x210"
-        android:layout_marginLeft="@dimen/x42"
-        android:layout_marginRight="@dimen/x42"
-        android:layout_marginTop="@dimen/x59"
+        android:layout_width="@dimen/bt_margin_280"
+        android:layout_height="@dimen/bt_margin_350"
+        android:layout_marginLeft="@dimen/bt_margin_50"
+        android:layout_marginRight="@dimen/bt_margin_50"
+        android:layout_marginTop="@dimen/bt_margin_100"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
         android:background="@color/white"
         >
         <ImageView
             android:id="@+id/iv_img"
-            android:layout_width="@dimen/x53"
-            android:layout_height="@dimen/x53"
-            android:layout_marginTop="@dimen/x18"
-            android:layout_marginLeft="@dimen/y15"
+            android:layout_width="@dimen/bt_margin_60"
+            android:layout_height="@dimen/bt_margin_60"
+            android:layout_marginTop="@dimen/bt_margini_20"
+            android:layout_marginLeft="@dimen/bt_margin_24"
             android:src="@mipmap/pp"
             android:scaleType="fitXY"
             />
@@ -26,9 +28,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="用户名"
-            android:layout_marginLeft="@dimen/x18"
-            android:layout_marginTop="@dimen/y22"
-            android:textSize="@dimen/x13"
+            android:layout_marginLeft="@dimen/bt_margini_20"
+            android:layout_marginTop="@dimen/bt_margin_35"
+            android:textSize="@dimen/font15"
             />
         <ImageView
             android:id="@+id/iv_sex"
@@ -38,7 +40,7 @@
             android:layout_alignTop="@+id/tv_name"
             android:layout_alignBottom="@+id/tv_name"
             android:src="@mipmap/gentlman"
-            android:layout_marginLeft="@dimen/x3"
+            android:layout_marginLeft="@dimen/bt_margin_5"
             android:scaleType="fitCenter"
 
             />
@@ -50,29 +52,27 @@
            android:layout_alignLeft="@+id/tv_name"
             android:textColor="@color/default_text_color"
             android:layout_below="@+id/tv_name"
-            android:layout_marginTop="@dimen/x7"
-            android:textSize="@dimen/x12"
+            android:layout_marginTop="@dimen/bt_margin_8"
+            android:textSize="@dimen/font14"
             />
         <ImageView
             android:id="@+id/iv_qr"
             android:layout_below="@+id/iv_img"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/x29"
-            android:layout_marginRight="@dimen/x29"
-            android:layout_marginTop="@dimen/x22"
-            android:src="@mipmap/ewm"
-            android:layout_marginBottom="@dimen/x34"
-            />
+            android:layout_marginLeft="@dimen/bt_margin_33"
+            android:layout_marginRight="@dimen/bt_margin_33"
+            android:layout_marginTop="@dimen/bt_margin_25"
+            android:layout_above="@+id/tv_desc"
+            android:src="@mipmap/ewm" />
         <TextView
             android:id="@+id/tv_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="扫一扫上方二维码图案，加我E信"
             android:textColor="@color/default_text_color"
-            android:textSize="@dimen/x11"
-            android:layout_marginBottom="@dimen/x12"
-            android:layout_marginTop="@dimen/x12"
+            android:textSize="@dimen/font12"
+          android:layout_margin="@dimen/bt_margin_13"
              android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             />

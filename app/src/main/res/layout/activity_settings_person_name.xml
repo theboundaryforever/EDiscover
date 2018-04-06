@@ -4,48 +4,24 @@
     android:layout_height="match_parent"
     android:background="@color/default_bg_color"
     >
+   <include
+       layout="@layout/activity_settings_title_person"
+       />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_15" />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y27"
-        android:orientation="horizontal"
+        android:layout_height="@dimen/bt_margin_50"
         android:background="@color/white">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/set_back"
-            android:paddingLeft="@dimen/x9"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="@dimen/x10"
-            android:paddingRight="@dimen/x10" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="用户名"
-            android:textSize="@dimen/y7"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/x9" />
-    </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x9"
-        />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        >
         <EditText
             android:id="@+id/et_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:hint="刘晓明"
-            android:textSize="@dimen/x9"
-            android:paddingLeft="@dimen/x9"
-            android:paddingTop="@dimen/x14"
-            android:paddingBottom="@dimen/x14"
+            android:textSize="@dimen/font15"
+           android:padding="@dimen/bt_margin_15"
+            android:layout_centerVertical="true"
             android:background="@null"
             />
         <ImageView
@@ -54,29 +30,27 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/cancel"
             android:layout_alignParentRight="true"
-            android:paddingTop="@dimen/x14"
-            android:paddingBottom="@dimen/x14"
-            android:paddingRight="@dimen/x9"
-            android:paddingLeft="@dimen/x9"
+           android:padding="@dimen/bt_margin_15"
+            android:layout_centerVertical="true"
             />
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="字数（限制二十个字以内）"
-        android:layout_marginTop="@dimen/x6"
-        android:layout_marginLeft="@dimen/x9"
-        android:textSize="@dimen/y6"
+        android:layout_marginTop="@dimen/bt_margin_10"
+        android:layout_marginLeft="@dimen/bt_margin_15"
+        android:textSize="@dimen/font14"
         />
     <LinearLayout
         android:id="@+id/ll_default"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y16"
+        android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/bt_bg1"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x19"
-        android:layout_marginLeft="@dimen/x24"
-        android:layout_marginRight="@dimen/x24"
+        android:layout_marginTop="@dimen/bt_margin_30"
+        android:layout_marginLeft="@dimen/bt_margini_20"
+        android:layout_marginRight="@dimen/bt_margini_20"
 
         >
         <TextView
@@ -85,20 +59,19 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:text="确认修改"
-            android:textSize="@dimen/x8"
+            android:textSize="@dimen/font15"
             android:textColor="@color/white"
             />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/ll_ok"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y16"
+        android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/bt_bg2"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x19"
-        android:layout_marginLeft="@dimen/x24"
-        android:layout_marginRight="@dimen/x24"
-
+        android:layout_marginTop="@dimen/bt_margin_30"
+        android:layout_marginLeft="@dimen/bt_margini_20"
+        android:layout_marginRight="@dimen/bt_margini_20"
         >
         <TextView
             android:layout_width="match_parent"
@@ -106,7 +79,7 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:text="确认修改"
-            android:textSize="@dimen/x8"
+            android:textSize="@dimen/font15"
             android:textColor="@color/white"
             />
     </LinearLayout>

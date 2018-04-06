@@ -7,7 +7,7 @@
         layout="@layout/activity_settings_title_pay"
         />
     <LinearLayout
-        android:layout_marginTop="@dimen/x45"
+        android:layout_marginTop="@dimen/bt_margin_75"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -17,22 +17,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/x8"
+            android:textSize="@dimen/font13"
             android:text="我们已发送"
-            android:textColor="@color/default_text_color"/>
+            android:textColor="@color/text_color2"/>
         <TextView
             android:id="@+id/tv_card_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="验证码"
-            android:textSize="@dimen/x8"
+            android:textSize="@dimen/font13"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="到你的手机"
-            android:textColor="@color/default_text_color"
-            android:textSize="@dimen/x8"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/font13"
             />
     </LinearLayout>
     <TextView
@@ -40,33 +40,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="135******78"
-        android:layout_marginTop="@dimen/x6"
+        android:layout_marginTop="@dimen/bt_margin_10"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:textSize="@dimen/x9"
+        android:textSize="@dimen/font15"
         />
     <EditText
         android:id="@+id/et_vertify_code"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x21"
+        android:layout_height="wrap_content"
         android:background="@null"
         android:hint="请输入验证码"
-        android:layout_marginLeft="@dimen/x14"
-        android:layout_marginRight="@dimen/x14"
-        android:textSize="@dimen/x10"
-        android:layout_marginTop="@dimen/x16"
-        />
+        android:layout_marginLeft="@dimen/bt_margini_20"
+        android:layout_marginRight="@dimen/bt_margini_20"
+        android:textSize="@dimen/font15"
+        android:layout_marginTop="@dimen/bt_margini_20" />
     <LinearLayout
         android:id="@+id/ll_getcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/x11"
-        android:paddingLeft="@dimen/x9"
-        android:paddingRight="@dimen/x9"
+        android:layout_marginTop="@dimen/bt_margini_20"
+        android:padding="@dimen/bt_margin_15"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:paddingBottom="@dimen/x9"
+
         >
         <TextView
             android:layout_width="wrap_content"

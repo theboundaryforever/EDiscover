@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.kest.ediscover.R;
 
@@ -20,13 +21,16 @@ public class SettingsPWDActivity extends AppCompatActivity {
     RelativeLayout rl_pay_pwd;
     //登录密码
     RelativeLayout rl_login_pwd;
+    TextView tv_title;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_reset);
-        rl_pay_pwd=findViewById(R.id.rl_login_pwd);
+        rl_pay_pwd=findViewById(R.id.rl_pay_pwd);
         rl_login_pwd=findViewById(R.id.rl_login_pwd);
         iv_back=findViewById(R.id.iv_back);
+        tv_title=findViewById(R.id.tv_title);
+        tv_title.setText("设置");
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +47,7 @@ public class SettingsPWDActivity extends AppCompatActivity {
         rl_pay_pwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("--------------a");
                 startActivity(new Intent(SettingsPWDActivity.this,ResetPWDActivity.class));
             }
         });

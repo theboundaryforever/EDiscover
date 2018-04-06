@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qr_bg_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_125"
+        android:background="@drawable/alert_bt_bg"
+        android:layout_marginRight="@dimen/bt_margin_65"
+        android:layout_marginLeft="@dimen/bt_margin_65"
+        android:layout_marginTop="@dimen/bt_margin_190"
+
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/bt_margin_27"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_suc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/vertify_suc" />
+            <TextView
+                android:id="@+id/tv_suc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恭喜认证成功"
+                android:layout_margin="@dimen/bt_margin_10"
+                android:layout_toRightOf="@+id/iv_suc"
+                android:textSize="@dimen/font16" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_margin_1"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/bt_margin_12" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:textSize="@dimen/font16"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/bt_margin_15"
+            android:textColor="@android:color/holo_blue_light"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -4,36 +4,9 @@
     android:layout_height="match_parent"
     android:background="@color/default_bg_color"
     >
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_margin_49"
-        android:background="@mipmap/daohang">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/iv_back"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/bt_margin_15" />
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="本人姓名"
-            android:textSize="@dimen/font17"
-            android:textColor="@color/white"
-            android:layout_centerInParent="true" />
-        <TextView
-            android:id="@+id/tv_ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="完成"
-            android:textColor="@color/white"
-            android:textSize="@dimen/font17"
-            android:padding="@dimen/bt_margin_15" />
-    </RelativeLayout>
+    <include
+        layout="@layout/activity_settings_title_report2"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_margin_64"

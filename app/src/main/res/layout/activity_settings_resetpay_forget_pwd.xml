@@ -8,63 +8,78 @@
     <include
         layout="@layout/activity_settings_title_pay"
         />
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
+        android:orientation="horizontal"
         android:layout_marginTop="@dimen/bt_margin_75">
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="请为域名liuming"
+            android:text="我们已发送"
+            android:textColor="@color/text_color2"
             android:textSize="@dimen/font15" />
-        <ImageView
+        <TextView
             android:layout_toRightOf="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/bt_margin_5"
-            android:layout_alignTop="@+id/tv_name"
-            android:layout_alignBottom="@+id/tv_name"
-            android:paddingTop="@dimen/bt_margin_3"
-            android:src="@mipmap/e_dlscover" />
+            android:textColor="@android:color/black"
+            android:text="验证码"
+          />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="到您的手机"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/font15" />
 
-    </RelativeLayout>
+    </LinearLayout>
     <TextView
+        android:id="@+id/tv_tel_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/bt_margin_15"
-        android:text="设置6位数字支付密码"
+        android:text="185******90"
         android:textSize="@dimen/font13"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal" />
 
-    <com.kest.ediscover.widget.PasswordInputView
+    <com.kest.ediscover.widget.NumberInputView
         android:id="@+id/pwd"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_margin_40"
+        android:layout_height="@dimen/bt_margin_50"
         android:layout_marginLeft="@dimen/bt_margin_40"
         android:layout_marginRight="@dimen/bt_margin_40"
         android:layout_marginTop="@dimen/bt_margin_40"
         android:layout_gravity="center_horizontal"
-        app:passwordLength="6"
-        app:borderWidth="@dimen/bt_margin_3"
-        app:borderRadius="@dimen/bt_margin_3"
-        app:borderColor="@color/text_color2"
-        app:passwordWidth="@dimen/bt_margin_3"
-        app:passwordColor="@android:color/black"
-        />
+        app:text_size="@dimen/font15"
+        app:text_color="@android:color/black" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/bt_margin_10"
+    android:layout_marginTop="@dimen/bt_margin_5"
+    android:layout_gravity="center_horizontal"
 
+    >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="支付密码不能是重复，连续的数字"
+        android:text="收不到验证码？"
         android:textSize="@dimen/font13"
-        android:layout_marginTop="@dimen/bt_margin_15"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:textColor="#808080"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重发短信"
+        android:textSize="@dimen/font13"
+        android:textColor="@color/bank_title_color"
+        />
+</LinearLayout>
+
 </LinearLayout>
