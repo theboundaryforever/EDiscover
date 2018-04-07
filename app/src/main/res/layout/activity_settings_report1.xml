@@ -216,7 +216,7 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/ll_ok"
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/bt_margin_295"
                 android:layout_height="@dimen/bt_margin_40"
                 android:background="@mipmap/yuanjiao"
                 android:layout_marginLeft="@dimen/bt_margini_20"

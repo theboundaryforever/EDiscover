@@ -153,7 +153,7 @@
         android:textColor="@color/vertify_color" />
     <RelativeLayout
         android:id="@+id/rl_save"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/bt_margin_295"
         android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/button"
         android:layout_gravity="center_horizontal"

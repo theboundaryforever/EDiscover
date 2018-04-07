@@ -56,10 +56,9 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/bt_margin_295"
         android:layout_height="@dimen/bt_margin_40"
-        android:layout_marginLeft="@dimen/bt_margin_35"
-        android:layout_marginRight="@dimen/bt_margin_35"
+        android:layout_gravity="center_horizontal"
         android:background="@mipmap/button"
         android:layout_marginTop="@dimen/bt_margin_27">
         <TextView

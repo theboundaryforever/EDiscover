@@ -45,7 +45,7 @@
         />
     <LinearLayout
         android:id="@+id/ll_ok"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/bt_margin_295"
         android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/bt_bg2"
         android:layout_gravity="center_horizontal"

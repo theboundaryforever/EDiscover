@@ -112,12 +112,10 @@
     <LinearLayout
         android:id="@+id/ll_default"
         android:layout_marginTop="@dimen/bt_margin_30"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/bt_margin_295"
         android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/bt_bg1"
-        android:layout_marginLeft="@dimen/bt_margin_33"
-        android:layout_marginRight="@dimen/bt_margin_33"
-        >
+        android:layout_gravity="center_horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,12 +129,10 @@
     <LinearLayout
         android:id="@+id/ll_ok"
         android:layout_marginTop="@dimen/bt_margin_30"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/bt_margin_295"
         android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/bt_bg2"
-        android:layout_marginLeft="@dimen/bt_margin_33"
-        android:layout_marginRight="@dimen/bt_margin_33"
-        >
+       android:layout_gravity="center_horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

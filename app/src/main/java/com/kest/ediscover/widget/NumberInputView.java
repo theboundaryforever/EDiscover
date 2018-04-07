@@ -38,15 +38,12 @@ public class NumberInputView extends View {
     /**
      * 单个输入框的宽度
      */
-    private int boxWidth;
+
     /**
      * 单个输入框的高度
      */
-    private int boxHeight;
-    /**
-     * 文本大小
-     */
-    private int textSize;
+
+
     /**
      * 文本颜色
      */
@@ -66,10 +63,13 @@ public class NumberInputView extends View {
     private TextPaint textPaint = new TextPaint();
 
     private float textBaseY = 0f;
-    private int borderheight;
-    private int borderWidth;
-
-
+    private int borderheight=70;
+    private int boxHeight=70;
+    private int boxWidth=80;
+    /**
+     * 文本大小
+     */
+    private int textSize;
     public NumberInputView(@NonNull Context context) {
         super(context);
         init();
@@ -105,17 +105,19 @@ public class NumberInputView extends View {
     }
 
     private void init() {
-        boxWidth = UiTools.dip2px(getContext(), 50);
-        boxHeight = UiTools.dip2px(getContext(), 50);
-        textSize = UiTools.sp2px(getContext(), 30);
+        boxWidth = UiTools.dip2px(getContext(), boxWidth);
+        boxHeight = UiTools.dip2px(getContext(), boxHeight);
+        textSize = UiTools.sp2px(getContext(), textSize);
 
         boxPaint.setAntiAlias(true);
         boxPaint.setStyle(Paint.Style.STROKE);
         boxPaint.setColor(boxColor);
 
+        textPaint.setAntiAlias(true);
         textPaint.setTextSize(textSize);
         textPaint.setColor(textColor);
         textPaint.setTextAlign(Paint.Align.CENTER);
+
 
         inputMethodManager = (InputMethodManager) getContext()
                 .getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -185,9 +187,11 @@ public class NumberInputView extends View {
                         y,
                         textPaint);
                if(i==currentNumber.length()-1){
-                   codeNumberListener.onFinish();
+                   if(codeNumberListener!=null)
+                         codeNumberListener.onFinish();
                }else{
-                   codeNumberListener.onCurrent("" + currentNumber.charAt(i));
+                   if(codeNumberListener!=null)
+                        codeNumberListener.onCurrent("" + currentNumber.charAt(i));
                }
             }
         }
