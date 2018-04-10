@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <include
+        layout="@layout/activity_settings_title_bank"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_30"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_125"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_width="330dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/bank_default"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font15"
+            android:text="你还未绑定任何银行卡"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ok"
+        android:layout_width="@dimen/bt_margin_295"
+        android:layout_height="@dimen/bt_margin_50"
+        android:background="@mipmap/bt_bg2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/bt_margin_30">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="下一步"
+            android:textSize="@dimen/font15"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+</LinearLayout>

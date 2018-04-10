@@ -84,6 +84,7 @@
         <activity android:name=".account.AccountListActivity"  android:launchMode="singleTop"
                   android:screenOrientation="portrait">
         </activity>
+        <!--启动页-->
         <activity android:name=".SplashActivity"  android:launchMode="singleTop"
                   android:screenOrientation="portrait">
             <intent-filter>
@@ -92,6 +93,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="main.MainHomeActivity" android:launchMode="singleTop"/>
+
         <activity android:name=".account.AddAccountActivity"  android:launchMode="singleTop"
                   android:screenOrientation="portrait">
         </activity>
@@ -130,8 +133,72 @@
         <activity android:name=".ChatPage.Activity.GroupChatActivity" android:launchMode="singleTop" />
 
         <activity android:name=".FriendPage2.Activity.SelectContactActivity" android:launchMode="singleTop" />
+        <!--我的-->
+        <activity android:name=".my.MyActivity" android:launchMode="singleTop"/>
+        <!--设置界面-->
+        <activity android:name=".my.settings.SettingsActivity" android:launchMode="singleTop"/>
+        <!--联系客服-->
+        <activity android:name=".my.settings.ContractCustomerActivity" android:launchMode="singleTop"/>
+        <!--举报中心-->
+        <activity android:name=".my.settings.ReportCenterActivity"
+            android:launchMode="singleTop"
+            />
+        <!--举报首页-->
+        <activity android:name=".my.settings.ReportActivity" android:launchMode="singleTop"/>
+        <!--举报网络诈骗-->
+        <activity android:name=".my.settings.ReportNetActivity" android:launchMode="singleTop"/>
+        <!--黄赌毒-->
+        <activity android:name=".my.settings.ReportPornographyActivity" android:launchMode="singleTop"/>
+        <!--举报信息贩卖-->
+        <activity android:name=".my.settings.ReportInfoActivity" android:launchMode="singleTop"/>
+        <!--网络传销-->
+        <activity android:name=".my.settings.ReportMLMActivity" android:launchMode="singleTop"/>
+        <!--举报其它受害-->
+        <activity android:name=".my.settings.ReportOtherActivity" android:launchMode="singleTop"/>
+        <!--举报人真实姓名-->
+        <activity android:name=".my.settings.ReportRealNameActivity" android:launchMode="singleTop"/>
+        <!--举报人电话-->
+        <activity android:name=".my.settings.ReportRealTelActivity" android:launchMode="singleTop"/>
+        <!--举报描述-->
+        <activity android:name=".my.settings.ReportDescribeActivity" android:launchMode="singleTop"/>
+<!--设置密码主界面-->
+        <activity android:name=".my.settings.SettingsPWDActivity" android:launchMode="singleTop"/>
+        <!--重置登录密码-->
+        <activity android:name=".my.settings.ResetLoginPwdActivity" android:launchMode="singleTop"/>
+        <!--设置密码的下一步-->
+        <activity android:name=".my.settings.ResetPWD2Activity" android:launchMode="singleTop"/>
+        <!--修改支付密码-->
+        <activity android:name=".my.settings.ResetPWDActivity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetPWDSuccessActivity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetRememberPWD1Activity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetRememberPWD2Activity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetRememberPWD3Activity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetForgetPWDActivity" android:launchMode="singleTop"/>
+        <activity android:name=".my.settings.SetForgetPWD2Activity" android:launchMode="singleTop">
 
-        <activity android:name=".ChatPage.Activity.GroupDetailsActivity" android:launchMode="singleTop" />
+
+        </activity>
+        <activity android:name=".my.settings.SetForgetPWD3Activity" android:launchMode="singleTop"/>
+        <!--换绑手机-->
+        <activity android:name=".my.settings.ChangeTelActivity" android:launchMode="singleTop"/>
+        <!--换绑手机成功-->
+        <activity android:name=".my.settings.ChangeTelSuccessActivity" android:launchMode="singleTop"/>
+<!--我的二维码-->
+        <activity android:name=".my.person.MyQrCodeActivity">
+
+        </activity>
+        <!--个人信息-->
+        <activity android:name=".my.person.PersonInfoActivity" android:launchMode="singleTop"/>
+        <!--用户名-->
+        <activity android:name=".my.person.PersonInfoNameActivity" android:launchMode="singleTop"/>
+        <!--名认证-->
+        <activity android:name=".my.person.AuthencationActivity" android:launchMode="singleTop"/>
+        <!--添加银行卡-->
+        <activity android:name=".my.bindbank.AddBank1Activity" >
+
+        </activity>
+        <activity android:name=".my.bindbank.AddBankActivity" android:launchMode="singleTop"/>
+        <activity android:name=".my.bindbank.UnbindBankActivity" android:launchMode="singleTop"/>
 
         <activity android:name=".ChatPage.Activity.GroupMembersActivity" android:launchMode="singleTop" />
 

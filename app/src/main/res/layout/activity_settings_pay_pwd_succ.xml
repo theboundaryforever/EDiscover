@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/default_bg_color"
+    android:background="@color/white"
     >
     <!--设置支付密码成功-->
    <include
@@ -13,28 +13,25 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/successful"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x21"
-        />
-
+        android:layout_marginTop="@dimen/bt_margin_42" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/x9"
+            android:layout_marginTop="@dimen/bt_margini_20"
             android:text="修改成功"
-            android:textSize="@dimen/x9"
+            android:textSize="@dimen/font15"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
             />
 
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/x9"
+        android:textSize="@dimen/font15"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x6"
+        android:layout_marginTop="@dimen/bt_margin_10"
         android:text="请牢牢记住，不要告诉任何人"
         android:textColor="@color/default_text_color"
         />

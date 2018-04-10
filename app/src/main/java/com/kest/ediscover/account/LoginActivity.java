@@ -32,6 +32,8 @@ import com.kest.ediscover.utils.SharePreferenceUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import main.MainHomeActivity;
+
 import com.igexin.sdk.PushManager;
 
 import org.json.JSONObject;
@@ -210,7 +212,9 @@ public class LoginActivity extends AppCompatActivity implements HttpUtils.ICallb
                 Log.d("环信账户登录","登录成功");
                 EMClient.getInstance().chatManager().loadAllConversations();
                 EMClient.getInstance().groupManager().loadAllGroups();
-                startActivity(new Intent(context, HomeActivity.class));
+             /*   startActivity(new Intent(context, HomeActivity.class));*/
+
+                startActivity(new Intent(context, MainHomeActivity.class));
                 context.finish();
             }
 

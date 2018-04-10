@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/y27"
+    android:layout_height="@dimen/bt_margin_49"
     android:orientation="horizontal"
     android:background="@color/white">
 
@@ -10,17 +10,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/set_back"
-            android:paddingLeft="@dimen/x9"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="@dimen/x9"
-            android:paddingRight="@dimen/x10" />
+            android:layout_centerVertical="true"
+            android:padding="@dimen/bt_margin_15"
+        />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="实名认证"
-            android:textSize="@dimen/x10"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/x10"
+            android:textSize="@dimen/font17"
+        android:layout_centerInParent="true"
             />
     </RelativeLayout>

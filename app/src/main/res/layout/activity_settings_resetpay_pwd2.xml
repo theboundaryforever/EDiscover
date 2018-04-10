@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!--重置支付密码-->
     <include
@@ -10,18 +12,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x9"
+        android:layout_marginTop="@dimen/bt_margin_15"
         android:text="设置6位数字支付密码"
-        android:textSize="@dimen/x8"
+        android:textSize="@dimen/font14"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal" />
-    <TextView
-        android:layout_width="@dimen/y123"
-        android:layout_height="@dimen/x24"
-        android:hint="默认的支付密码"
-        android:layout_marginTop="@dimen/y16"
+
+    <com.kest.ediscover.widget.PasswordInputView
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+        android:layout_marginLeft="@dimen/bt_margin_40"
+        android:layout_marginRight="@dimen/bt_margin_40"
+        android:layout_marginTop="@dimen/bt_margin_40"
         android:layout_gravity="center_horizontal"
+        app:passwordLength="6"
+        app:borderWidth="@dimen/bt_margin_3"
+        app:borderRadius="@dimen/bt_margin_3"
+        app:borderColor="@color/text_color2"
+        app:passwordWidth="@dimen/bt_margin_3"
+        app:passwordColor="@android:color/black"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

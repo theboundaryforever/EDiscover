@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/y27"
+    android:layout_height="@dimen/bt_margin_49"
     android:orientation="horizontal"
-    android:background="@color/white">
+    android:background="@color/default_bg_color">
 
         <ImageView
             android:id="@+id/iv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/set_back"
-            android:paddingLeft="@dimen/x9"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="@dimen/x10"
-            android:paddingRight="@dimen/x10" />
+            android:layout_centerVertical="true"
+            android:padding="@dimen/bt_margin_15" />
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="设置支付密码"
-            android:textSize="@dimen/y7"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/x9"
-            />
+            android:textSize="@dimen/font17"
+           android:layout_centerInParent="true" />
     </RelativeLayout>

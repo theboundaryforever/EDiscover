@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y27"
+        android:layout_height="@dimen/bt_margin_49"
         android:orientation="horizontal"
         android:background="@color/white">
 
@@ -13,121 +13,109 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/set_back"
-                android:layout_alignParentBottom="true"
-                android:paddingLeft="@dimen/x9"
-                android:paddingBottom="@dimen/x10"
-                android:paddingRight="@dimen/x5"
+               android:layout_centerVertical="true"
+                 android:padding="@dimen/bt_margin_15"
                 />
-
-
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="换绑手机"
-            android:textSize="@dimen/y7"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/x9"
-            />
+            android:textSize="@dimen/font17"
+            android:layout_centerInParent="true" />
 
     </RelativeLayout>
-    <View
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/x6"/>
+        android:layout_height="@dimen/bt_margin_10"/>
 
     <RelativeLayout
         android:id="@+id/rl_report"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/bt_margin_50"
         android:background="@color/white"
         >
         <TextView
             android:id="@+id/tv_tel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/x9"
-            android:layout_marginTop="@dimen/x11"
-            android:layout_marginBottom="@dimen/x11"
-            android:textSize="@dimen/x9"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/font15"
             android:text="新手机"
             />
         <EditText
             android:layout_toRightOf="@+id/tv_tel"
             android:layout_toLeftOf="@+id/tv_code"
             android:layout_alignTop="@+id/tv_tel"
-            android:textSize="@dimen/x9"
-            android:paddingLeft="@dimen/x9"
+            android:textSize="@dimen/font14"
+            android:paddingLeft="@dimen/bt_margin_15"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@null"
             android:hint="11111111"
             />
         <TextView
             android:id="@+id/tv_code"
-            android:layout_width="@dimen/x64"
-            android:layout_height="@dimen/x19"
+            android:layout_width="@dimen/bt_margin_100"
+            android:layout_height="@dimen/bt_margin_32"
             android:background="@mipmap/bt_bg2"
             android:text="获取验证码"
-            android:layout_marginTop="@dimen/x11"
             android:textColor="@color/white"
-            android:textSize="@dimen/x9"
+            android:textSize="@dimen/font14"
             android:gravity="center"
-            android:paddingRight="@dimen/x9"
-            android:layout_marginRight="@dimen/x9"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/bt_margin_15"
             android:layout_alignParentRight="true" />
-        <view
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="1px"
+            android:layout_height="@dimen/bt_margin_1"
             android:background="@color/line_color"
-            android:layout_marginLeft="@dimen/x9"
-            android:layout_below="@+id/tv_tel" />
+            android:layout_alignLeft="@+id/tv_tel"
+            android:layout_alignParentBottom="true" />
 
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/rl_code"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/bt_margin_50"
         android:background="@color/white"
         >
         <TextView
             android:id="@+id/tv_vertify"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/x9"
-            android:layout_marginTop="@dimen/x11"
-            android:layout_marginBottom="@dimen/x11"
-            android:textSize="@dimen/x9"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/font15"
             android:text="验证码"
             />
         <EditText
             android:layout_toRightOf="@+id/tv_vertify"
             android:layout_alignTop="@+id/tv_vertify"
-            android:textSize="@dimen/x9"
-            android:paddingLeft="@dimen/x9"
+            android:textSize="@dimen/font15"
+            android:paddingLeft="@dimen/bt_margin_15"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@null"
             android:hint="请输入验证码"
             />
-
-        <view
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="1px"
+            android:layout_height="@dimen/bt_margin_1"
+            android:layout_alignParentBottom="true"
             android:background="@color/line_color"
-            android:layout_marginLeft="@dimen/x9"
-            android:layout_below="@+id/tv_vertify" />
+            android:layout_marginLeft="@dimen/bt_margin_15" />
 
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/ll_default"
-        android:layout_marginTop="@dimen/x18"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x23"
+        android:layout_marginTop="@dimen/bt_margin_30"
+        android:layout_width="@dimen/bt_margin_295"
+        android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/bt_bg1"
-        android:layout_marginLeft="@dimen/x24"
-        android:layout_marginRight="@dimen/x21"
-        >
+        android:layout_gravity="center_horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -135,18 +123,16 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/x9"
+            android:textSize="@dimen/font15"
             />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/ll_ok"
-        android:layout_marginTop="@dimen/x18"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x23"
+        android:layout_marginTop="@dimen/bt_margin_30"
+        android:layout_width="@dimen/bt_margin_295"
+        android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/bt_bg2"
-        android:layout_marginLeft="@dimen/x24"
-        android:layout_marginRight="@dimen/x21"
-        >
+       android:layout_gravity="center_horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,7 +140,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/x9"
+            android:textSize="@dimen/font15"
             />
     </LinearLayout>
 </LinearLayout>

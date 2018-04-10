@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+<com.kest.ediscover.widget.PasswordInputView
+    android:id="@+id/pwd"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bt_margin_40"
+    android:layout_marginLeft="@dimen/bt_margin_40"
+    android:layout_marginRight="@dimen/bt_margin_40"
+    app:passwordLength="6"
+    app:borderWidth="@dimen/bt_margin_3"
+    app:borderRadius="@dimen/bt_margin_3"
+    app:borderColor="@color/text_color2"
+    app:passwordWidth="@dimen/bt_margin_3"
+    app:passwordColor="@android:color/black"
+    />
+
+</LinearLayout>

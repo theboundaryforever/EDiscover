@@ -4,32 +4,9 @@
     android:layout_height="match_parent"
     android:background="@color/default_bg_color"
     >
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/y27"
-    android:background="@mipmap/daohang">
-
-    <ImageView
-        android:id="@+id/iv_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/iv_back"
-        android:paddingLeft="@dimen/x9"
-        android:layout_alignParentBottom="true"
-
-        android:paddingBottom="@dimen/x10"
-        android:paddingRight="@dimen/x10" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="举报网络诈骗"
-        android:textSize="@dimen/y7"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/x9"
-        android:textColor="@color/white"
-        />
-</RelativeLayout>
+<include
+    layout="@layout/activity_settings_title_report"
+    />
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,199 +17,187 @@
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x26"
+                android:layout_height="@dimen/bt_margin_50"
                 android:text="举报类型"
-                android:textSize="@dimen/x8"
-                android:paddingLeft="@dimen/x9"
-                android:paddingTop="@dimen/x9"
+                android:textSize="@dimen/font14"
+                android:padding="@dimen/bt_margin_15"
                 />
             <RelativeLayout
                 android:id="@+id/rl_report_net"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y21"
+                android:layout_height="@dimen/bt_margin_50"
                 android:background="@color/white"
-                android:paddingTop="@dimen/x10"
-
-                android:paddingLeft="@dimen/x9"        >
+         >
                 <TextView
                     android:id="@+id/tv_fraud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="举报网络诈骗"
-                    android:textSize="@dimen/x9"
-                    />
+                    android:textSize="@dimen/font15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/bt_margin_15" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/set_go"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="@dimen/x9"
-                    />
-                <View
+                    android:paddingRight="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true" />
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
+                    android:layout_height="@dimen/bt_margin_1"
                     android:background="@color/line_color"
-                    android:layout_alignParentBottom="true"
-                    />
+                    android:layout_alignParentBottom="true" />
 
             </RelativeLayout>
-            <View
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x9"/>
+                android:layout_height="@dimen/bt_margin_15"/>
             <RelativeLayout
                 android:id="@+id/rl_tel"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y21"
-                android:background="@color/white"
-                android:paddingTop="@dimen/x10"
-
-                android:paddingLeft="@dimen/x9"        >
+                android:layout_height="@dimen/bt_margin_50"
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="本人手机"
-                    android:textSize="@dimen/x9"
-                    />
+                    android:textSize="@dimen/font15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/bt_margin_15" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/set_go"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="@dimen/x9"
+                    android:paddingRight="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true"
                     />
-                <View
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
+                    android:layout_height="@dimen/bt_margin_1"
                     android:background="@color/line_color"
-                    android:layout_alignParentBottom="true"
-                    />
+                    android:layout_alignParentBottom="true" />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rl_account"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y21"
-                android:background="@color/white"
-                android:paddingTop="@dimen/x10"
-                android:paddingLeft="@dimen/x9"        >
+                android:layout_height="@dimen/bt_margin_50"
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="受骗账号"
-                    android:textSize="@dimen/x9"
-                    />
+                    android:textSize="@dimen/font15"
+                    android:layout_marginLeft="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/set_go"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="@dimen/x9"
-                    />
-                <View
+                    android:paddingRight="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true" />
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
+                    android:layout_height="@dimen/bt_margin_1"
                     android:background="@color/line_color"
-                    android:layout_alignParentBottom="true"
-                    />
+                    android:layout_alignParentBottom="true" />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rl_report_name"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y21"
-                android:background="@color/white"
-                android:paddingTop="@dimen/x10"
-                android:paddingLeft="@dimen/x9"        >
+                android:layout_height="@dimen/bt_margin_50"
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="举报对象"
-                    android:textSize="@dimen/x9"
-                    />
+                    android:textSize="@dimen/font15"
+                    android:layout_marginLeft="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/set_go"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="@dimen/x9"
-                    />
-                <View
+                    android:paddingRight="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true" />
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
+                    android:layout_height="@dimen/bt_margin_1"
                     android:background="@color/line_color"
-                    android:layout_alignParentBottom="true"
-                    />
+                    android:layout_alignParentBottom="true" />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rl_illegal"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y21"
-                android:background="@color/white"
-                android:paddingTop="@dimen/x10"
-                android:paddingLeft="@dimen/x9"        >
+                android:layout_height="@dimen/bt_margin_50"
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="违规行为"
-                    android:textSize="@dimen/x9"
-                    />
+                    android:textSize="@dimen/font15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/bt_margin_15" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/set_go"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="@dimen/x9"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/bt_margin_15"
                     />
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bt_margin_1"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true" />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rl_describe"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y21"
-                android:background="@color/white"
-                android:paddingTop="@dimen/x10"
-                android:paddingLeft="@dimen/x9"
-                android:paddingBottom="@dimen/x9"
-             >
+                android:layout_height="@dimen/bt_margin_50"
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="举报描述"
-                    android:textSize="@dimen/x9"
-
-                    />
+                    android:textSize="@dimen/font15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/bt_margin_15" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/set_go"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="@dimen/x9"
-                    />
-                <View
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/bt_margin_15" />
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
+                    android:layout_height="@dimen/bt_margin_1"
                     android:background="@color/line_color"
-                    android:layout_alignParentBottom="true"
-                    />
+                    android:layout_alignParentBottom="true" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/x6"
-                android:paddingLeft="@dimen/x9"
-                android:paddingRight="@dimen/x9"
-                android:background="@color/white"
-                >
+                android:paddingTop="@dimen/bt_margin_10"
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="聊天/支付记录等诈骗经过的证据截图"
-                    android:textSize="@dimen/x9"
-                    />
+                    android:textSize="@dimen/font15"
+                    android:layout_marginLeft="@dimen/bt_margin_15" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="示例"
-                    android:textSize="@dimen/x9"
+                    android:textSize="@dimen/font15"
                     android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/bt_margin_15"
                     android:textColor="@android:color/holo_blue_light"
                     />
             </RelativeLayout>
@@ -240,10 +205,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="@dimen/x6"
-                android:layout_marginLeft="@dimen/x9"
-                android:background="@color/white"
-                >
+                android:padding="@dimen/bt_margin_15"
+                android:background="@color/white">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -253,22 +216,19 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/ll_ok"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/y16"
+                android:layout_width="@dimen/bt_margin_295"
+                android:layout_height="@dimen/bt_margin_40"
                 android:background="@mipmap/yuanjiao"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/x19"
-                android:layout_marginLeft="@dimen/x21"
-                android:layout_marginRight="@dimen/y18"
-
-                >
+                android:layout_marginLeft="@dimen/bt_margini_20"
+                android:layout_marginRight="@dimen/bt_margini_20"
+                android:layout_gravity="center_horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:text="提交"
-                    android:textSize="@dimen/x8"
+                    android:textSize="@dimen/font16"
                     android:textColor="@color/white"
                     />
             </LinearLayout>

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/default_bg_color"
-    >
+    android:background="@color/white">
     <include
         layout="@layout/activity_settings_title_pwd"
         />
     <LinearLayout
-        android:layout_marginTop="@dimen/y31"
+        android:layout_marginTop="@dimen/bt_margin_75"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -18,29 +19,37 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/x8"
+            android:textSize="@dimen/font13"
             android:text="输入"
-            android:textColor="@color/default_text_color"/>
+            android:textColor="@color/text_color2"/>
         <TextView
             android:id="@+id/tv_card_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="支付密码，"
-            android:textSize="@dimen/x8"
+            android:textSize="@dimen/font13"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="完成身份验证"
-            android:textColor="@color/default_text_color"
-            android:textSize="@dimen/x8"
-            />
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/font13" />
     </LinearLayout>
-    <EditText
-        android:layout_width="@dimen/y123"
-        android:layout_height="@dimen/y17"
-        android:background="@null"
+    <com.kest.ediscover.widget.PasswordInputView
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+        android:layout_marginLeft="@dimen/bt_margin_40"
+        android:layout_marginRight="@dimen/bt_margin_40"
+        android:layout_marginTop="@dimen/bt_margin_25"
         android:layout_gravity="center_horizontal"
-        android:hint="输入支付密码"
-        android:layout_marginTop="@dimen/x15" />
+        app:passwordLength="6"
+        app:borderWidth="@dimen/bt_margin_3"
+        app:borderRadius="@dimen/bt_margin_3"
+        app:borderColor="@color/text_color2"
+        app:passwordWidth="@dimen/bt_margin_3"
+        app:passwordColor="@android:color/black"
+        />
+
 </LinearLayout>

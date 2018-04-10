@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qr_bg_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_150"
+        android:background="@drawable/alert_bt_bg"
+        android:layout_marginRight="@dimen/bt_margin_65"
+        android:layout_marginLeft="@dimen/bt_margin_65"
+        android:layout_marginTop="@dimen/bt_margin_190"
+
+        android:orientation="vertical">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="修改用户名"
+           android:textSize="@dimen/font16"
+           android:layout_gravity="center_horizontal"
+           android:gravity="center_horizontal"
+           android:layout_marginTop="@dimen/bt_margin_40"
+           />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_margin_1"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/bt_margin_30" />
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="horizontal">
+
+         <TextView
+             android:id="@+id/tv_ok"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="match_parent"
+             android:text="确认"
+             android:textSize="@dimen/font16"
+             android:textColor="@color/bt_color"
+          android:gravity="center"
+             />
+         <TextView
+             android:id="@+id/tv_cancel"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="match_parent"
+             android:textColor="@color/bt_color"
+             android:text="取消"
+             android:textSize="@dimen/font16"
+             android:gravity="center"
+             />
+     </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

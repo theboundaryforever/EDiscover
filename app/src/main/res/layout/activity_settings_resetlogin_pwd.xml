@@ -10,41 +10,49 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x15">
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/ll_f"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请为域名liuming"
+                android:layout_marginTop="@dimen/bt_margin_25"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font15" />
+            <ImageView
+                android:layout_toRightOf="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/bt_margin_30"
+
+                android:src="@mipmap/e_dlscover" />
+        </RelativeLayout>
+
 
         <TextView
-            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="请为域名liuming"
-            android:textSize="@dimen/x9" />
-        <ImageView
-            android:layout_toRightOf="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/x2"
-            android:layout_marginTop="@dimen/x2"
-            android:src="@mipmap/e_dlscover" />
+            android:text="设置一个新密码"
+            android:textSize="@dimen/font15"
+            android:layout_below="@+id/ll_f"
+            android:layout_marginTop="@dimen/bt_margin_18"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/bt_margin_25" />
     </RelativeLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="设置一个新密码"
-        android:textSize="@dimen/x8"
-        android:layout_marginTop="@dimen/y7"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/x15"
-        />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x6"
-        />
+
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/y21">
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/bt_margin_10"
+        android:layout_height="@dimen/bt_margin_50"
+        android:background="@color/white"
+        >
 
         <EditText
             android:id="@+id/et_old_pwd"
@@ -53,8 +61,9 @@
             android:layout_toLeftOf="@+id/iv_old_see"
             android:background="@null"
             android:hint="请输入旧密码"
-            android:textSize="@dimen/x8"
-            android:layout_marginLeft="@dimen/x11"
+            android:textSize="@dimen/font15"
+            android:layout_marginLeft="@dimen/bt_margini_20"
+            android:gravity="center_vertical"
             />
         <ImageView
             android:id="@+id/iv_old_see"
@@ -62,16 +71,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:src="@mipmap/close_eyes"
-            android:paddingTop="@dimen/x11"
-            android:paddingRight="@dimen/x11"
-            android:paddingBottom="@dimen/x9"
-            android:paddingLeft="@dimen/x4"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/bt_margini_20"
 
             />
     </RelativeLayout>
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/y21">
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_50"
+        android:background="@color/white">
 
         <EditText
             android:id="@+id/et_new_pwd"
@@ -80,8 +88,9 @@
             android:layout_toLeftOf="@+id/iv_new_see"
             android:background="@null"
             android:hint="请设置8-20位（不能全数字或字母）"
-            android:textSize="@dimen/x8"
-            android:layout_marginLeft="@dimen/x11"
+            android:textSize="@dimen/font15"
+            android:layout_marginLeft="@dimen/bt_margini_20"
+            android:gravity="center_vertical"
             />
         <ImageView
             android:id="@+id/iv_new_see"
@@ -89,16 +98,22 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:src="@mipmap/close_eyes"
-            android:paddingTop="@dimen/x11"
-            android:paddingRight="@dimen/x11"
-            android:paddingBottom="@dimen/x9"
-            android:paddingLeft="@dimen/x4"
-
+            android:layout_centerVertical="true"
+            android:padding="@dimen/bt_margini_20"
+            android:gravity="center_vertical"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_margin_1"
+            android:background="@color/line_color"
+            android:layout_alignLeft="@+id/et_new_pwd"
+           android:layout_alignParentBottom="true" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/y21">
+        android:layout_height="@dimen/bt_margin_50"
+        android:background="@color/white"
+        >
 
         <EditText
             android:id="@+id/et_again_pwd"
@@ -107,8 +122,9 @@
             android:layout_toLeftOf="@+id/iv_again_see"
             android:background="@null"
             android:hint="请再次输入新密码"
-            android:textSize="@dimen/x8"
-            android:layout_marginLeft="@dimen/x11"
+            android:textSize="@dimen/font15"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/bt_margini_20"
             />
         <ImageView
             android:id="@+id/iv_again_see"
@@ -116,38 +132,41 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:src="@mipmap/close_eyes"
-            android:paddingTop="@dimen/x11"
-            android:paddingRight="@dimen/x11"
-            android:paddingBottom="@dimen/x9"
-            android:paddingLeft="@dimen/x4"
+           android:layout_centerVertical="true"
+            android:padding="@dimen/bt_margini_20"
 
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_margin_1"
+            android:background="@color/line_color"
+            android:layout_alignLeft="@+id/et_again_pwd"
+            android:layout_alignParentBottom="true" />
     </RelativeLayout>
     <TextView
         android:id="@+id/tv_forget_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/x11"
-        android:paddingTop="@dimen/x11"
-        android:paddingRight="@dimen/x11"
+        android:padding="@dimen/bt_margini_20"
         android:text="忘记旧密码"
-        android:textSize="@dimen/x9"
-        android:textColor="@color/vertify_color"
-        android:paddingBottom="@dimen/x9" />
+        android:textSize="@dimen/font15"
+        android:textColor="@color/vertify_color" />
     <RelativeLayout
         android:id="@+id/rl_save"
-        android:layout_width="@dimen/x175"
-        android:layout_height="@dimen/x23"
+        android:layout_width="@dimen/bt_margin_295"
+        android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/button"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x9"
+        android:layout_marginLeft="@dimen/bt_margin_40"
+        android:layout_marginRight="@dimen/bt_margin_40"
+        android:layout_marginTop="@dimen/bt_margin_30"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="保存新密码"
             android:textColor="@color/white"
-            android:textSize="@dimen/x9"
+            android:textSize="@dimen/font15"
             android:layout_centerInParent="true"
             />
     </RelativeLayout>

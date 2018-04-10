@@ -55,6 +55,7 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.friendlist_layout);
         init();
+
     }
 
     /**初始化*/
