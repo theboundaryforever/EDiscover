@@ -64,16 +64,17 @@ public class ChatActivity extends FragmentActivity implements View.OnClickListen
     /**赋值*/
     private void assigment(){
 
-        im_right.setImageResource(R.drawable.ease_to_group_details_normal);
-
          try {
              if(chattype.equals("2")){
                  Log.d("聊天界面","群组聊天");
                  EMGroup group = EMClient.getInstance().groupManager().getGroup(chatid);
                  tv_title.setText(group.getGroupName());
+                 im_right.setImageResource(R.drawable.ease_to_group_details_normal);
 
              }else if(chattype.equals("1")){
                  Log.d("聊天界面","单人聊天");
+                 im_right.setImageResource(R.mipmap.person);
+
              }
 
          }catch(Exception e){

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_redenvelopes"
+    android:background="@color/color_eaea" >
+
+    <include
+        layout="@layout/ease_title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/shape_kung_white">
+
+                <TextView
+                    android:id="@+id/tv_bbb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/color_3333"
+                    android:textSize="15sp"
+                    android:text="金额"/>
+
+                <TextView
+                    android:id="@+id/tv_aaa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_3333"
+                    android:text="元"/>
+
+                <EditText
+                    android:id="@+id/ed_moneynumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv_aaa"
+                    android:background="@null"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLength="20"
+                    android:inputType="numberDecimal"
+                    android:hint="0.00"
+                    android:textColorHint="@color/color_6666"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_3333"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_kung_white">
+
+            <EditText
+                android:id="@+id/ed_moneycontent1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:padding="20dp"
+                android:scrollbars="none"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:layout_marginRight="10dp"
+                android:maxLength="50"
+                android:hint="恭喜发财，大吉大利"
+                android:textColorHint="@color/color_6666"
+                android:textSize="15sp"
+                android:textColor="@color/color_3333"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_money"
+                android:layout_alignTop="@id/tv_money"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/color_3333"
+                android:text="¥" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/color_3333"
+                android:text="0.00"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_redenveopes"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/shape_66easered_bg"
+            android:textColor="@color/color_f1f1"
+            android:textSize="15sp"
+            android:text="塞钱进红包"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

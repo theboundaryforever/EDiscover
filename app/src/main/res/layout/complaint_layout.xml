@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_ea">
+
+    <include
+        layout="@layout/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:textColor="@color/color_black6"
+        android:text="请选择投诉原因"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:orientation="vertical"
+        android:background="@color/color_white_ff">
+
+        <TextView
+            android:id="@+id/tv_Pornographic"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:textColor="@color/color_black3"
+            android:text="发布色情信息"
+            android:drawableRight="@mipmap/an" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/color_white_ea" />
+
+        <TextView
+            android:id="@+id/tv_garbage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:textColor="@color/color_black3"
+            android:text="被骚扰（垃圾短信）"
+            android:drawableRight="@mipmap/an" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/color_white_ea" />
+
+        <TextView
+            android:id="@+id/tv_Illegal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:textColor="@color/color_black3"
+            android:text="发布违法信息"
+            android:drawableRight="@mipmap/an" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

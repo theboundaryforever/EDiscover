@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="#ffffff" >
+    android:background="#eaeaea" >
 
     <com.hyphenate.easeui.widget.EaseTitleBar
         android:id="@+id/title_bar"
@@ -22,8 +22,7 @@
         <com.hyphenate.easeui.widget.EaseChatMessageList
             android:id="@+id/message_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/color_ffff"/>
+            android:layout_height="match_parent"/>
 
         <com.hyphenate.easeui.widget.EaseVoiceRecorderView
             android:id="@+id/voice_recorder"
@@ -37,6 +36,7 @@
         android:id="@+id/input_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/color_f1f1"
         android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

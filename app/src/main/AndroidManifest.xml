@@ -133,6 +133,19 @@
 
         <activity android:name=".ChatPage.Activity.GroupDetailsActivity" android:launchMode="singleTop" />
 
+        <activity android:name=".ChatPage.Activity.GroupMembersActivity" android:launchMode="singleTop" />
+
+        <activity android:name=".ChatPage.Activity.GroupAnnouncementActivity" android:launchMode="singleTop" />
+
+        <activity android:name=".ChatPage.Activity.ComplaintActivity"  android:launchMode="singleTop" />
+
+        <activity android:name=".ChatPage.Activity.ComplaintDetailsActivity" android:launchMode="singleTop" />
+
+        <activity android:name=".FriendPage2.Activity.PersonalDataActivity"  android:launchMode="singleTop" />
+
+
+        <!-- 在环信里面添加的activity -->
+        <activity android:name="com.hyphenate.easeui.ui.RedEnvelopesActivity" />
 
         <!-- 环信自己的activity     -->
         <activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity" />

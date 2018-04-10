@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/layout_top"
     android:background="@color/color_white_ea" >
 
     <include
@@ -40,6 +41,7 @@
                     android:gravity="center">
 
                     <TextView
+                        android:id="@+id/tv_members"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="10dp"
@@ -60,11 +62,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:background="@color/color_ffff"
                 android:orientation="vertical">
 
                 <RelativeLayout
+                    android:id="@+id/groupname_layout"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -100,6 +103,7 @@
                     android:background="@color/color_white_ea"/>
 
                 <RelativeLayout
+                    android:id="@+id/layout_groupannouncement"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -135,6 +139,7 @@
                     android:background="@color/color_white_ea"/>
 
                 <RelativeLayout
+                    android:id="@+id/layout_nikname"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -173,14 +178,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:background="@color/color_ffff"
                 android:orientation="vertical">
 
                 <RelativeLayout
+                    android:id="@+id/layout_disturb"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp">
 
@@ -192,9 +197,9 @@
                         android:textColor="@color/color_black6"
                         android:text="消息免打扰"/>
 
-                    <SeekBar
+                    <Switch
                         android:id="@+id/seekbar_disturb"
-                        android:layout_width="60dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"/>
@@ -210,8 +215,7 @@
                 <RelativeLayout
                     android:id="@+id/layout_groupcomplaint"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp">
 
@@ -244,8 +248,9 @@
                 android:background="@color/color_white_ea"/>
 
             <RelativeLayout
+                android:id="@+id/layout_deleteconversation"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:background="@color/color_ffff" >
 
                 <TextView
@@ -278,15 +283,15 @@
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/btn_delete"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginLeft="50dp"
                     android:layout_marginRight="50dp"
-                    android:background="@drawable/shape_red2_bg"
+                    android:background="@drawable/shape_easered_bg"
                     android:gravity="center"
                     android:textSize="15sp"
-                    android:textColor="@color/color_ffff"
-                    android:text="退出该群"/>
+                    android:textColor="@color/color_ffff" />
 
             </LinearLayout>
         </LinearLayout>

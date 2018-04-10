@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/layout_newfriends"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="25dp"
         android:gravity="center_vertical"
@@ -59,7 +59,7 @@
     <RelativeLayout
         android:id="@+id/layout_creategroup"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="20dp"
         android:gravity="center_vertical"
@@ -103,7 +103,7 @@
     <RelativeLayout
         android:id="@+id/layout_megroup"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="20dp"
         android:gravity="center_vertical"

@@ -11,6 +11,11 @@
     <string name="attach_picture">图片</string>
     <string name="attach_take_pic">拍照</string>
     <string name="attach_location">位置</string>
+    <string name="attach_hb">红包</string>
+    <string name="attach_yy">语音通话</string>
+    <string name="attach_sp">视频通话</string>
+    <string name="attach_gr">个人名片</string>
+    <string name="attach_zz">转账</string>
     <string name="attach_video">视频</string>
     <string name="attach_file">文件</string>
     <string name="attach_voice_call">语音电话</string>

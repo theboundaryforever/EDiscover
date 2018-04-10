@@ -7,16 +7,25 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.TextView;
 
+import com.hyphenate.EMMessageListener;
+import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
+import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.ui.EaseConversationListFragment;
+import com.kest.ediscover.FriendPage2.Activity.SearchActivity;
+import com.kest.ediscover.MyApplication;
 import com.kest.ediscover.R;
 import com.kest.ediscover.WebAppActivity;
 import com.kest.ediscover.FriendPage2.Activity.FriendListActivity;
 import com.kest.ediscover.HomePage.Activity.HomeActivity;
 import com.kest.ediscover.utils.SharePreferenceUtil;
+
+import java.util.List;
 
 /**
  * Created by Administrator on 2018\3\26 0026.
@@ -26,6 +35,8 @@ public class ChatListActivity extends FragmentActivity implements View.OnClickLi
 
     private EaseConversationListFragment easeConversationListFragment;
     private SharePreferenceUtil sp;
+
+    private TextView txt_title;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,18 +48,31 @@ public class ChatListActivity extends FragmentActivity implements View.OnClickLi
     /**初始化*/
     private void init(){
 
+        this.findViewById(R.id.purse_btn).setOnClickListener(this);
+        this.findViewById(R.id.daybuy_btn2).setOnClickListener(this);
+        this.findViewById(R.id.city_btn2).setOnClickListener(this);
+        this.findViewById(R.id.allbuy_btn).setOnClickListener(this);
+        this.findViewById(R.id.view_search).setOnClickListener(this);
+
+        txt_title = (TextView)this.findViewById(R.id.txt_title1_title);
+        sp = SharePreferenceUtil.getInstance(this);
+
+
+        assigment();
+    }
+
+    /**赋值*/
+    private void assigment(){
+
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         easeConversationListFragment = new EaseConversationListFragment();
         transaction.add(R.id.chatlist_framelayout,easeConversationListFragment);
         transaction.commit();
 
-        sp = SharePreferenceUtil.getInstance(this);
 
-        this.findViewById(R.id.purse_btn).setOnClickListener(this);
-        this.findViewById(R.id.daybuy_btn2).setOnClickListener(this);
-        this.findViewById(R.id.city_btn2).setOnClickListener(this);
-        this.findViewById(R.id.allbuy_btn).setOnClickListener(this);
+        txt_title.setText("E信");
+
 
 
         easeConversationListFragment.setConversationListItemClickListener(new EaseConversationListFragment.EaseConversationListItemClickListener() {
@@ -56,12 +80,60 @@ public class ChatListActivity extends FragmentActivity implements View.OnClickLi
             public void onListItemClicked(EMConversation conversation) {
                 Log.d("会话点击事件", EaseConstant.EXTRA_USER_ID + " " + conversation.conversationId() + conversation.getType().name());
                 startActivity(new Intent(ChatListActivity.this, ChatActivity
-                        .class).putExtra(EaseConstant.EXTRA_USER_ID, conversation.conversationId()));
+                        .class).putExtra(EaseConstant.EXTRA_USER_ID, conversation.conversationId()).putExtra("chatType",1
+                ));
             }
         });
 
-        //startActivity(new Intent(ChatListActivity.this, ChatActivity.class).putExtra(EaseConstant.EXTRA_USER_ID, getIntent().getExtras()));
+
+        EMMessageListener emMessageListener = new EMMessageListener() {
+            @Override
+            public void onMessageReceived(List<EMMessage> list) {
+                refreshUIWithMessage();
+            }
+
+            @Override
+            public void onCmdMessageReceived(List<EMMessage> list) {
+
+            }
+
+            @Override
+            public void onMessageRead(List<EMMessage> list) {
+
+            }
+
+            @Override
+            public void onMessageDelivered(List<EMMessage> list) {
+
+            }
+
+            @Override
+            public void onMessageRecalled(List<EMMessage> list) {
+
+            }
+
+            @Override
+            public void onMessageChanged(EMMessage emMessage, Object o) {
+
+            }
+        };
+
+        EMClient.getInstance().chatManager().addMessageListener(emMessageListener);
+
     }
+
+
+
+    private void refreshUIWithMessage() {
+        runOnUiThread(new Runnable() {
+            public void run() {
+                    if (easeConversationListFragment != null) {
+                        easeConversationListFragment.refresh();
+                    }
+            }
+        });
+    }
+
 
     @Override
     public void onClick(View view) {
@@ -82,6 +154,28 @@ public class ChatListActivity extends FragmentActivity implements View.OnClickLi
                 intent.putExtra("address","http://pay.allbuy.me/index.php?m=Home&c=Index&a=index&token=" + sp.getToken());
                 startActivity(intent);
                 break;
+            case R.id.view_search: //搜索好友
+                startActivity(new Intent(ChatListActivity.this,SearchActivity.class));
+                break;
         }
+    }
+
+    //记录用户首次点击返回键的时间
+    private long firstTime=0;
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        switch (keyCode){
+            case KeyEvent.KEYCODE_BACK:
+                long secondTime=System.currentTimeMillis();
+                if(secondTime-firstTime>2000){
+                    MyApplication.setToast("再按一次退出程序");
+                    firstTime=secondTime;
+                    return true;
+                }else{
+                    System.exit(0);
+                }
+                break;
+        }
+        return super.onKeyUp(keyCode, event);
     }
 }

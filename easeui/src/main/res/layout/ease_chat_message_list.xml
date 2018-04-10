@@ -13,10 +13,7 @@
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:cacheColorHint="@color/color_f1f1"
-            android:divider="@color/color_f1f1"
-            android:dividerHeight="5dp"
-            android:listSelector="@color/color_f1f1"
+            android:divider="@null"
             android:scrollbarStyle="outsideOverlay"
             android:transcriptMode="normal" />
     </android.support.v4.widget.SwipeRefreshLayout>

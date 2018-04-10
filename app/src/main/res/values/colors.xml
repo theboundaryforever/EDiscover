@@ -24,4 +24,11 @@
     <!-- QRCode scanner color end -->
 
     <color name="colorPrimaryDarkTrans">#CCf57257</color>
+    <color name="line_color">#e5e5e5</color>
+    <color name="white">#ffffff</color>
+    <color name="default_bg_color">#e1e1e1</color>
+    <color name="default_bg_color2">#e9c686</color>
+    <color name="vertify_color">#e9c686</color>
+    <color name="default_text_color">#808080</color>
+
 </resources>

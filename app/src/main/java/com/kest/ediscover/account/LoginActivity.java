@@ -235,6 +235,7 @@ public class LoginActivity extends AppCompatActivity implements HttpUtils.ICallb
                    JSONObject js = new JSONObject(result);
                    if(js.getInt("returnCode")==10000){
                        easelogin(js.getString("hx_username"),js.getString("hx_password"));
+                       sp.setHx_username(js.getString("hx_username"));
                    }else{
                        MyApplication.setToast(js.getString("returnMsg"));
                    }

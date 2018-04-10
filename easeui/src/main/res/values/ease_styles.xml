@@ -167,4 +167,14 @@
         <item name="android:includeFontPadding">false</item>
         <item name="android:background">@drawable/ease_edit_text_bg</item>
     </style>
+
+    <!-- popwindow 弹出动画 -->
+    <style name="mypopwindow_anim_style" >
+
+        <item name="android:windowEnterAnimation" >@anim/push_bottom_in</item>  //进入动画
+
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>  //退出动画
+
+    </style>
+
 </resources>

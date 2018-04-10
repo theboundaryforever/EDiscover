@@ -209,14 +209,14 @@ public class SelectContactActivity extends Activity implements View.OnClickListe
                 try{
                     EMGroupOptions options = new EMGroupOptions();
                     options.maxUsers = 200;  //设置群人数
-                    options.inviteNeedConfirm = true;
+                    options.inviteNeedConfirm = false;
 
                     String reason = SelectContactActivity.this.getString(R.string.invite_join_group);
                     reason = EMClient.getInstance().getCurrentUser() + reason + groupName;
 
                     EMClient.getInstance().groupManager().createGroup(groupName,desc,members,reason,options);
-                    MyApplication.setToast("创建群成功");
                     startActivity(new Intent(SelectContactActivity.this,FriendListActivity.class));
+                    finish();
                 }catch(Exception e){
                     e.printStackTrace();
                     MyApplication.setToast("创建群组异常,请联系客服");

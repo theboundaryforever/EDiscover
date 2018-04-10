@@ -3,6 +3,8 @@ package com.kest.ediscover.ChatPage.Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +31,18 @@ public class GroupChatActivity  extends Activity implements View.OnClickListener
     private List<String> Slist = new ArrayList<>();
     private List<EMGroup> groupslist;
 
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch(msg.what){
+                case 1:
+                    assigment();
+                    break;
+            }
+        }
+    };
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,15 +59,28 @@ public class GroupChatActivity  extends Activity implements View.OnClickListener
         tv_title = (TextView)this.findViewById(R.id.txt_title1_title);
         listView = (ListView)this.findViewById(R.id.groupchat_listview);
 
-
-        assigment();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    groupslist = EMClient.getInstance().groupManager().getJoinedGroupsFromServer();//需异步处理
+                    Message message = handler.obtainMessage();
+                    message.what = 1;
+                    handler.sendMessage(message);
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     /**赋值*/
     private void assigment(){
 
         tv_title.setText("我加入的群聊");
-        groupslist = EMClient.getInstance().groupManager().getAllGroups();
+
+
+
         listView.setAdapter(new GroupChatAdapter(this,R.layout.groupchat_item,groupslist));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

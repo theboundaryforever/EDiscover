@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg_color"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y27"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/set_back"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="@dimen/x9"
+                android:paddingBottom="@dimen/x10"
+                android:paddingRight="@dimen/x5"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textSize="@dimen/x10"
+                android:paddingBottom="@dimen/x12"
+                android:paddingRight="@dimen/x10"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_alignParentBottom="@+id/iv_back"
+                android:layout_alignBottom="@+id/iv_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="换绑手机"
+            android:textSize="@dimen/y7"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x9"
+            />
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/successful"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x21"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x18"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textSize="@dimen/x9"
+            android:textColor="@color/default_text_color"
+            />
+        <TextView
+            android:id="@+id/tv_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x8"
+            android:paddingLeft="@dimen/y5"
+            android:text="18758735160"
+            android:textColor="@color/default_text_color"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/x9"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x9"
+        android:text="绑定成功"
+        />
+
+</LinearLayout>

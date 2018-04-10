@@ -116,6 +116,7 @@ public class EaseMessageAdapter extends BaseAdapter{
 	            int position = message.arg1;
 	            listView.setSelection(position);
                 break;
+
 			default:
 				break;
 			}

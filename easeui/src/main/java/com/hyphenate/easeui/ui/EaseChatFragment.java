@@ -109,11 +109,16 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     static final int ITEM_TAKE_PICTURE = 1;
     static final int ITEM_PICTURE = 2;
     static final int ITEM_LOCATION = 3;
+    static final int ITEM_HB = 4;
+    static final int ITEM_YY = 5;
+    static final int ITEM_SP = 6;
+    static final int ITEM_GE = 7;
+    static final int ITEM_ZZ = 8;
     
-    protected int[] itemStrings = { R.string.attach_take_pic, R.string.attach_picture, R.string.attach_location };
-    protected int[] itemdrawables = { R.drawable.ease_chat_takepic_selector, R.drawable.ease_chat_image_selector,
-            R.drawable.ease_chat_location_selector };
-    protected int[] itemIds = { ITEM_TAKE_PICTURE, ITEM_PICTURE, ITEM_LOCATION };
+    protected int[] itemStrings = { R.string.attach_take_pic, R.string.attach_picture, R.string.attach_location,R.string.attach_hb,R.string.attach_yy,R.string.attach_sp,R.string.attach_gr,R.string.attach_zz};
+    protected int[] itemdrawables = { R.mipmap.shooting, R.mipmap.photos,
+            R.mipmap.position,R.mipmap.redicon,R.mipmap.voice,R.mipmap.video,R.mipmap.business_card,R.mipmap.transfer };
+    protected int[] itemIds = { ITEM_TAKE_PICTURE, ITEM_PICTURE, ITEM_LOCATION,ITEM_HB ,ITEM_YY,ITEM_SP,ITEM_GE,ITEM_ZZ};
     private boolean isMessageListInited;
     protected MyItemClickListener extendMenuItemClickListener;
     protected boolean isRoaming = false;
@@ -639,7 +644,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
 
     /**
      * handle the click event for extend menu
-     *
+     * 功能栏的点击事件
      */
     class MyItemClickListener implements EaseChatExtendMenu.EaseChatExtendMenuItemClickListener{
 
@@ -651,18 +656,35 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                 }
             }
             switch (itemId) {
-            case ITEM_TAKE_PICTURE:
+            case ITEM_TAKE_PICTURE:  //拍照
                 selectPicFromCamera();
                 break;
-            case ITEM_PICTURE:
+            case ITEM_PICTURE:  //图片
                 selectPicFromLocal();
                 break;
-            case ITEM_LOCATION:
+            case ITEM_LOCATION:  //位置
                 startActivityForResult(new Intent(getActivity(), EaseBaiduMapActivity.class), REQUEST_CODE_MAP);
                 break;
-
-            default:
+            case ITEM_HB:  //红包
+                Intent redenvelopesintent = new Intent(getActivity(), RedEnvelopesActivity.class);
+                redenvelopesintent.putExtra("toChatUsername",toChatUsername);
+                startActivity(redenvelopesintent);
                 break;
+            case ITEM_YY:  //语音
+
+                break;
+            case ITEM_SP:  //视频
+
+                break;
+            case ITEM_GE:  //个人
+
+                break;
+            case ITEM_ZZ: //转账
+
+                break;
+
+
+
             }
         }
 

@@ -3,5 +3,12 @@
 
     <color name="color_f1f1">#f1f1f1</color>
     <color name="color_ffff">#ffffff</color>
+    <color name="color_eaea">#eaeaea</color>
+    <color name="color_efef">#efefef</color>
     <color name="color_6666">#666666</color>
+    <color name="color_3333">#333333</color>
+    <color name="color_9999">#999999</color>
+    <color name="color_redff">#ff3666</color>
+    <color name="color_66redff">#66ff3666</color>
+    <color name="color_blue">#01aafc</color>
 </resources>
