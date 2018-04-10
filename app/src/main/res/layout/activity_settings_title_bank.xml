@@ -19,4 +19,16 @@
             android:textSize="@dimen/font17"
             android:textColor="@color/bank_title_color"
             android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/tv_race"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font15"
+        android:text="筛选"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/bt_margin_10"
+        android:textColor="@color/bank_title_color"
+        android:visibility="gone"
+        />
     </RelativeLayout>

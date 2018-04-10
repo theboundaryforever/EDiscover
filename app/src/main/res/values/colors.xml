@@ -31,6 +31,9 @@
     <color name="vertify_color">#e9c686</color>
     <color name="text_color">#333333</color>
     <color name="text_color2">#666666</color>
+    <color name="text_color3">#4b4b5b</color>
+    <color name="text_color4">#eb4040</color>
+    <color name="text_color5">#eabf75</color>
     <color name="default_text_color">#a7a7a7</color>
     <color name="bt_color">#4FAAE8</color>
     <color name="qr_bg_color">#333333</color>

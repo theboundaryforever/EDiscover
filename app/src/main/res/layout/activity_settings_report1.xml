@@ -15,63 +15,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/bt_margin_50"
-                android:text="举报类型"
-                android:textSize="@dimen/font14"
-                android:padding="@dimen/bt_margin_15"
-                />
-            <RelativeLayout
-                android:id="@+id/rl_report_net"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/bt_margin_50"
-                android:background="@color/white"
-         >
-                <TextView
-                    android:id="@+id/tv_fraud"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="举报网络诈骗"
-                    android:textSize="@dimen/font15"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/bt_margin_15" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/set_go"
-                    android:layout_alignParentRight="true"
-                    android:paddingRight="@dimen/bt_margin_15"
-                    android:layout_centerVertical="true" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/bt_margin_1"
-                    android:background="@color/line_color"
-                    android:layout_alignParentBottom="true" />
-
-            </RelativeLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/bt_margin_15"/>
             <RelativeLayout
                 android:id="@+id/rl_tel"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/bt_margin_50"
+                android:layout_height="@dimen/bt_margin_44"
                 android:background="@color/white">
                 <TextView
+                    android:id="@+id/tv_tel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="本人手机"
                     android:textSize="@dimen/font15"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/bt_margin_15" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/set_go"
+                <EditText
+                    android:id="@+id/et_tel"
+                    android:layout_toRightOf="@+id/tv_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
                     android:layout_alignParentRight="true"
                     android:paddingRight="@dimen/bt_margin_15"
+                    android:hint="输入手机号"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/text_color3"
                     android:layout_centerVertical="true"
+                    android:gravity="center_vertical|right"
+                    android:background="@null"
                     />
                 <TextView
                     android:layout_width="match_parent"
@@ -82,22 +52,31 @@
             <RelativeLayout
                 android:id="@+id/rl_account"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/bt_margin_50"
+                android:layout_height="@dimen/bt_margin_44"
                 android:background="@color/white">
                 <TextView
+                    android:id="@+id/tv_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="受骗账号"
                     android:textSize="@dimen/font15"
                     android:layout_marginLeft="@dimen/bt_margin_15"
                     android:layout_centerVertical="true" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/set_go"
+                <EditText
+                    android:id="@+id/et_account"
+                    android:layout_toRightOf="@+id/tv_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
                     android:layout_alignParentRight="true"
                     android:paddingRight="@dimen/bt_margin_15"
-                    android:layout_centerVertical="true" />
+                    android:hint="输入受骗账号"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/text_color3"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|right"
+                    android:background="@null"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/bt_margin_1"
@@ -107,22 +86,32 @@
             <RelativeLayout
                 android:id="@+id/rl_report_name"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/bt_margin_50"
+                android:layout_height="@dimen/bt_margin_44"
                 android:background="@color/white">
                 <TextView
+                    android:id="@+id/tv_obj"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="举报对象"
                     android:textSize="@dimen/font15"
-                    android:layout_marginLeft="@dimen/bt_margin_15"
-                    android:layout_centerVertical="true" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/set_go"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/bt_margin_15"/>
+                <EditText
+                    android:id="@+id/et_obj"
+                    android:layout_toRightOf="@+id/tv_obj"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
                     android:layout_alignParentRight="true"
                     android:paddingRight="@dimen/bt_margin_15"
-                    android:layout_centerVertical="true" />
+                    android:hint="输入举报账号"
+                    android:textSize="@dimen/font14"
+                    android:textColor="@color/text_color3"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|right"
+                    android:background="@null"
+                    />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/bt_margin_1"
@@ -191,17 +180,10 @@
                     android:text="聊天/支付记录等诈骗经过的证据截图"
                     android:textSize="@dimen/font15"
                     android:layout_marginLeft="@dimen/bt_margin_15" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="示例"
-                    android:textSize="@dimen/font15"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/bt_margin_15"
-                    android:textColor="@android:color/holo_blue_light"
-                    />
+
             </RelativeLayout>
             <LinearLayout
+                android:id="@+id/ll_img"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -221,6 +203,7 @@
                 android:background="@mipmap/yuanjiao"
                 android:layout_marginLeft="@dimen/bt_margini_20"
                 android:layout_marginRight="@dimen/bt_margini_20"
+                android:layout_marginTop="@dimen/bt_margin_30"
                 android:layout_gravity="center_horizontal">
                 <TextView
                     android:layout_width="match_parent"

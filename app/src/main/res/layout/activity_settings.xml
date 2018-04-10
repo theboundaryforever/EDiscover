@@ -20,6 +20,7 @@
             android:layout_centerVertical="true"
             />
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="设置"
@@ -185,19 +186,19 @@
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/ll_exit"
-        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/bt_margin_30"
+        android:layout_width="@dimen/bt_margin_295"
         android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/bt_bg2"
-        android:layout_marginTop="@dimen/bt_margin_30"
-        android:layout_marginLeft="@dimen/bt_margin_40"
-        android:layout_marginRight="@dimen/bt_margin_40">
+        android:layout_gravity="center_horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="退出登录"
-            android:textSize="@dimen/font16"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/font15"
+            />
     </LinearLayout>
 </LinearLayout>

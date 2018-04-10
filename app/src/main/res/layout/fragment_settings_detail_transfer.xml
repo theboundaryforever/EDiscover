@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <include
+        layout="@layout/activity_settings_title_bank"
+        />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_49"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tv_shou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="付款金额"
+            android:textSize="@dimen/font14"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+             android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_margin_1"
+            android:background="@color/line_color"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/tv_shou" />
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+               android:text="18000.00"
+              android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/bt_margin_15" />
+    </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bt_margin_49"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款记录"
+                    android:textSize="@dimen/font14"
+                    android:layout_marginLeft="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_bg_color" />
+                <TextView
+                    android:id="@+id/tv_reback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已退款100.00"
+                    android:textColor="@color/text_color5"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/bt_margin_15" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bt_margin_49"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款时间"
+                    android:textSize="@dimen/font14"
+                    android:layout_marginLeft="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_bg_color" />
+                <TextView
+                    android:id="@+id/tv_reback_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-04-03 10:36:10"
+                    android:textColor="@color/default_text_color"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/bt_margin_15" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bt_margin_49"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款方式"
+                    android:textSize="@dimen/font14"
+                    android:layout_marginLeft="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_bg_color" />
+                <TextView
+                    android:id="@+id/tv_reback_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="余额"
+                    android:textColor="@color/default_text_color"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/bt_margin_15" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_reaback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bt_margin_49"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款单号"
+                    android:textSize="@dimen/font14"
+                    android:layout_marginLeft="@dimen/bt_margin_15"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_bg_color" />
+                <TextView
+                    android:id="@+id/tv_reback_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1564789541236547896541"
+                    android:textColor="@color/default_text_color"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/bt_margin_15" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bt_margin_1"
+                android:layout_marginLeft="@dimen/bt_margin_15"
+                android:layout_marginTop="@dimen/bt_margini_20"
+                android:background="@color/line_color"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前状态"
+            android:textSize="@dimen/font12"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="等待确认收钱"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color"
+            android:layout_marginRight="@dimen/bt_margin_15" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收款方"
+            android:textSize="@dimen/font12"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color" />
+
+        <TextView
+            android:id="@+id/tv_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小红"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color"
+            android:layout_marginRight="@dimen/bt_margin_15" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转账说明"
+            android:textSize="@dimen/font12"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color" />
+
+        <TextView
+            android:id="@+id/tv_transfer_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E信转账"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color"
+            android:layout_marginRight="@dimen/bt_margin_15" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转账时间"
+            android:textSize="@dimen/font12"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color" />
+
+        <TextView
+            android:id="@+id/tv_transfer_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-04-02 19：40：02"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color"
+            android:layout_marginRight="@dimen/bt_margin_15" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付方式"
+            android:textSize="@dimen/font12"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color" />
+
+        <TextView
+            android:id="@+id/tv_pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余额"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color"
+            android:layout_marginRight="@dimen/bt_margin_15" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转账单账号"
+            android:textSize="@dimen/font12"
+            android:layout_marginLeft="@dimen/bt_margin_15"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color" />
+
+        <TextView
+            android:id="@+id/tv_account_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="789123654789125478963"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_bg_color"
+            android:layout_marginRight="@dimen/bt_margin_15" />
+    </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

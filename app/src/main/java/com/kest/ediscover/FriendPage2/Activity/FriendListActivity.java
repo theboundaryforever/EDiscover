@@ -70,7 +70,7 @@ public class FriendListActivity extends FragmentActivity implements View.OnClick
         this.findViewById(R.id.allbuy_btn).setOnClickListener(this);
         this.findViewById(R.id.view_search).setOnClickListener(this);
 
-        txt_title = (TextView)this.findViewById(R.id.txt_title1_title);
+        txt_title = this.findViewById(R.id.txt_title1_title);
 
 
         assigment();

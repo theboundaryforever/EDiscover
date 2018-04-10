@@ -4,16 +4,16 @@
     android:layout_height="match_parent"
     android:background="@color/default_bg_color"
     >
+    <include
+        layout="@layout/activity_settings_title_person" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_margin_10"/>
+
     <RelativeLayout
         android:id="@+id/rl_person_img"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_margin_75"
         android:background="@color/white"
-        >
+        android:layout_marginTop="@dimen/bt_margin_10">
         <TextView
             android:id="@+id/tv_img"
             android:layout_width="wrap_content"

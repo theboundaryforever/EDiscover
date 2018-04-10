@@ -28,70 +28,73 @@
             android:textColor="@color/white"
             android:textSize="@dimen/font17" />
 
-        <ImageView
-            android:id="@+id/iv_go"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/white_arrow"
-            android:layout_alignTop="@+id/iv_qr"
-            android:layout_alignBottom="@+id/iv_qr"
-            android:layout_alignParentRight="true"
-            android:paddingRight="@dimen/bt_margin_15" />
-        <ImageView
-            android:id="@+id/iv_qr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/qr_code"
-            android:layout_marginTop="@dimen/bt_margin_90"
-            android:layout_toLeftOf="@+id/iv_go"
-            android:layout_marginRight="@dimen/bt_margin_15" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_img"
-            android:layout_width="@dimen/bt_margin_50"
-            android:layout_height="@dimen/bt_margin_50"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/bt_margin_30"
-            android:layout_marginLeft="@dimen/bt_margin_15"
-            android:src="@mipmap/ic_launcher" />
+<RelativeLayout
+    android:id="@+id/rl_person_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="@dimen/bt_margin_30">
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_person_img"
+        android:layout_width="@dimen/bt_margin_50"
+        android:layout_height="@dimen/bt_margin_50"
+        android:layout_marginLeft="@dimen/bt_margin_15"
+        android:src="@mipmap/head_portrait" />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_person_img"
+        android:layout_marginLeft="@dimen/bt_margin_15"
+        android:text="刘晓明"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font15"
+        android:layout_marginTop="@dimen/bt_margin_10"
+        />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_name"
+        android:paddingBottom="@dimen/bt_margin_10"
+        android:layout_below="@+id/tv_name">
 
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/tv_domain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/bt_margin_18"
-            android:layout_marginTop="@dimen/bt_margin_90"
-            android:layout_toRightOf="@+id/iv_img"
-            android:text="刘晓明"
+            android:text="域名：liumin "
             android:textColor="@color/white"
-            android:textSize="@dimen/font15" />
+            android:textSize="@dimen/font14" />
 
-
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/iv_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tv_name"
-            android:layout_below="@+id/tv_name">
+            android:layout_alignBottom="@+id/tv_domain"
+            android:layout_alignTop="@+id/tv_domain"
+            android:layout_toRightOf="@+id/tv_domain"
+            android:paddingTop="@dimen/bt_margin_1"
+            android:src="@mipmap/domain_name" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/white_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/bt_margin_15" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ewm"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/bt_margin_40" />
 
-            <TextView
-                android:id="@+id/tv_domain"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="域名：liumin "
-                android:textColor="@color/white"
-                android:textSize="@dimen/font14" />
-
-            <ImageView
-                android:id="@+id/iv_code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/tv_domain"
-                android:paddingTop="@dimen/bt_margin_1"
-                android:layout_alignTop="@+id/tv_domain"
-                android:layout_toRightOf="@+id/tv_domain"
-                android:src="@mipmap/domain_name" />
-        </RelativeLayout>
-
+</RelativeLayout>
     </RelativeLayout>
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -245,7 +248,7 @@
                     android:src="@mipmap/set_go"
                     android:padding="@dimen/bt_margin_15" />
             </RelativeLayout>
-            <View
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/bt_margini_20"/>
             <RelativeLayout

@@ -1,5 +1,6 @@
 package main.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,10 +16,13 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.hyphenate.easeui.domain.EaseUser;
 import com.hyphenate.easeui.domain.UserClass2;
 import com.hyphenate.easeui.ui.EaseContactListFragment;
@@ -32,6 +36,7 @@ import com.kest.ediscover.MyApplication;
 import com.kest.ediscover.MyHttputils.Conntent;
 import com.kest.ediscover.MyHttputils.HttpUtils;
 import com.kest.ediscover.R;
+import com.kest.ediscover.base.BaseResult;
 import com.kest.ediscover.utils.SharePreferenceUtil;
 import com.kest.ediscover.widget.SideBar;
 
@@ -47,16 +52,15 @@ import java.util.Map;
  */
 
 //通讯录
-public class MailListFragment extends Fragment implements HttpUtils.ICallback,View.OnClickListener{
+public class MailListFragment extends EaseContactListFragment implements HttpUtils.ICallback,View.OnClickListener{
     private List<UserClass2> Ulist = new ArrayList<>();
-
     private LinearLayout ll_search;
     private TextView txt_title;
     private SharePreferenceUtil sp;
     protected ListView listView;
     private TextView tv_show;
     SideBar sidebar;
-  @Nullable
+/* @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        View view=null;
@@ -68,35 +72,43 @@ public class MailListFragment extends Fragment implements HttpUtils.ICallback,Vi
            initData();
        }
         return view;
-    }
+    }*/
 
+
+    @Override
+    protected void initView() {
+        super.initView();
+        @SuppressLint("InflateParams")
+        View headerView = View.inflate(getContext(),R.layout.fragment_maillist_headview, null);
+
+        headerView.findViewById(R.id.layout_newfriends).setOnClickListener(this);
+        headerView.findViewById(R.id.layout_creategroup).setOnClickListener(this);
+        headerView.findViewById(R.id.layout_megroup).setOnClickListener(this);
+        init(headerView);
+        initData();
+        listView=getListView();
+        if(listView!=null){
+            listView.addHeaderView(headerView);
+        }
+
+        sp = SharePreferenceUtil.getInstance(getActivity());
+        getSelectFriendlist();
+    }
     /**初始化*/
 
-    public void initView(View view){
+    public void init(View view){
         txt_title = view.findViewById(R.id.txt_title1_title);
         ll_search=view.findViewById(R.id.ll_search);
-        sidebar=view.findViewById(R.id.sidebar);
-        tv_show=view.findViewById(R.id.tv_show);
 
         view.findViewById(R.id.layout_newfriends).setOnClickListener(this);
         view.findViewById(R.id.layout_creategroup).setOnClickListener(this);
         view.findViewById(R.id.layout_megroup).setOnClickListener(this);
-
 
     }
     private void initData(){
         txt_title.setText("通讯录");
         sp = SharePreferenceUtil.getInstance(getActivity());
         getSelectFriendlist();
-        sidebar.setTextView(tv_show);
-        sidebar.setOnTouchingLetterChangedListener(new SideBar.OnTouchingLetterChangedListener() {
-            @Override
-            public void onTouchingLetterChanged(String s) {
-
-              System.out.println("--------------s:"+s);
-
-            }
-        });
     }
 
 /**查寻通讯录*/
@@ -130,37 +142,21 @@ public class MailListFragment extends Fragment implements HttpUtils.ICallback,Vi
 
     @Override
     public void onSuccess(String url, String result) {
-        System.out.println("-------------result:"+result);
         if(url.equals(Conntent.HTTPURL+Conntent.EASEMOBFRIENDLIST)){
             if(result.length()>0){
                 Log.d("通讯录返回值",""+result);
-                try{
-                    JSONObject js = new JSONObject(result);
-                    if(js.getInt("returnCode")==10000){
-                        if(js.getString("action").equals("user_contacts")) {
-                            JSONArray ja = js.getJSONArray("userList");
-                            for (int i = 0; i < ja.length(); i++) {
-                                JSONObject jo = ja.getJSONObject(i);
-                                UserClass2 us = new UserClass2();
-                                us.setInitialLetter(us.getInitialLetter());
-                                us.setHx_username(jo.getString("hx_username"));
-                                us.setNickname(jo.getString("nickname"));
-                                us.setUser_id(jo.getString("user_id"));
-                                us.setUsername(jo.getString("username"));
-                                us.setImg(jo.getString("img"));
-                                us.setSign("0");
-                                Ulist.add(us);
-                            }
-                            if (Ulist.size() > 0) {
-                               // contactListLayout.init2(Ulist);
-                            }
-                        }
-                    }else{
-                        MyApplication.setToast(js.getString("returnMsg"));
-                    }
-                }catch(Exception e){
-                    e.printStackTrace();
-                }
+                    Gson gson=new Gson();
+                    BaseResult<UserClass2> baseResult=gson.fromJson(result,BaseResult.class);
+
+                   if(baseResult.getReturnCode()==1000){
+                     if("user_contacts".equals(baseResult.getAction())){
+                         baseResult.getUserList().get(0).getInitialLetter();
+                     }else{
+                         MyApplication.setToast(baseResult.getReturnMsg());
+                     }
+
+                 }
+
             }
         }
     }

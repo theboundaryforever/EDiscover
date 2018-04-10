@@ -17,7 +17,7 @@ public class ReportOtherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings_report2);
+        setContentView(R.layout.activity_settings_report_illegal);
         tv_title=findViewById(R.id.tv_title);
         tv_title.setText("举报其它有害");
     }

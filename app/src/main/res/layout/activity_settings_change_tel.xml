@@ -45,6 +45,7 @@
             android:text="新手机"
             />
         <EditText
+            android:id="@+id/et_tel"
             android:layout_toRightOf="@+id/tv_tel"
             android:layout_toLeftOf="@+id/tv_code"
             android:layout_alignTop="@+id/tv_tel"
@@ -92,6 +93,7 @@
             android:text="验证码"
             />
         <EditText
+            android:id="@+id/et_code"
             android:layout_toRightOf="@+id/tv_vertify"
             android:layout_alignTop="@+id/tv_vertify"
             android:textSize="@dimen/font15"

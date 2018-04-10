@@ -47,7 +47,7 @@ public class SettingsPWDActivity extends AppCompatActivity {
         rl_pay_pwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("--------------a");
+
                 startActivity(new Intent(SettingsPWDActivity.this,ResetPWDActivity.class));
             }
         });

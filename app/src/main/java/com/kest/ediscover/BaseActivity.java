@@ -12,6 +12,7 @@ import com.kest.ediscover.account.AccountBiz;
 import com.kest.ediscover.account.LoginActivity;
 import com.kest.ediscover.utils.ActivityCollector;
 import com.kest.ediscover.utils.SharePreferenceUtil;
+import com.kest.ediscover.utils.ThreadPoolManager;
 
 /**
  * Created by dk on 2017/12/20.
@@ -28,7 +29,8 @@ public class BaseActivity extends AppCompatActivity {
         final AccountBiz account = new AccountBiz(this);
         sp1 = SharePreferenceUtil.getInstance(this);
         context = this;
-        new Thread() {
+        ThreadPoolManager.getNormalPool().execute(new Runnable() {
+            @Override
             public void run() {
                 Message message = Message.obtain();
                 String oldToken = sp1.getToken();
@@ -41,7 +43,8 @@ public class BaseActivity extends AppCompatActivity {
                     handler.sendMessage(message);
                 }
             }
-        }.start();
+        });
+
     }
 
     private Handler handler = new Handler() {

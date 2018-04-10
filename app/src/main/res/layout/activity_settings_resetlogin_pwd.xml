@@ -51,8 +51,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/bt_margin_10"
         android:layout_height="@dimen/bt_margin_50"
-        android:background="@color/white"
-        >
+        android:background="@color/white">
 
         <EditText
             android:id="@+id/et_old_pwd"
@@ -114,7 +113,6 @@
         android:layout_height="@dimen/bt_margin_50"
         android:background="@color/white"
         >
-
         <EditText
             android:id="@+id/et_again_pwd"
             android:layout_width="match_parent"

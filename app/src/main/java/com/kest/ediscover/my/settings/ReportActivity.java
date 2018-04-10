@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.kest.ediscover.R;
@@ -15,30 +17,38 @@ import com.kest.ediscover.R;
  */
 /*举报*/
 public class ReportActivity  extends AppCompatActivity {
-    //网络诈骗
-    RelativeLayout rl_report_net;
-    //信息贩卖
-    RelativeLayout rl_info;
-    //网络传销
-    RelativeLayout rl_mlm;
-    //黄赌毒
-    RelativeLayout rl_pornography;
-    //其它
-    RelativeLayout rl_other;
+
     ImageView iv_back;
+    //手机号码
+    EditText et_tel;
+    //受骗账号
+    EditText et_account;
+    //举报对象
+    EditText et_obj;
+    //违规行为
+    RelativeLayout rl_illegal;
+    //举报描述
+    RelativeLayout rl_describe;
+    //举报截图
+    LinearLayout ll_img;
+    //提交
+    LinearLayout ll_ok;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings_report);
+        setContentView(R.layout.activity_settings_report1);
         initView();
         setListener();
     }
     private void initView(){
-        rl_report_net=findViewById(R.id.rl_report_net);
-        rl_info=findViewById(R.id.rl_info);
-        rl_mlm=findViewById(R.id.rl_mlm);
-        rl_pornography=findViewById(R.id.rl_pornography);
-        rl_other=findViewById(R.id.rl_other);
+        iv_back=findViewById(R.id.iv_back);
+        et_tel=findViewById(R.id.et_tel);
+        et_account=findViewById(R.id.et_account);
+        et_obj=findViewById(R.id.et_obj);
+        rl_illegal=findViewById(R.id.rl_illegal);
+        rl_describe=findViewById(R.id.rl_describe);
+        ll_img=findViewById(R.id.ll_img);
+        ll_ok=findViewById(R.id.ll_ok);
 
     }
     private void setListener(){
@@ -48,35 +58,6 @@ public class ReportActivity  extends AppCompatActivity {
                 finish();
             }
         });
-        rl_report_net.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ReportActivity.this,ReportNetActivity.class));
-            }
-        });
-        rl_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ReportActivity.this,ReportInfoActivity.class));
-            }
-        });
-        rl_mlm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ReportActivity.this,ReportMLMActivity.class));
-            }
-        });
-        rl_pornography.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ReportActivity.this,ReportPornographyActivity.class));
-            }
-        });
-        rl_other.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ReportActivity.this,ReportOtherActivity.class));
-            }
-        });
+
     }
 }

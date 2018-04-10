@@ -22,7 +22,7 @@ public class MyActivity extends AppCompatActivity {
     ImageView tv_settings;
     //实名认证
     RelativeLayout rl_authen;
-    ImageView iv_cancel;
+  ImageView iv_cancel;
     //账户明细
     RelativeLayout rl_count;
     //总资产
@@ -35,7 +35,8 @@ public class MyActivity extends AppCompatActivity {
     RelativeLayout rl_wallet;
     //银行卡
     RelativeLayout rl_card;
-
+    //个人信息
+    RelativeLayout rl_person_info;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,7 +47,15 @@ public class MyActivity extends AppCompatActivity {
     }
     private void initView(){
         tv_settings=findViewById(R.id.tv_settings);
+        iv_cancel=findViewById(R.id.iv_cancel);
         rl_card=findViewById(R.id.rl_card);
+        rl_authen=findViewById(R.id.rl_authen);
+        rl_person_info=findViewById(R.id.rl_person_info);
+        rl_count=findViewById(R.id.rl_count);
+        rl_total_assets=findViewById(R.id.rl_total_assets);
+        rl_line=findViewById(R.id.rl_line);
+        rl_ed=findViewById(R.id.rl_ed);
+        rl_wallet=findViewById(R.id.rl_wallet);
 
     }
     private void setListener(){

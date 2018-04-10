@@ -96,6 +96,9 @@ public class EaseContactListFragment extends EaseBaseFragment {
         query = (EditText) getView().findViewById(R.id.query);
         clearSearch = (ImageButton) getView().findViewById(R.id.search_clear);
     }
+    public ListView getListView(){
+        return contactListLayout.getListView();
+    }
 
     @Override
     protected void setUpView() {

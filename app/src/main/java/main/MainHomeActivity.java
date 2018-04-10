@@ -31,15 +31,15 @@ import main.fragment.MyFragment;
 public class MainHomeActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener{
     private FrameLayout content_layout;
     //首页
-    ResizableRadioButton rb_home;
+    RadioButton rb_home;
     //E发现
-    ResizableRadioButton rb_e_find;
+    RadioButton rb_e_find;
     //E信
-    ResizableRadioButton rb_e_latter;
+    RadioButton rb_e_latter;
     //通讯录
-    ResizableRadioButton rb_mail_list;
+    RadioButton rb_mail_list;
     //我的
-    ResizableRadioButton rb_my;
+    RadioButton rb_my;
     private RadioGroup radiogroup;
 
     private HomeFragment homeFragment;

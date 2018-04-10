@@ -37,6 +37,7 @@
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="请联系全买得客服"
@@ -46,7 +47,8 @@
         android:layout_marginTop="@dimen/bt_margin_42"
         />
     <TextView
-        android:id="@+id/tv_tel_go"
+
+        android:id="@+id/tv_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@mipmap/telephone"

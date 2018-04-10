@@ -7,37 +7,39 @@
     layout="@layout/activity_settings_title_report2"
     />
     <RelativeLayout
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/bt_margin_125"
+        android:layout_marginTop="@dimen/bt_margin_10"
         android:background="@color/white">
         <EditText
-            android:id="@+id/et_name"
+            android:id="@+id/et_describe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="测试啦"
+            android:hint=""
             android:textSize="@dimen/font16"
-            android:paddingLeft="@dimen/bt_margin_15"
-            android:paddingTop="@dimen/bt_margini_22"
+            android:paddingLeft="@dimen/bt_margin_10"
+            android:paddingTop="@dimen/bt_margin_10"
             android:lines="3"
             android:gravity="left|top"
             android:background="@null"
             />
-        <ImageView
-            android:id="@+id/iv_cancel"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/cancel"
+            android:text="不得超过100字"
             android:layout_alignParentRight="true"
-             android:layout_centerVertical="true"
-            android:padding="@dimen/bt_margin_15"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/bt_margin_10"
+            android:textColor="#bebebf"
             />
     </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="描述不超过四十个字"
+        android:text="尽可能描述完整的事发经过，若涉及财产损失，请写明金额，支付金额与方式"
         android:textColor="@color/default_text_color"
-        android:textSize="@dimen/font13"
+        android:textSize="@dimen/font9"
         android:layout_marginTop="@dimen/bt_margin_13"
         android:layout_marginLeft="@dimen/bt_margin_15" />
 

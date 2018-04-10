@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.kest.ediscover.R;
 
@@ -15,6 +17,13 @@ import com.kest.ediscover.R;
 /*换绑手机*/
 public class ChangeTelActivity extends AppCompatActivity {
     ImageView iv_back;
+    //验证码
+    EditText et_code;
+    //手机号
+    EditText et_tel;
+    LinearLayout ll_default;
+    LinearLayout ll_ok;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

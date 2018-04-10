@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import com.kest.ediscover.R;
 import com.kest.ediscover.my.MyActivity;
 import com.kest.ediscover.my.bindbank.AddBank1Activity;
+import com.kest.ediscover.my.person.PersonInfoActivity;
 import com.kest.ediscover.my.settings.SettingsActivity;
 
 /**
@@ -38,6 +39,9 @@ public class MyFragment extends Fragment {
     RelativeLayout rl_wallet;
     //银行卡
     RelativeLayout rl_card;
+    //个人信息
+    RelativeLayout rl_person_info;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -53,7 +57,15 @@ public class MyFragment extends Fragment {
     }
     private void initView(View view){
         tv_settings=view.findViewById(R.id.tv_settings);
+        iv_cancel=view.findViewById(R.id.iv_cancel);
         rl_card=view.findViewById(R.id.rl_card);
+        rl_authen=view.findViewById(R.id.rl_authen);
+        rl_person_info=view.findViewById(R.id.rl_person_info);
+        rl_count=view.findViewById(R.id.rl_count);
+        rl_total_assets=view.findViewById(R.id.rl_total_assets);
+        rl_line=view.findViewById(R.id.rl_line);
+        rl_ed=view.findViewById(R.id.rl_ed);
+        rl_wallet=view.findViewById(R.id.rl_wallet);
 
     }
     private void setListener(){
@@ -67,6 +79,12 @@ public class MyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), AddBank1Activity.class));
+            }
+        });
+        rl_person_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), PersonInfoActivity.class));
             }
         });
     }
