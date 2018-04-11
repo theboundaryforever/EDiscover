@@ -15,6 +15,7 @@ import com.kest.ediscover.Bean.Response;
 import com.kest.ediscover.MyApplication;
 import com.kest.ediscover.R;
 import com.kest.ediscover.utils.DebugLog;
+import com.kest.ediscover.utils.ThreadPoolManager;
 
 import java.util.Date;
 import java.util.Timer;
@@ -128,8 +129,8 @@ public class RegisterActivity extends BaseActivity {
             }
 
         }
-
-        new Thread() {
+        ThreadPoolManager.getNormalPool().execute(new Runnable() {
+            @Override
             public void run() {
                 Message message = Message.obtain();
                 AccountBiz accountBiz = new AccountBiz(context);
@@ -139,7 +140,8 @@ public class RegisterActivity extends BaseActivity {
                 } else message.what = 0;
                 handler.sendMessage(message);
             }
-        }.start();
+        });
+
     }
 
     @OnClick(sendCodeBtn)

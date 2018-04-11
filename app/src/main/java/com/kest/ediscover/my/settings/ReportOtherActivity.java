@@ -8,9 +8,10 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 举报其它受害
  * Created by Administrator on 2018/4/3 0003.
  */
-/*举报其它受害*/
+
 public class ReportOtherActivity extends AppCompatActivity {
 
     TextView tv_title;

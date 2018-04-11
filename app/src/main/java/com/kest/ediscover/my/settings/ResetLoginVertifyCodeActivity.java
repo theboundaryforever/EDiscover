@@ -11,9 +11,9 @@ import android.widget.LinearLayout;
 import com.kest.ediscover.R;
 
 /**
+ * 重置登录密码，忘记密码接收验证码
  * Created by Administrator on 2018/4/3 0003.
  */
-//重置登录密码，忘记密码接收验证码
 
 public class ResetLoginVertifyCodeActivity extends AppCompatActivity {
     ImageView iv_back;

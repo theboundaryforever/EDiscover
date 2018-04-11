@@ -10,9 +10,9 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 联系客服
  * Created by Administrator on 2018/4/3 0003.
  */
-/*联系客服*/
 
 public class ContractCustomerActivity  extends AppCompatActivity{
     ImageView iv_back;

@@ -11,10 +11,11 @@ import android.widget.LinearLayout;
 import com.kest.ediscover.R;
 
 /**
+ * 换绑手机
  * Created by Administrator on 2018/4/3 0003.
  */
 
-/*换绑手机*/
+
 public class ChangeTelActivity extends AppCompatActivity {
     ImageView iv_back;
     //验证码

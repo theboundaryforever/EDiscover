@@ -63,7 +63,7 @@
                     android:gravity="right|center_vertical"
                     android:hint="请输入银行卡号"
                     android:paddingRight="@dimen/bt_margin_15"
-                    android:textColor="@color/default_text_color"
+                    android:textColor="@color/color7a7a7a"
                     android:textSize="@dimen/font14" />
 
                 <View
@@ -99,7 +99,7 @@
                     android:gravity="center_vertical|right"
                     android:hint="工商银行"
                     android:paddingRight="@dimen/bt_margin_15"
-                    android:textColor="@color/default_text_color"
+                    android:textColor="@color/color7a7a7a"
                     android:textSize="@dimen/font15" />
 
                 <View
@@ -159,7 +159,7 @@
                     android:gravity="right|center_vertical"
                     android:hint="请输入银行卡预留手机号"
                     android:paddingRight="@dimen/bt_margin_15"
-                    android:textColor="@color/default_text_color"
+                    android:textColor="@color/color7a7a7a"
                     android:textSize="@dimen/font15" />
 
                 <View
@@ -215,7 +215,7 @@
                     android:paddingBottom="@dimen/bt_margin_15"
                     android:paddingRight="@dimen/bt_margin_15"
                     android:paddingTop="@dimen/bt_margin_15"
-                    android:textColor="@color/default_text_color"
+                    android:textColor="@color/color7a7a7a"
                     android:textSize="@dimen/font14" />
 
                 <View

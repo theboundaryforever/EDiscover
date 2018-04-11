@@ -37,28 +37,42 @@ import java.util.List;
 
 import javax.xml.transform.Result;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
+ * 个人信息
  * Created by Administrator on 2018/4/3 0003.
  */
-/*个人信息*/
 public class PersonInfoActivity extends AppCompatActivity{
+    @BindView(R.id.iv_back)
     ImageView iv_back;
+    @BindView(R.id.tv_title)
     TextView tv_title;
     //头像
+    @BindView(R.id.rl_person_img)
     RelativeLayout rl_person_img;
     //生日
+    @BindView(R.id.rl_birth)
     RelativeLayout rl_birth;
     //名字
+    @BindView(R.id.rl_name)
     RelativeLayout rl_name;
     //身份认证
+    @BindView(R.id.rl_vertify)
     RelativeLayout rl_vertify;
     //我的二维码
+    @BindView(R.id.rl_person_qr)
     RelativeLayout rl_person_qr;
     //性别
+    @BindView(R.id.rl_sex)
     RelativeLayout rl_sex;
+    @BindView(R.id.iv_person_img)
     CircleImageView iv_person_img;
+    Unbinder unbinder;
     private final int PICTURE_CODE=100;
     private final int PHOTO_CODE=101;
 
@@ -66,56 +80,31 @@ public class PersonInfoActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_person);
-
-        initView();
-        setListener();
-
-    }
-    private void initView(){
-        rl_person_img=findViewById(R.id.rl_person_img);
-        rl_person_qr=findViewById(R.id.rl_person_qr);
-        rl_name=findViewById(R.id.rl_name);
-        rl_sex=findViewById(R.id.rl_sex);
-        rl_birth=findViewById(R.id.rl_birth);
-        rl_vertify=findViewById(R.id.rl_vertify);
-        iv_back=findViewById(R.id.iv_back);
-        tv_title=findViewById(R.id.tv_title);
-        iv_person_img=findViewById(R.id.iv_person_img);
+        unbinder= ButterKnife.bind(this);
         tv_title.setText("个人信息");
-
     }
-    private void setListener(){
-        iv_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @OnClick({})
+    void onClick(View view){
+        switch (view.getId()){
+            case R.id.iv_back:
                 finish();
-            }
-        });
-        rl_person_qr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.rl_person_qr:
                 startActivity(new Intent(PersonInfoActivity.this,MyQrCodeActivity.class));
-            }
-        });
-        rl_vertify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.rl_vertify:
                 startActivity(new Intent(PersonInfoActivity.this,AuthencationActivity.class));
-            }
-        });
-        rl_name.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.rl_name:
                 startActivity(new Intent(PersonInfoActivity.this,PersonInfoNameActivity.class));
-            }
-        });
-        rl_person_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.rl_person_img:
                 showPop();
-            }
-        });
+                break;
+        }
     }
+
+
     private void showPop(){
         View view= LayoutInflater.from(this).inflate(R.layout.activity_settings_photo,null);
         View parentView =LayoutInflater.from(this).inflate(R.layout.activity_settings_person,null);
@@ -237,5 +226,11 @@ public class PersonInfoActivity extends AppCompatActivity{
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
             }
             startActivityForResult(intent, PICTURE_CODE);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
 }

@@ -161,16 +161,16 @@
 
             <ImageView
                 android:id="@+id/iv_card_positive"
-                android:layout_width="@dimen/bt_margin_120"
-                android:layout_height="@dimen/bt_margin_120"
+                android:layout_width="@dimen/bt_margin_150"
+                android:layout_height="@dimen/bt_margin_150"
                   android:layout_marginLeft="@dimen/bt_margini_20"
                  android:src="@mipmap/idcard" />
 
 
         <ImageView
             android:id="@+id/iv_card_negative"
-            android:layout_width="@dimen/bt_margin_120"
-            android:layout_height="@dimen/bt_margin_120"
+            android:layout_width="@dimen/bt_margin_150"
+            android:layout_height="@dimen/bt_margin_150"
             android:layout_gravity="right"
             android:layout_alignParentRight="true"
 
@@ -186,9 +186,7 @@
         android:layout_width="@dimen/bt_margin_295"
         android:layout_height="@dimen/bt_margin_40"
         android:background="@mipmap/button"
-        android:layout_marginLeft="@dimen/bt_margin_40"
-        android:layout_marginRight="@dimen/bt_margin_40"
-        >
+        android:layout_gravity="center_horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

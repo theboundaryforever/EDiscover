@@ -7,9 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import com.kest.ediscover.R;
 
 /**
+ * 解绑银行卡
  * Created by Administrator on 2018/4/4 0004.
  */
-//解绑银行卡
 public class UnbindBankActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

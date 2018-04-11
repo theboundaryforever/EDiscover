@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_control"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bt_margin_40"
+    android:background="@color/colorPrimary">
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/test3_test"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_margin_40"
+         android:layout_marginLeft="@dimen/bt_margin_15"
+        android:layout_marginRight="@dimen/bt_margin_15"
+       android:layout_alignTop="@+id/ll_search"
+        android:layout_alignBottom="@+id/ll_search"
+        android:layout_below="@+id/ll_top"
+        android:layout_toLeftOf="@+id/ll_search"
+        android:background="@drawable/shape_search">
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/search" />
+
+        <EditText
+            android:id="@+id/img_zhangdan_txt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_margin_40"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_search"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:hint="搜索商品"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/ll_search"
+    android:layout_width="@dimen/bt_margin_80"
+    android:layout_height="@dimen/bt_margin_40"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:background="@drawable/shape_search"
+   android:layout_margin="@dimen/bt_margin_10"
+    android:layout_below="@+id/ll_top"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="共享平台"
+        android:layout_gravity="center"
+        android:textColor="@color/color_white_ea"
+        android:gravity="center" />
+</LinearLayout>
+
+    <View
+        android:id="@+id/v_expand_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

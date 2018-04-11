@@ -6,8 +6,7 @@
     android:layout_height="match_parent">
     <!--重置支付密码-->
     <include
-        layout="@layout/activity_settings_title_pwd"
-        />
+        layout="@layout/activity_settings_title_pwd" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,17 +30,15 @@
         app:borderRadius="@dimen/bt_margin_3"
         app:borderColor="@color/text_color2"
         app:passwordWidth="@dimen/bt_margin_3"
-        app:passwordColor="@android:color/black"
-        />
+        app:passwordColor="@android:color/black" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="支付密码不能是重复，连续的数字"
-        android:textSize="@dimen/x8"
-        android:layout_marginTop="@dimen/x9"
+        android:textSize="@dimen/font14"
+        android:layout_marginTop="@dimen/bt_margin_15"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:textColor="#808080"
-        />
+        android:textColor="#808080" />
 </LinearLayout>

@@ -12,6 +12,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +37,7 @@ import butterknife.OnClick;
 import main.MainHomeActivity;
 
 import com.igexin.sdk.PushManager;
+import com.kest.ediscover.utils.ThreadPoolManager;
 
 import org.json.JSONObject;
 
@@ -49,15 +52,14 @@ public class LoginActivity extends AppCompatActivity implements HttpUtils.ICallb
     Activity context;
     SharePreferenceUtil sp;
     private static final int REQUEST_PERMISSION = 0;
-
     @BindView(R.id.mobile)
     EditText mobileEditText;
     @BindView(R.id.password)
     EditText passwordEditText;
     @BindView(R.id.seepassword_btn)
     TextView seePasswordBtn;
- /*   @BindView(R.id.login_btn)
-    Button login_btn;*/
+    @BindView(R.id.login_btn)
+     Button login_btn;
 
 
     @Override
@@ -141,8 +143,7 @@ public class LoginActivity extends AppCompatActivity implements HttpUtils.ICallb
         }
     }*/
     String cid="";
-     private static final int REQUEST_PHONE_STATE = 1;
-   @OnClick(R.id.login_btn)
+  //登录
     void login(){
         /*
         //Android6.0需要动态获取权限
@@ -156,7 +157,8 @@ public class LoginActivity extends AppCompatActivity implements HttpUtils.ICallb
         //final String cid = DeviceUtils.getDeviceId(context);
        if(mobileEditText.getText().toString().length()>5) {
            if(passwordEditText.getText().toString().length()>5){
-               new Thread() {
+               ThreadPoolManager.getNormalPool().execute(new Runnable() {
+                   @Override
                    public void run() {
                        Message message = Message.obtain();
                        if (NetworkUtil.checkNetState(LoginActivity.this)) {
@@ -170,7 +172,8 @@ public class LoginActivity extends AppCompatActivity implements HttpUtils.ICallb
                        handler.sendMessage(message);
 
                    }
-               }.start();
+               });
+
            }else{
                MyApplication.setToast("账号长度有误,最少6位");
            }
@@ -179,42 +182,46 @@ public class LoginActivity extends AppCompatActivity implements HttpUtils.ICallb
        }
     }
 
-    @OnClick(R.id.register_btn)
-    void register(){
-        startActivity(new Intent(context, RegisterActivity.class));
-    }
-
-    @OnClick(R.id.lostpassword_btn)
-    void lostPassword(){
-        startActivity(new Intent(context, LostPasswordActivity.class));
-    }
-
     boolean canSeePassword = false;
-
-    @OnClick(R.id.see_password)
-    void seePassword(){
-        if (canSeePassword){
-            seePasswordBtn.setBackgroundResource(R.mipmap.eye);
-            passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        }else{
-            seePasswordBtn.setBackgroundResource(R.mipmap.eye_selected);
-            passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+    @OnClick({R.id.register_btn,R.id.login_btn,R.id.lostpassword_btn})
+    void onClick(View view) {
+        switch (view.getId()){
+            case R.id.register_btn:
+                //注册
+                startActivity(new Intent(context, RegisterActivity.class));
+                break;
+            case R.id.lostpassword_btn:
+                //忘记密码
+                startActivity(new Intent(context, LostPasswordActivity.class));
+                break;
+            case R.id.login_btn:
+                login();
+                break;
+            case R.id.see_password:
+                if (canSeePassword){
+                    seePasswordBtn.setBackgroundResource(R.mipmap.eye);
+                    passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }else{
+                    seePasswordBtn.setBackgroundResource(R.mipmap.eye_selected);
+                    passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                }
+                canSeePassword = !canSeePassword;
+                break;
         }
-        canSeePassword = !canSeePassword;
     }
+
 
     //登录的方法
     public void easelogin(String username,String passwork){
-
         EMClient.getInstance().login(username.trim(), passwork.trim(), new EMCallBack() {
             @Override
             public void onSuccess() {
                 Log.d("环信账户登录","登录成功");
                 EMClient.getInstance().chatManager().loadAllConversations();
                 EMClient.getInstance().groupManager().loadAllGroups();
-             /*   startActivity(new Intent(context, HomeActivity.class));*/
+               // startActivity(new Intent(context, HomeActivity.class));
 
-                startActivity(new Intent(context, MainHomeActivity.class));
+            startActivity(new Intent(context, MainHomeActivity.class));
                 context.finish();
             }
 

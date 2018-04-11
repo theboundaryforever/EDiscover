@@ -4,6 +4,6 @@
         android:color="@color/vertify_color"
         />
     <corners
-        android:radius="@dimen/x9" />
+        android:radius="@dimen/bt_margin_15" />
 
 </shape>

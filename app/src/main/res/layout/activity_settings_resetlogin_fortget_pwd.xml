@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_margin_50"
         android:background="@color/white"
-        android:layout_marginTop="@dimen/x20"
+        android:layout_marginTop="@dimen/bt_margin_33"
         >
         <EditText
             android:id="@+id/et_vertify_code"

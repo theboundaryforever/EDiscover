@@ -13,9 +13,10 @@ import android.widget.RelativeLayout;
 import com.kest.ediscover.R;
 
 /**
+ *
+ * 设置
  * Created by Administrator on 2018/4/3 0003.
  */
-/*设置*/
 public class SettingsActivity  extends Activity {
     ImageView iv_back;
     //设置手机号

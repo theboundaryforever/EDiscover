@@ -10,8 +10,8 @@ import java.util.List;
  * Created by Administrator on 2018/4/9 0009.
  */
 
-public class TestAdapter extends BaseArrayRecyclerAdapter<String> {
-    public TestAdapter(List<String> mDatas) {
+public class AccountTypeAdapter extends BaseArrayRecyclerAdapter<String> {
+    public AccountTypeAdapter(List<String> mDatas) {
         super(mDatas);
     }
 

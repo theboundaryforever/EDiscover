@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import com.kest.ediscover.R;
 
 /**
+ * 记得密码一
  * Created by Administrator on 2018/4/6 0006.
  */
 
-//记得密码一
 public class SetRememberPWD1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

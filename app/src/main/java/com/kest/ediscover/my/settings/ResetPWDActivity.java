@@ -10,9 +10,9 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 修改支付密码
  * Created by Administrator on 2018/4/2 0002.
  */
-/*修改支付密码*/
 public class ResetPWDActivity extends AppCompatActivity {
     ImageView iv_back;
     TextView tv_remember;

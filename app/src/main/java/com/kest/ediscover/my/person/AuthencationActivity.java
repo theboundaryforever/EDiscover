@@ -8,59 +8,70 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.kest.ediscover.R;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2018/4/3 0003.
  */
 /*实名认证*/
 public class AuthencationActivity extends AppCompatActivity {
+    @BindView(R.id.iv_back)
     ImageView iv_back;
     //名字
+    @BindView(R.id.et_real_name)
     EditText et_real_name;
     //身份证号码
+    @BindView(R.id.et_card)
     EditText et_card;
     //手机号
+    @BindView(R.id.et_tel)
     EditText et_tel;
     //发送验证码按钮
+    @BindView(R.id.tv_send_code)
     TextView tv_send_code;
     //接收到的验证码
+    @BindView(R.id.et_code)
     EditText et_code;
     //身份证正面
+    @BindView(R.id.iv_card_positive)
     ImageView iv_card_positive;
     //身份证背面
+    @BindView(R.id.iv_card_negative)
     ImageView iv_card_negative;
     //确定按钮
-    LinearLayout ll_ok;
+    @BindView(R.id.ll_ok)
+    RelativeLayout ll_ok;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_person_authen);
-        initView();
-        setListener();
-    }
-    private void initView(){
-        iv_back=findViewById(R.id.iv_back);
-        et_real_name=findViewById(R.id.et_real_name);
-        et_card=findViewById(R.id.et_card);
-        et_tel=findViewById(R.id.et_tel);
-        tv_send_code=findViewById(R.id.tv_send_code);
-        et_code=findViewById(R.id.et_code);
-        iv_card_positive=findViewById(R.id.iv_card_positive);
-        iv_card_negative=findViewById(R.id.iv_card_negative);
-        ll_ok=findViewById(R.id.ll_ok);
-    }
-    private void setListener(){
-        iv_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
+    }
+
+
+    @OnClick({R.id.iv_back,R.id.tv_send_code,R.id.iv_card_positive,R.id.iv_card_negative,R.id.ll_ok})
+    void onclick(View view){
+        switch (view.getId()){
+            case R.id.iv_back:
+                finish();
+                break;
+            case R.id.tv_send_code:
+
+                break;
+            case R.id.iv_card_positive:
+                break;
+            case R.id.iv_card_negative:
+                break;
+            case R.id.ll_ok:
+                break;
+        }
     }
 }

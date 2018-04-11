@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import com.kest.ediscover.R;
 
 /**
+ * 修改支付密码成功
  * Created by Administrator on 2018/4/6 0006.
  */
 
-//修改支付密码成功
 public class SetPWDSuccessActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

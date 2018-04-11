@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.hyphenate.chat.EMOptions;
 import com.hyphenate.easeui.EaseUI;
+import com.squareup.leakcanary.LeakCanary;
 
 
 /**
@@ -21,7 +22,7 @@ public class MyApplication extends Application{
     public void onCreate() {
         super.onCreate();
         context = getApplicationContext();
-
+        LeakCanary.install(this);
         EMOptions emOptions = new EMOptions();
         // 默认添加好友时，是不需要验证的，改成需要验证
         emOptions.setAcceptInvitationAlways(true);

@@ -12,9 +12,9 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 设置密码主界面
  * Created by Administrator on 2018/4/3 0003.
  */
-/*设置密码主界面*/
 public class SettingsPWDActivity extends AppCompatActivity {
     ImageView iv_back;
     //支付密码

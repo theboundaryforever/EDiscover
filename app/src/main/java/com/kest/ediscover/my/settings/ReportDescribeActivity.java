@@ -10,9 +10,10 @@ import android.widget.ImageView;
 import com.kest.ediscover.R;
 
 /**
+ * 举报描述
  * Created by Administrator on 2018/4/3 0003.
  */
-/*举报描述*/
+
 public class ReportDescribeActivity  extends AppCompatActivity {
     ImageView iv_back;
     EditText et_describe;

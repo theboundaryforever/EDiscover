@@ -50,7 +50,6 @@
             android:drawablePadding="8dp"
             android:paddingBottom="15dp"
             android:paddingTop="15dp"
-
             android:textColor="@color/color333"
             android:textSize="16sp"
             android:text="余额支付（剩余￥500.00）" />
