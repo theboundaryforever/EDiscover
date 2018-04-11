@@ -32,8 +32,8 @@ import static com.kest.ediscover.R.id.sendCodeBtn;
 public class RegisterActivity extends BaseActivity {
 
     Activity context;
-    String code="";
-    Response response ;
+    String code = "";
+    Response response;
     private int flag = 60;
     private Timer timer;
 
@@ -68,11 +68,11 @@ public class RegisterActivity extends BaseActivity {
     boolean canSeePassword = false;
 
     @OnClick(R.id.see_password)
-    void seePassword(){
-        if (canSeePassword){
+    void seePassword() {
+        if (canSeePassword) {
             seePasswordBtn.setBackgroundResource(R.mipmap.eye);
             password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        }else{
+        } else {
             seePasswordBtn.setBackgroundResource(R.mipmap.eye_selected);
             password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         }
@@ -82,11 +82,11 @@ public class RegisterActivity extends BaseActivity {
     boolean canSeePassword2 = false;
 
     @OnClick(R.id.see_password_again)
-    void seePassword2(){
-        if (canSeePassword2){
+    void seePassword2() {
+        if (canSeePassword2) {
             seePasswordBtn2.setBackgroundResource(R.mipmap.eye);
             againPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        }else{
+        } else {
             seePasswordBtn2.setBackgroundResource(R.mipmap.eye_selected);
             againPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         }
@@ -95,34 +95,34 @@ public class RegisterActivity extends BaseActivity {
 
 
     @OnClick(R.id.register_btn)
-    void register(){
+    void register() {
 
-        if (userName.getText().toString().length()<1 || phoneNumber.getText().toString().length()<0
-                || smsCode.getText().toString().length()<0 || password.getText().toString().length()<0
-                || againPassword.getText().toString().length()<0 ){
+        if (userName.getText().toString().length() < 1 || phoneNumber.getText().toString().length() < 0
+                || smsCode.getText().toString().length() < 0 || password.getText().toString().length() < 0
+                || againPassword.getText().toString().length() < 0) {
             MyApplication.setToast("请把信息填写完整");
             return;
-        }else{
-            if(userName.getText().toString().length()<6||userName.getText().toString().length()>9){
+        } else {
+            if (userName.getText().toString().length() < 6 || userName.getText().toString().length() > 9) {
                 MyApplication.setToast("账户名长度有误，最小长度6，最大长度8");
                 return;
             }
-            if(smsCode.getText().toString().length()!=4){
-                MyApplication.setToast("验证码长度有误,验证码长度为4位");
-                return;
-            }
-            if(password.getText().toString().length()<6){
+//            if(smsCode.getText().toString().length()!=4){
+//                MyApplication.setToast("验证码长度有误,验证码长度为4位");
+//                return;
+//            }
+            if (password.getText().toString().length() < 6) {
                 MyApplication.setToast("密码长度有误,最少6位");
                 return;
             }
-            if(password.getText().toString().equals("123456")||password.getText().toString().equals("1234567")
-               || password.getText().toString().equals("12345678") || password.getText().toString().equals("123456789")
-               || password.getText().toString().equals("654321") || password.getText().toString().equals("234567")
-               || password.getText().toString().equals("345678") || password.getText().toString().equals("456789")){
+            if (password.getText().toString().equals("123456") || password.getText().toString().equals("1234567")
+                    || password.getText().toString().equals("12345678") || password.getText().toString().equals("123456789")
+                    || password.getText().toString().equals("654321") || password.getText().toString().equals("234567")
+                    || password.getText().toString().equals("345678") || password.getText().toString().equals("456789")) {
                 MyApplication.setToast("请不要使用类似123456这样的连续数字为密码");
                 return;
             }
-            if(!againPassword.getText().toString().equals(password.getText().toString())){
+            if (!againPassword.getText().toString().equals(password.getText().toString())) {
                 MyApplication.setToast("两次密码不相同，请重新输入");
                 return;
             }
@@ -133,10 +133,10 @@ public class RegisterActivity extends BaseActivity {
             public void run() {
                 Message message = Message.obtain();
                 AccountBiz accountBiz = new AccountBiz(context);
-                if(accountBiz.register(userName.getText().toString(),phoneNumber.getText().toString(), smsCode.getText().toString(),
-                        password.getText().toString(), "1")){
+                if (accountBiz.register(userName.getText().toString(), phoneNumber.getText().toString(), smsCode.getText().toString(),
+                        password.getText().toString(), "1")) {
                     message.what = 1;
-                }else message.what = 0;
+                } else message.what = 0;
                 handler.sendMessage(message);
             }
         }.start();
@@ -195,7 +195,9 @@ public class RegisterActivity extends BaseActivity {
                 default:
                     break;
             }
-        };
+        }
+
+        ;
     };
 
 

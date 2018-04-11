@@ -77,7 +77,6 @@ public class AccountBiz {
         try {
             String response = MessageDispatcher.JsonPost(USER_LOGIN_URI, params);
             JSONObject jsonObject = new JSONObject(response);
-
             DebugLog.i("登录返回"+response);
 
             //JSONObject responseBody = new JSONObject(jsonObject.optString("returnBody"));

@@ -42,4 +42,13 @@
     <color name="translucent">#50000000</color>
     <color name="sidebar_bg">#9AC949</color>
 
+    <color name="payment_title_text">#eabf75</color>
+    <color name="payment_bg">#2f354a</color>
+    <color name="color7a7a7a">#7a7a7a</color>
+    <color name="color333">#333333</color>
+    <color name="color8ebd6">#f8ebd6</color>
+
+
+    <color name="colore6e6e6">#e6e6e6</color>
+    <color name="colorBlack">#000000</color>
 </resources>

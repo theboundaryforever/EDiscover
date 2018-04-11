@@ -70,6 +70,7 @@
     <style name="Theme" parent="AppTheme">
         <item name="android:windowAnimationStyle">@style/Animation</item>
     </style>
+
     <style name="Animation">
         <item name="android:activityOpenEnterAnimation">@null</item>
         <item name="android:activityOpenExitAnimation">@null</item>
@@ -86,12 +87,27 @@
     </style>
 
     <!-- popwindow 弹出动画 -->
-    <style name="mypopwindow_anim_style" >
+    <style name="mypopwindow_anim_style">
 
-        <item name="android:windowEnterAnimation" >@anim/push_bottom_in</item>  //进入动画
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        //进入动画
 
-        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>  //退出动画
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+        //退出动画
 
     </style>
+
+
+    <!-- 带动画的底部弹出dialog-->
+    <style name="BottomDialog" parent="android:Animation">
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+    </style>
+
+
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/push_bottm_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
 
 </resources>

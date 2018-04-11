@@ -17,50 +17,47 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.kest.ediscover.ChatPage.Activity.ChatListActivity;
-import com.kest.ediscover.FriendPage2.Activity.FriendListActivity;
-import com.kest.ediscover.HomePage.Activity.HomeActivity;
+import com.kest.ediscover.my.PaymentActivity;
 import com.kest.ediscover.QRCodeActivity;
 import com.kest.ediscover.R;
 import com.kest.ediscover.ScanActivity;
-import com.kest.ediscover.WebAppActivity;
 import com.kest.ediscover.finance.FinanceFBiz;
-import com.kest.ediscover.my.MyActivity;
 import com.kest.ediscover.utils.DebugLog;
 import com.kest.ediscover.utils.SharePreferenceUtil;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Administrator on 2018/4/7 0007.
  */
 //首页
-public class HomeFragment extends Fragment implements View.OnClickListener{
+public class HomeFragment extends Fragment implements View.OnClickListener {
     private AppBarLayout appBarLayout;
-    private View toolbar1,toolbar2;
+    private View toolbar1, toolbar2;
     /*toolbar2*/
-    private ImageView img_shaomiao,img_fukuang,img_shoukuan,img_soushuo,img_zhaoxiang;
+    private ImageView img_shaomiao, img_fukuang, img_shoukuan, img_soushuo, img_zhaoxiang;
     /*toolbar1*/
-    private LinearLayout layout_sousuo,setting_btn;
-    private TextView aaa,bbb,txt_username;
+    private LinearLayout layout_sousuo, setting_btn;
+    private TextView aaa, bbb, txt_username;
     private ImageView txt_tianjia;
     private String url;
     private SharePreferenceUtil sp;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=null;
-        if(view==null){
-            view=inflater.inflate(R.layout.fragment_home,null);
+        View view = null;
+        if (view == null) {
+            view = inflater.inflate(R.layout.fragment_home, null);
         }
-        if(view!=null){
+        if (view != null) {
             init(view);
         }
         return view;
     }
-    /**初始化*/
-    private void init(View view){
+
+    /**
+     * 初始化
+     */
+    private void init(View view) {
         view.findViewById(R.id.img_shaomiao).setOnClickListener(this);
         view.findViewById(R.id.img_fukuang).setOnClickListener(this);
         view.findViewById(R.id.img_shoukuan).setOnClickListener(this);
@@ -82,7 +79,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         /*toolbar2*/
         img_shaomiao = view.findViewById(R.id.img_shaomiao);
         img_fukuang = view.findViewById(R.id.img_fukuang);
-        img_shoukuan =view.findViewById(R.id.img_shoukuan);
+        img_shoukuan = view.findViewById(R.id.img_shoukuan);
         img_soushuo = view.findViewById(R.id.img_soushuo);
         img_zhaoxiang = view.findViewById(R.id.img_zhaoxiang);
         /*toolbar1*/
@@ -91,38 +88,40 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         aaa = view.findViewById(R.id.aaa);
         bbb = view.findViewById(R.id.bbb);
         txt_username = view.findViewById(R.id.txt_username);
-        txt_tianjia =  view.findViewById(R.id.txt_tianjia);
+        txt_tianjia = view.findViewById(R.id.txt_tianjia);
         assigment();
     }
 
-    /**赋值*/
-    private void assigment(){
+    /**
+     * 赋值
+     */
+    private void assigment() {
         sp = SharePreferenceUtil.getInstance(getContext());
         txt_username.setText(sp.getUserName());
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                Log.d("我的","verticalOffset="+verticalOffset+",ads="+Math.abs(verticalOffset)+","+appBarLayout.getTotalScrollRange());
-                if(verticalOffset == 0){
+                Log.d("我的", "verticalOffset=" + verticalOffset + ",ads=" + Math.abs(verticalOffset) + "," + appBarLayout.getTotalScrollRange());
+                if (verticalOffset == 0) {
                     //完全展开
                     toolbar1.setVisibility(View.VISIBLE);
                     toolbar2.setVisibility(View.GONE);
                     setToolbar1Alpha(255);
-                }else if(Math.abs(verticalOffset) == appBarLayout.getTotalScrollRange()){
+                } else if (Math.abs(verticalOffset) == appBarLayout.getTotalScrollRange()) {
                     //完全折叠
                     toolbar1.setVisibility(View.GONE);
                     toolbar2.setVisibility(View.VISIBLE);
                     setToolbar2Alpha(255);
-                }else{
+                } else {
                     //0-150上下滑
-                    if(toolbar1.getVisibility() == View.VISIBLE){
+                    if (toolbar1.getVisibility() == View.VISIBLE) {
                         //操作tollbar1
-                        int alpha = 300 - 155- Math.abs(verticalOffset);
-                        Log.d("我的，alpha",""+alpha);
+                        int alpha = 300 - 155 - Math.abs(verticalOffset);
+                        Log.d("我的，alpha", "" + alpha);
                         setToolbar1Alpha(alpha);
-                    }else if(toolbar2.getVisibility() == View.VISIBLE){
+                    } else if (toolbar2.getVisibility() == View.VISIBLE) {
                         //操作toolbar2
-                        if(Math.abs(verticalOffset) > 0 && Math.abs(verticalOffset) < 150){
+                        if (Math.abs(verticalOffset) > 0 && Math.abs(verticalOffset) < 150) {
                             toolbar1.setVisibility(View.VISIBLE);
                             toolbar2.setVisibility(View.GONE);
                             setToolbar1Alpha(255);
@@ -139,7 +138,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()){
+        switch (view.getId()) {
 
             case R.id.img_shaomiao:  //便捷栏扫描
                 Intent intent = new Intent(getContext(), ScanActivity.class);
@@ -147,6 +146,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.img_fukuang:  //便捷栏付款
 
+                startActivity(new Intent(getContext(), PaymentActivity.class));
                 break;
             case R.id.img_shoukuan:  //便捷栏收款
                 final FinanceFBiz financeFBiz = new FinanceFBiz(getContext());
@@ -165,7 +165,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 startActivityForResult(intent5, 1);
                 break;
             case R.id.layout_fukuan:  //模块付款
-
+                startActivity(new Intent(getContext(), PaymentActivity.class));
                 break;
             case R.id.layout_shoukuan:  //模块收款
                 final FinanceFBiz financeFBiz1 = new FinanceFBiz(getContext());
