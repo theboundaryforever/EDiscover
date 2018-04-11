@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="选择优先的支付方式"
+            android:textColor="@color/color333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:text="优先使用所选的支付方式，如付款失败请尝试其他支付方式"
+            android:textColor="@color/color7a7a7a"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/payment_title_text" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bank_title_color"
+            android:drawableLeft="@drawable/icon5"
+            android:drawablePadding="8dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+
+            android:textColor="@color/color333"
+            android:textSize="16sp"
+            android:text="余额支付（剩余￥500.00）" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/payment_title_text" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bank_title_color"
+            android:drawableLeft="@drawable/icon5"
+            android:drawablePadding="8dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="ED币支付（剩余20枚）"
+            android:textColor="@color/color333"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/payment_title_text" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bank_title_color"
+            android:drawableLeft="@drawable/icon5"
+            android:drawablePadding="8dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="工商银行储蓄卡（6053）"
+            android:textColor="@color/color333"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
+</LinearLayout>
