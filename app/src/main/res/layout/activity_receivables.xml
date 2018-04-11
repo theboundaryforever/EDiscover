@@ -50,9 +50,9 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="16dp"
-            android:drawableLeft="@drawable/icon6"
+            android:drawableLeft="@drawable/icon"
             android:drawablePadding="6dp"
-            android:text="向商家付款"
+            android:text="二维码收款"
             android:textColor="@color/payment_title_text"
             android:textSize="15sp" />
 
@@ -65,15 +65,22 @@
 
 
         <TextView
-            android:id="@+id/tv_show_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
-            android:text="点击可查看付款码数字"
+            android:text="无需加好友，扫二维码向我付钱"
             android:textColor="@color/color7a7a7a"
             android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="￥300.00"
+            android:textColor="@color/color333"
+            android:textSize="30sp" />
 
 
         <ImageView
@@ -81,9 +88,46 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
             android:background="#000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tv_setting_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="设置金额"
+                android:textColor="@color/payment_title_text"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@color/color7a7a7a" />
+
+            <TextView
+                android:id="@+id/tv_save_pic"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="保存图片"
+                android:textColor="@color/payment_title_text"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
 
         <View
             android:layout_width="match_parent"
@@ -98,18 +142,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingTop="13dp">
+            android:padding="20dp">
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:drawableLeft="@drawable/icon2"
-                android:text="余额"
-                android:drawablePadding="5dp"
+                android:drawablePadding="10dp"
+                android:text="收账小账本"
                 android:textColor="@color/color333"
                 android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/set_go" />
 
         </LinearLayout>
 

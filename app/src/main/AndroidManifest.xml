@@ -4,7 +4,10 @@
     package="com.kest.ediscover">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
+
     　　
+
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -246,7 +249,7 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".my.settings.SetForgetPWD2Activity"
-            android:launchMode="singleTop"></activity>
+            android:launchMode="singleTop" />
         <activity
             android:name=".my.settings.SetForgetPWD3Activity"
             android:launchMode="singleTop" />
@@ -259,7 +262,7 @@
             android:name=".my.settings.ChangeTelSuccessActivity"
             android:launchMode="singleTop" />
         <!-- 我的二维码 -->
-        <activity android:name=".my.person.MyQrCodeActivity"></activity>
+        <activity android:name=".my.person.MyQrCodeActivity" />
         <!-- 个人信息 -->
         <activity
             android:name=".my.person.PersonInfoActivity"
@@ -273,7 +276,7 @@
             android:name=".my.person.AuthencationActivity"
             android:launchMode="singleTop" />
         <!-- 添加银行卡 -->
-        <activity android:name=".my.bindbank.AddBank1Activity"></activity>
+        <activity android:name=".my.bindbank.AddBank1Activity" />
         <activity
             android:name=".my.bindbank.AddBankActivity"
             android:launchMode="singleTop" />
@@ -325,7 +328,9 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="3ecea51f560650b1ed8a4b99808f52e8" />
 
-        <activity android:name=".my.ReceivablesActivity"></activity>
+        <activity android:name=".my.ReceivablesActivity" />
+        <activity android:name=".my.SmallBillActivity" />
+        <activity android:name=".my.SettingMoneyActivity"/>
     </application>
 
 </manifest>

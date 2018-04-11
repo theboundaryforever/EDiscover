@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import com.kest.ediscover.BaseActivity;
 import com.kest.ediscover.ChatPage.Activity.ChatListActivity;
-import com.kest.ediscover.PaymentActivity_ViewBinding;
 import com.kest.ediscover.QRCodeActivity;
 import com.kest.ediscover.R;
 import com.kest.ediscover.ScanActivity;

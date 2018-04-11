@@ -22,6 +22,7 @@ import com.kest.ediscover.QRCodeActivity;
 import com.kest.ediscover.R;
 import com.kest.ediscover.ScanActivity;
 import com.kest.ediscover.finance.FinanceFBiz;
+import com.kest.ediscover.my.ReceivablesActivity;
 import com.kest.ediscover.utils.DebugLog;
 import com.kest.ediscover.utils.SharePreferenceUtil;
 
@@ -149,16 +150,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getContext(), PaymentActivity.class));
                 break;
             case R.id.img_shoukuan:  //便捷栏收款
-                final FinanceFBiz financeFBiz = new FinanceFBiz(getContext());
-                new Thread() {
-                    public void run() {
-                        Message message = Message.obtain();
-                        message.what = 1;
-                        url = financeFBiz.getPayCode();
-                        DebugLog.i("url:====" + url);
-                        handler.sendMessage(message);
-                    }
-                }.start();
+//                final FinanceFBiz financeFBiz = new FinanceFBiz(getContext());
+//                new Thread() {
+//                    public void run() {
+//                        Message message = Message.obtain();
+//                        message.what = 1;
+//                        url = financeFBiz.getPayCode();
+//                        DebugLog.i("url:====" + url);
+//                        handler.sendMessage(message);
+//                    }
+//                }.start();
+
+                startActivity(new Intent(getContext(), ReceivablesActivity.class));
                 break;
             case R.id.layout_saomiao:  //模块扫描
                 Intent intent5 = new Intent(getContext(), ScanActivity.class);
@@ -168,16 +171,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getContext(), PaymentActivity.class));
                 break;
             case R.id.layout_shoukuan:  //模块收款
-                final FinanceFBiz financeFBiz1 = new FinanceFBiz(getContext());
-                new Thread() {
-                    public void run() {
-                        Message message = Message.obtain();
-                        message.what = 1;
-                        url = financeFBiz1.getPayCode();
-                        DebugLog.i("url:====" + url);
-                        handler.sendMessage(message);
-                    }
-                }.start();
+//                final FinanceFBiz financeFBiz1 = new FinanceFBiz(getContext());
+//                new Thread() {
+//                    public void run() {
+//                        Message message = Message.obtain();
+//                        message.what = 1;
+//                        url = financeFBiz1.getPayCode();
+//                        DebugLog.i("url:====" + url);
+//                        handler.sendMessage(message);
+//                    }
+//                }.start();
+
+                startActivity(new Intent(getContext(), ReceivablesActivity.class));
                 break;
             case R.id.layout_yve:  //模块余额
              /*   Intent intent1 = new Intent(HomeActivity.this, WebAppActivity.class);
