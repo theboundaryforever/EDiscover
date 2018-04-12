@@ -10,5 +10,7 @@
     <color name="color_9999">#999999</color>
     <color name="color_redff">#ff3666</color>
     <color name="color_66redff">#66ff3666</color>
+    <color name="color_reded">#ed4040</color>
     <color name="color_blue">#01aafc</color>
+    <color name="color_money">#ebc088</color>
 </resources>

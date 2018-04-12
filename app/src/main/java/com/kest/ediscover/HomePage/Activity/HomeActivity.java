@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.hyphenate.chat.EMClient;
 import com.kest.ediscover.BaseActivity;
 import com.kest.ediscover.ChatPage.Activity.ChatListActivity;
 import com.kest.ediscover.QRCodeActivity;
@@ -102,6 +103,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
     private void assigment(){
 
         sp = SharePreferenceUtil.getInstance(this);
+        EMClient.getInstance().chatManager().loadAllConversations();
+        EMClient.getInstance().groupManager().loadAllGroups();
 
         txt_username.setText(sp.getUserName());
 

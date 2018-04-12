@@ -38,8 +38,8 @@ public class SplashActivity extends BaseActivity {
                 cancelTimer();
                 if(sp.getLoginStatus()){
                     //intent = new Intent(SplashActivity.this, MainActivity.class);
-                    // intent = new Intent(SplashActivity.this, HomeActivity.class);
-                 intent = new Intent(SplashActivity.this, MainHomeActivity .class);
+                    intent = new Intent(SplashActivity.this, HomeActivity.class);
+                  //intent = new Intent(SplashActivity.this, MainHomeActivity .class);
                 }else {
                     intent = new Intent(SplashActivity.this, LoginActivity.class);
                 }
@@ -62,8 +62,8 @@ public class SplashActivity extends BaseActivity {
         public void handleMessage(android.os.Message msg) {
             if (msg.what == -1) {
                 if(sp.getLoginStatus()){
-                   /* intent = new Intent(SplashActivity.this, HomeActivity.class);*/
-                    intent = new Intent(SplashActivity.this, MainHomeActivity.class);
+                   intent = new Intent(SplashActivity.this, HomeActivity.class);
+                  //  intent = new Intent(SplashActivity.this, MainHomeActivity.class);
                 }else {
 
                     intent = new Intent(SplashActivity.this, LoginActivity.class);

@@ -133,6 +133,13 @@
         <activity android:name=".ChatPage.Activity.GroupChatActivity" android:launchMode="singleTop" />
 
         <activity android:name=".FriendPage2.Activity.SelectContactActivity" android:launchMode="singleTop" />
+
+        <activity android:name="com.hyphenate.easeui.ui.RedEnvelopesActivity"  android:launchMode="singleTop" />
+
+        <activity android:name="com.hyphenate.easeui.ui.RedEnvelopesDetailsActivity" android:launchMode="singleTop" />
+
+        <activity android:name="com.hyphenate.easeui.ui.RedEnvelopesRecordActivity"  android:launchMode="singleTop" />
+
         <!--我的-->
         <activity android:name=".my.MyActivity" android:launchMode="singleTop"/>
         <!--设置界面-->
@@ -145,11 +152,8 @@
             />
         <!--举报首页-->
         <activity android:name=".my.settings.ReportActivity" android:launchMode="singleTop"/>
-
-
         <!--举报其它受害-->
         <activity android:name=".my.settings.ReportOtherActivity" android:launchMode="singleTop"/>
-
         <!--举报描述-->
         <activity android:name=".my.settings.ReportDescribeActivity" android:launchMode="singleTop"/>
 <!--设置密码主界面-->
@@ -190,9 +194,6 @@
         </activity>
         <activity android:name=".my.bindbank.AddBankActivity" android:launchMode="singleTop"/>
         <activity android:name=".my.bindbank.UnbindBankActivity" android:launchMode="singleTop"/>
-        <activity android:name=".my.account.AccountDetailActivity" android:launchMode="singleInstance"/>
-        <activity android:name=".my.account.DetailBillActivity" android:launchMode="singleInstance"/>
-        <activity android:name=".my.account.TransferAccountsActivity" android:launchMode="singleInstance"/>
 
 
         <!-- 环信自己的activity     -->

@@ -13,7 +13,6 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -117,7 +116,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     
     protected int[] itemStrings = { R.string.attach_take_pic, R.string.attach_picture, R.string.attach_location,R.string.attach_hb,R.string.attach_yy,R.string.attach_sp,R.string.attach_gr,R.string.attach_zz};
     protected int[] itemdrawables = { R.mipmap.shooting, R.mipmap.photos,
-            R.mipmap.position,R.mipmap.redicon,R.mipmap.voice,R.mipmap.video,R.mipmap.business_card,R.mipmap.transfer };
+            R.mipmap.position,R.mipmap.redicon,R.mipmap.voice,R.mipmap.video,R.mipmap.business_card,R.mipmap.transfer1};
     protected int[] itemIds = { ITEM_TAKE_PICTURE, ITEM_PICTURE, ITEM_LOCATION,ITEM_HB ,ITEM_YY,ITEM_SP,ITEM_GE,ITEM_ZZ};
     private boolean isMessageListInited;
     protected MyItemClickListener extendMenuItemClickListener;

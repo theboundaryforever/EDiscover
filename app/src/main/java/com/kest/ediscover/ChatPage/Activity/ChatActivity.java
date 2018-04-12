@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
+import com.hyphenate.easeui.ui.ChatFragment;
 import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.hyphenate.easeui.widget.EaseTitleBar;
 import com.kest.ediscover.MyApplication;
@@ -24,7 +25,7 @@ import com.kest.ediscover.utils.SharePreferenceUtil;
 
 public class ChatActivity extends FragmentActivity implements View.OnClickListener{
 
-    private EaseChatFragment chatFragment;
+    private ChatFragment chatFragment;
     private EaseTitleBar easetitlebar;
     private String chattype="",chatid="";
 
@@ -36,7 +37,7 @@ public class ChatActivity extends FragmentActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chatlayout);
 
-        chatFragment = new EaseChatFragment();
+        chatFragment = new ChatFragment();
         //传入参数
         chatFragment.setArguments(getIntent().getExtras());
         getSupportFragmentManager().beginTransaction().add(R.id.chatlist_frament, chatFragment).commit();

@@ -17,6 +17,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -29,6 +30,7 @@ import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.model.styles.EaseMessageListItemStyle;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.widget.EaseChatMessageList.MessageListItemClickListener;
+import com.hyphenate.easeui.widget.chatrow.EaseChatRedEnvelopsPresenter;
 import com.hyphenate.easeui.widget.chatrow.EaseCustomChatRowProvider;
 import com.hyphenate.easeui.widget.presenter.EaseChatBigExpressionPresenter;
 import com.hyphenate.easeui.widget.presenter.EaseChatFilePresenter;
@@ -36,8 +38,12 @@ import com.hyphenate.easeui.widget.presenter.EaseChatImagePresenter;
 import com.hyphenate.easeui.widget.presenter.EaseChatLocationPresenter;
 import com.hyphenate.easeui.widget.presenter.EaseChatRowPresenter;
 import com.hyphenate.easeui.widget.presenter.EaseChatTextPresenter;
+import com.hyphenate.easeui.widget.presenter.EaseChatTransferPresenter;
 import com.hyphenate.easeui.widget.presenter.EaseChatVideoPresenter;
 import com.hyphenate.easeui.widget.presenter.EaseChatVoicePresenter;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class EaseMessageAdapter extends BaseAdapter{
 
@@ -63,6 +69,10 @@ public class EaseMessageAdapter extends BaseAdapter{
 	private static final int MESSAGE_TYPE_RECV_FILE = 11;
 	private static final int MESSAGE_TYPE_SENT_EXPRESSION = 12;
 	private static final int MESSAGE_TYPE_RECV_EXPRESSION = 13;
+	private static final int MESSAGE_TYPE_RECV_RED = 14;
+	private static final int MESSAGE_TYPE_SENT_RED = 15;
+	private static final int MESSAGE_TYPE_RECV_TRANSFER = 16;
+	private static final int MESSAGE_TYPE_SENT_TRANSFER = 17;
 	
 	
 	public int itemTypeCount; 
@@ -172,9 +182,9 @@ public class EaseMessageAdapter extends BaseAdapter{
 	 */
 	public int getViewTypeCount() {
 	    if(customRowProvider != null && customRowProvider.getCustomChatRowTypeCount() > 0){
-	        return customRowProvider.getCustomChatRowTypeCount() + 14;
+	        return customRowProvider.getCustomChatRowTypeCount() + 18;
 	    }
-        return 14;
+        return 18;
     }
 	
 
@@ -188,13 +198,19 @@ public class EaseMessageAdapter extends BaseAdapter{
 		}
 		
 		if(customRowProvider != null && customRowProvider.getCustomChatRowType(message) > 0){
-		    return customRowProvider.getCustomChatRowType(message) + 13;
+		    return customRowProvider.getCustomChatRowType(message) + 17;
 		}
-		
 		if (message.getType() == EMMessage.Type.TXT) {
 		    if(message.getBooleanAttribute(EaseConstant.MESSAGE_ATTR_IS_BIG_EXPRESSION, false)){
 		        return message.direct() == EMMessage.Direct.RECEIVE ? MESSAGE_TYPE_RECV_EXPRESSION : MESSAGE_TYPE_SENT_EXPRESSION;
 		    }
+
+		    Log.d("GETItem的值",""+message.getStringAttribute("sign",""));
+            if((message.getStringAttribute("sign","")).equals("0")){
+            	return message.direct() == EMMessage.Direct.RECEIVE ? MESSAGE_TYPE_RECV_RED : MESSAGE_TYPE_SENT_RED ;
+			}else if((message.getStringAttribute("sign","")).equals("1")){
+				return message.direct() == EMMessage.Direct.RECEIVE ? MESSAGE_TYPE_RECV_TRANSFER : MESSAGE_TYPE_SENT_TRANSFER ;
+			}
 			return message.direct() == EMMessage.Direct.RECEIVE ? MESSAGE_TYPE_RECV_TXT : MESSAGE_TYPE_SENT_TXT;
 		}
 		if (message.getType() == EMMessage.Type.IMAGE) {
@@ -226,11 +242,17 @@ public class EaseMessageAdapter extends BaseAdapter{
 
         switch (message.getType()) {
         case TXT:
-            if(message.getBooleanAttribute(EaseConstant.MESSAGE_ATTR_IS_BIG_EXPRESSION, false)){
+			Log.d("适配器",""+message.ext().size());
+			if (message.getBooleanAttribute(EaseConstant.MESSAGE_ATTR_IS_BIG_EXPRESSION, false)) {
 				presenter = new EaseChatBigExpressionPresenter();
-            }else{
+			}else if((message.getStringAttribute("sign","")).equals("0")){
+				presenter = new EaseChatRedEnvelopsPresenter();
+			}else if((message.getStringAttribute("sign","")).equals("1")){
+				presenter = new EaseChatTransferPresenter();
+			}else {
 				presenter = new EaseChatTextPresenter();
-            }
+			}
+
             break;
         case LOCATION:
         	presenter = new EaseChatLocationPresenter();

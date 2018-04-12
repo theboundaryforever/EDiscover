@@ -1,47 +1,52 @@
 package com.hyphenate.easeui.widget.chatrow;
 
 import android.content.Context;
-import android.text.Spannable;
 import android.util.Log;
 import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import android.widget.TextView.BufferType;
 
+import com.google.gson.Gson;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.chat.EMTextMessageBody;
 import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.model.EaseDingMessageHelper;
-import com.hyphenate.easeui.utils.EaseSmileUtils;
+
+import org.json.JSONObject;
 
 import java.util.List;
-import java.util.Map;
 
-public class EaseChatRowText extends EaseChatRow{
+/**
+ * Created by Administrator on 2018\4\12 0012.
+ */
 
-	private TextView contentView;
+public class EaseChatRowTransfer extends EaseChatRow {
 
-    public EaseChatRowText(Context context, EMMessage message, int position, BaseAdapter adapter) {
-		super(context, message, position, adapter);
-	}
+    private TextView tv_title;
 
-	@Override
-	protected void onInflateView() {
-        inflater.inflate(message.direct() == EMMessage.Direct.RECEIVE ?
-               R.layout.ease_row_received_message : R.layout.ease_row_sent_message, this);
+    public EaseChatRowTransfer(Context context, EMMessage message, int position, BaseAdapter adapter) {
+        super(context, message, position, adapter);
     }
 
-	@Override
-	protected void onFindViewById() {
-		contentView = (TextView) findViewById(R.id.tv_chatcontent);
-	}
+    @Override
+    protected void onInflateView() {
+        if (message.ext().size() > 0) {
+            Log.d("调用界面", "" + message.ext() + ",map值" + message.ext().get("sign"));
+            if (message.ext().get("sign").equals("1")) {
+                inflater.inflate(message.direct() == EMMessage.Direct.RECEIVE ?
+                        R.layout.ease_row_received_transfer_message : R.layout.ease_row_sent_transfer_message, this);
+            } else {
+                inflater.inflate(message.direct() == EMMessage.Direct.RECEIVE ?
+                        R.layout.ease_row_received_message : R.layout.ease_row_sent_message, this);
+            }
+        } else {
+            inflater.inflate(message.direct() == EMMessage.Direct.RECEIVE ?
+                    R.layout.ease_row_received_message : R.layout.ease_row_sent_message, this);
+        }
+    }
 
     @Override
-    public void onSetUpView() {
-        EMTextMessageBody txtBody = (EMTextMessageBody) message.getBody();
-        Spannable span = EaseSmileUtils.getSmiledText(context, txtBody.getMessage());
-        // 设置内容
-        contentView.setText(span, BufferType.SPANNABLE);
+    protected void onFindViewById() {
+        tv_title = (TextView)findViewById(R.id.tv_title);
     }
 
     @Override
@@ -61,6 +66,25 @@ public class EaseChatRowText extends EaseChatRow{
                 break;
         }
     }
+
+    /**
+     * 布局赋值
+     **/
+    @Override
+    protected void onSetUpView() {
+        if(message.ext().size()>0) {
+            try{
+                Gson gson = new Gson();
+                String jsonStr = gson.toJson(message.ext());
+                Log.d("ROW赋值",jsonStr);
+                JSONObject js = new JSONObject(jsonStr);
+                tv_title.setText(js.getString("Money")+" 元");
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
 
     public void onAckUserUpdate(final int count) {
         if (ackedView != null) {
@@ -112,4 +136,5 @@ public class EaseChatRowText extends EaseChatRow{
                     onAckUserUpdate(list.size());
                 }
             };
+
 }
