@@ -11,36 +11,53 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.kest.ediscover.R;
-import com.kest.ediscover.my.MyActivity;
+import com.kest.ediscover.my.account.AccountDetailActivity;
 import com.kest.ediscover.my.bindbank.AddBank1Activity;
+import com.kest.ediscover.my.person.AuthencationActivity;
 import com.kest.ediscover.my.person.PersonInfoActivity;
 import com.kest.ediscover.my.settings.SettingsActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+
 /**
+ * 我的
  * Created by Administrator on 2018/4/7 0007.
  */
 
-//我的
 public class MyFragment extends Fragment {
     //设置
+    @BindView(R.id.tv_settings)
     ImageView tv_settings;
     //实名认证
+    @BindView(R.id.rl_authen)
     RelativeLayout rl_authen;
+    @BindView(R.id.iv_cancel)
     ImageView iv_cancel;
     //账户明细
+    @BindView(R.id.rl_count)
     RelativeLayout rl_count;
     //总资产
+    @BindView(R.id.rl_total_assets)
     RelativeLayout rl_total_assets;
     //线下订单记录
+    @BindView(R.id.rl_line)
     RelativeLayout rl_line;
     //ED币
+    @BindView(R.id.rl_ed)
     RelativeLayout rl_ed;
     //钱包
+    @BindView(R.id.rl_wallet)
     RelativeLayout rl_wallet;
     //银行卡
+    @BindView(R.id.rl_card)
     RelativeLayout rl_card;
     //个人信息
+    @BindView(R.id.rl_person_info)
     RelativeLayout rl_person_info;
+    Unbinder unbinder;
 
     @Nullable
     @Override
@@ -50,42 +67,35 @@ public class MyFragment extends Fragment {
             view=inflater.inflate(R.layout.activity_my,null);
         }
         if(null!=view){
-            initView(view);
-            setListener();
+            unbinder=  ButterKnife.bind(this,view);
         }
         return view;
     }
-    private void initView(View view){
-        tv_settings=view.findViewById(R.id.tv_settings);
-        iv_cancel=view.findViewById(R.id.iv_cancel);
-        rl_card=view.findViewById(R.id.rl_card);
-        rl_authen=view.findViewById(R.id.rl_authen);
-        rl_person_info=view.findViewById(R.id.rl_person_info);
-        rl_count=view.findViewById(R.id.rl_count);
-        rl_total_assets=view.findViewById(R.id.rl_total_assets);
-        rl_line=view.findViewById(R.id.rl_line);
-        rl_ed=view.findViewById(R.id.rl_ed);
-        rl_wallet=view.findViewById(R.id.rl_wallet);
 
-    }
-    private void setListener(){
-        tv_settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @OnClick({R.id.tv_settings,R.id.rl_authen,R.id.rl_card,R.id.rl_person_info,R.id.rl_count})
+    void viewClick(View view){
+        switch (view.getId()){
+            case R.id.tv_settings:
                 startActivity(new Intent(getContext(), SettingsActivity.class));
-            }
-        });
-        rl_card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.rl_authen:
+                startActivity(new Intent(getContext(), AuthencationActivity.class));
+                break;
+            case R.id.rl_card:
                 startActivity(new Intent(getContext(), AddBank1Activity.class));
-            }
-        });
-        rl_person_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.rl_person_info:
                 startActivity(new Intent(getContext(), PersonInfoActivity.class));
-            }
-        });
+                break;
+            case R.id.rl_count:
+                startActivity(new Intent(getContext(), AccountDetailActivity.class));
+                break;
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
 }

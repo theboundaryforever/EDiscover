@@ -12,9 +12,9 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 重置登录密码
  * Created by Administrator on 2018/4/3 0003.
  */
-/*重置登录密码*/
 public class ResetLoginPwdActivity  extends AppCompatActivity{
     TextView tv_title;
     ImageView iv_back;

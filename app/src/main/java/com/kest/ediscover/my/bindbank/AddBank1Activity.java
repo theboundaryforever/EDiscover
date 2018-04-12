@@ -10,9 +10,10 @@ import android.widget.ImageView;
 import com.kest.ediscover.R;
 
 /**
+ * 添加银行卡
  * Created by Administrator on 2018/4/4 0004.
  */
-//添加银行卡
+
 public class AddBank1Activity extends Activity {
     private ImageView iv_back;
     @Override

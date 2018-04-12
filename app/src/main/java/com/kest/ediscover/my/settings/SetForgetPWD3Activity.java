@@ -7,9 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import com.kest.ediscover.R;
 
 /**
+ * 不记得支付密码密码二
  * Created by Administrator on 2018/4/6 0006.
  */
-//不记得支付密码密码二
 public class SetForgetPWD3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

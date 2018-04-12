@@ -9,9 +9,10 @@ import android.widget.ImageView;
 import com.kest.ediscover.R;
 
 /**
+ * 换绑手机成功
  * Created by Administrator on 2018/4/3 0003.
  */
-/*换绑手机成功*/
+
 public class ChangeTelSuccessActivity extends AppCompatActivity {
     ImageView iv_back;
     @Override

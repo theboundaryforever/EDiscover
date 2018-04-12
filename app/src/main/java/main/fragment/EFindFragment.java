@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import com.kest.ediscover.R;
 
 /**
+ * E发现
  * Created by Administrator on 2018/4/7 0007.
  */
-//E发现
 public class EFindFragment extends Fragment {
     @Nullable
     @Override

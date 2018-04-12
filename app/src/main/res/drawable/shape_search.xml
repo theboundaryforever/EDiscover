@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/blue_black" />
+
+    <corners
+        android:radius="@dimen/bt_margin_5" />
+
+</shape>

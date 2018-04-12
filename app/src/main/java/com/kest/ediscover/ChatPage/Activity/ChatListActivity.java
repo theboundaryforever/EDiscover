@@ -69,11 +69,7 @@ public class ChatListActivity extends FragmentActivity implements View.OnClickLi
         easeConversationListFragment = new EaseConversationListFragment();
         transaction.add(R.id.chatlist_framelayout,easeConversationListFragment);
         transaction.commit();
-
-
         txt_title.setText("E信");
-
-
 
         easeConversationListFragment.setConversationListItemClickListener(new EaseConversationListFragment.EaseConversationListItemClickListener() {
             @Override

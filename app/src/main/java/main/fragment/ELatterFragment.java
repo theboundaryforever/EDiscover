@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import com.kest.ediscover.R;
 
 /**
+ * E信
  * Created by Administrator on 2018/4/7 0007.
  */
-//E信
 public class ELatterFragment extends Fragment {
     @Nullable
     @Override

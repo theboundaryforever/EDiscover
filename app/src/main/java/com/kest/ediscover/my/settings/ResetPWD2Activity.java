@@ -12,9 +12,10 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 设置密码的下一步
  * Created by Administrator on 2018/4/3 0003.
  */
-/*设置密码的下一步*/
+
 
 public class ResetPWD2Activity extends AppCompatActivity {
     ImageView iv_back;

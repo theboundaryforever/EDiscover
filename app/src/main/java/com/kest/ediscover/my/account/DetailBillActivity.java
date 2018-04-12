@@ -19,56 +19,64 @@ import com.yanzhenjie.permission.Permission;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.OnClick;
+
 /**
  * Created by Administrator on 2018/4/9 0009.
  */
 //账单详情
 public class DetailBillActivity extends AppCompatActivity {
+    @BindView(R.id.iv_back)
     ImageView iv_back;
+    @BindView(R.id.tv_title)
     TextView tv_title;
+    @BindView(R.id.tv_race)
     TextView tv_race;
     //收款金额
+    @BindView(R.id.tv_money)
     TextView tv_money;
     //当前状态
+    @BindView(R.id.tv_sure)
     TextView tv_sure;
+
     //来自于谁
+    @BindView(R.id.tv_from)
     TextView tv_from;
     //转账说明
+    @BindView(R.id.tv_explain)
     TextView tv_explain;
     //专账时间
+    @BindView(R.id.tv_transfer_time)
     TextView tv_transfer_time;
     //收钱时间
+    @BindView(R.id.tv_collect_time)
     TextView tv_collect_time;
     //支付方式
+    @BindView(R.id.tv_pay_type)
     TextView tv_pay_type;
     //账单账号
+    @BindView(R.id.tv_account_num)
     TextView tv_account_num;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_settings_detail_bill);
-        iv_back=findViewById(R.id.iv_back);
-        tv_title=findViewById(R.id.tv_title);
-        tv_race=findViewById(R.id.tv_race);
         tv_race.setVisibility(View.VISIBLE);
         tv_title.setText("账户明细");
-        iv_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        tv_race.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPop();
-
-            }
-        });
-
     }
-
+        @OnClick({})
+        void onClick(View view){
+            switch (view.getId()){
+                case R.id.iv_back:
+                    finish();
+                    break;
+                case R.id.tv_race:
+                    showPop();
+                    break;
+            }
+        }
     private void showPop(){
         View view= LayoutInflater.from(this).inflate(R.layout.fragment_settings_account_type,null);
         View parentView =LayoutInflater.from(this).inflate(R.layout.fragment_settings_detail_bill,null);

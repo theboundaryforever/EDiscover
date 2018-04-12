@@ -9,10 +9,10 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 不记得支付密码密码
  * Created by Administrator on 2018/4/6 0006.
  */
 
-//不记得支付密码密码
 public class SetForgetPWDActivity extends AppCompatActivity {
     TextView tv_title;
     ImageView iv_back;

@@ -10,9 +10,9 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 违规行为条目
  * Created by Administrator on 2018/4/9 0009.
  */
-//违规行为条目
 public class ReportIllegalActivity extends AppCompatActivity {
     ImageView iv_back;
     TextView tv_title;

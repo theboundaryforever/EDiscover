@@ -16,6 +16,9 @@ import com.kest.ediscover.widget.ResizableRadioButton;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import main.fragment.EFindFragment;
 import main.fragment.ELatterFragment;
 import main.fragment.HomeFragment;
@@ -29,18 +32,26 @@ import main.fragment.MyFragment;
  */
 
 public class MainHomeActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener{
-    private FrameLayout content_layout;
+    @BindView(R.id.content_layout)
+     FrameLayout content_layout;
     //首页
+    @BindView(R.id.rb_home)
     RadioButton rb_home;
     //E发现
+    @BindView(R.id.rb_e_find)
     RadioButton rb_e_find;
     //E信
+    @BindView(R.id.rb_e_latter)
     RadioButton rb_e_latter;
     //通讯录
+    @BindView(R.id.rb_mail_list)
     RadioButton rb_mail_list;
+
     //我的
+    @BindView(R.id.rb_my)
     RadioButton rb_my;
-    private RadioGroup radiogroup;
+    @BindView(R.id.radiogroup)
+     RadioGroup radiogroup;
 
     private HomeFragment homeFragment;
     private EFindFragment eFindFragment;
@@ -54,18 +65,12 @@ public class MainHomeActivity extends BaseActivity implements RadioGroup.OnCheck
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_home);
+        ButterKnife.bind(this);
         initView();
     }
 
     /**初始化*/
     private void initView(){
-        content_layout=findViewById(R.id.content_layout);
-        rb_home=findViewById(R.id.rb_home);
-        rb_e_find=findViewById(R.id.rb_e_find);
-        rb_e_latter=findViewById(R.id.rb_e_latter);
-        rb_mail_list=findViewById(R.id.rb_mail_list);
-        rb_my=findViewById(R.id.rb_my);
-        radiogroup=findViewById(R.id.radiogroup);
         radiogroup.setOnCheckedChangeListener(this);
         fragmentManager=getSupportFragmentManager();
         fragments=new ArrayList<>();
@@ -89,14 +94,12 @@ public class MainHomeActivity extends BaseActivity implements RadioGroup.OnCheck
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-
         switch (checkedId){
             case R.id.rb_home:
                switchFragment(0);
                 break;
             case R.id.rb_e_find:
                 switchFragment(1);
-
                 break;
             case R.id.rb_e_latter:
                 switchFragment(2);
@@ -127,7 +130,6 @@ public class MainHomeActivity extends BaseActivity implements RadioGroup.OnCheck
                     transaction.hide(fragment);
                 }
             }
-
         }
         transaction.commit();
 

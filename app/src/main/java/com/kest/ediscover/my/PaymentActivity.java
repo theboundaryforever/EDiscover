@@ -51,7 +51,6 @@ public class PaymentActivity extends BaseActivity {
                 dialog = new PayTypeSelectDialog();
                 dialog.show(getSupportFragmentManager(), "");
 
-
             }
         });
 

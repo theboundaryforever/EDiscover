@@ -36,22 +36,20 @@ public class ScanActivity extends AppCompatActivity implements QRCodeView.Delega
 
         mQRCodeView = (ZXingView) findViewById(R.id.zxingview);
         mQRCodeView.setDelegate(this);
-        backLinearlayout = (LinearLayout) findViewById(R.id.scanner_toolbar_back);
+        backLinearlayout =  findViewById(R.id.scanner_toolbar_back);
         backLinearlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        //boolOpenCarmer();
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         mQRCodeView.startCamera();
-//        mQRCodeView.startCamera(Camera.CameraInfo.CAMERA_FACING_FRONT);
-
         mQRCodeView.showScanRect();
         mQRCodeView.startSpot();
     }

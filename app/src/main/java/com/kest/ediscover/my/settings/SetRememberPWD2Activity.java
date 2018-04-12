@@ -9,10 +9,9 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 /**
+ * 记得密码二
  * Created by Administrator on 2018/4/6 0006.
  */
-
-//记得密码二
 public class SetRememberPWD2Activity extends AppCompatActivity {
     ImageView iv_back;
     TextView tv_title;

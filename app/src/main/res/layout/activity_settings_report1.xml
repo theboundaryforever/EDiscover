@@ -192,7 +192,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/x4"
+                    android:layout_marginBottom="@dimen/bt_margin_10"
                     android:src="@mipmap/add_img"
                     />
             </LinearLayout>
@@ -217,6 +217,5 @@
             </LinearLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
-
 
 </LinearLayout>

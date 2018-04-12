@@ -13,9 +13,10 @@ import android.widget.RelativeLayout;
 import com.kest.ediscover.R;
 
 /**
+ * 举报
  * Created by Administrator on 2018/4/3 0003.
  */
-/*举报*/
+
 public class ReportActivity  extends AppCompatActivity {
 
     ImageView iv_back;
