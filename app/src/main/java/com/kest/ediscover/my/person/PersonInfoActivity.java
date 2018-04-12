@@ -83,7 +83,7 @@ public class PersonInfoActivity extends AppCompatActivity{
         unbinder= ButterKnife.bind(this);
         tv_title.setText("个人信息");
     }
-    @OnClick({})
+    @OnClick({R.id.iv_back,R.id.rl_person_qr,R.id.rl_vertify,R.id.rl_name,R.id.rl_person_img})
     void onClick(View view){
         switch (view.getId()){
             case R.id.iv_back:

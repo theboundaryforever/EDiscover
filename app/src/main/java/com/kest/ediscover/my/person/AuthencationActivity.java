@@ -14,7 +14,9 @@ import android.widget.TextView;
 import com.kest.ediscover.R;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2018/4/3 0003.
@@ -47,12 +49,14 @@ public class AuthencationActivity extends AppCompatActivity {
     //确定按钮
     @BindView(R.id.ll_ok)
     RelativeLayout ll_ok;
+    Unbinder unbinder;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_person_authen);
+        unbinder=  ButterKnife.bind(this);
 
     }
 
@@ -73,5 +77,11 @@ public class AuthencationActivity extends AppCompatActivity {
             case R.id.ll_ok:
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
 }

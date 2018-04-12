@@ -24,27 +24,33 @@
             style="@style/radioButton"
             android:text="首页"
             android:checked="true"
+
+            android:textColor="@drawable/rb_select_color"
             android:drawableTop="@drawable/selector_bottom_tab_first" />
         <RadioButton
             android:id="@+id/rb_e_find"
             style="@style/radioButton"
             android:text="E发现"
+            android:textColor="@drawable/rb_select_color"
             android:drawableTop="@drawable/selector_bottom_tab_ediscover" />
 
         <RadioButton
             android:id="@+id/rb_e_latter"
             style="@style/radioButton"
             android:text="E信"
+            android:textColor="@drawable/rb_select_color"
             android:drawableTop="@drawable/selector_bottom_tab_im" />
         <RadioButton
             android:id="@+id/rb_mail_list"
             style="@style/radioButton"
             android:text="通讯录"
+            android:textColor="@drawable/rb_select_color"
             android:drawableTop="@drawable/selector_bottom_tab_frend" />
         <RadioButton
             android:id="@+id/rb_my"
             style="@style/radioButton"
             android:text="我的"
+            android:textColor="@drawable/rb_select_color"
             android:drawableTop="@drawable/selector_bottom_tab_mine" />
     </RadioGroup>
 </RelativeLayout>
